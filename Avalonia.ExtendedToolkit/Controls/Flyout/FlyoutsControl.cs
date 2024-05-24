@@ -69,11 +69,10 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// use FlyoutContainerGenerator as container generator
         /// </summary>
         /// <returns></returns>
-        //.orig
-        //protected override IItemContainerGenerator CreateItemContainerGenerator()
-        //{
-        //    return new FlyoutContainerGenerator(this);
-        //}
+        protected override ItemContainerGenerator CreateItemContainerGenerator()
+        {
+            return new FlyoutContainerGenerator(this);
+        }
 
         /// <summary>
         /// called from the <see cref="FlyoutContainerGenerator.CreateContainer(object)"/> only.

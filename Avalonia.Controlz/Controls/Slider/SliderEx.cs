@@ -165,19 +165,18 @@ namespace Avalonia.Controlz.Controls
         /// When Ticks is not 'null', Slider will ignore 'TickFrequency', and draw only TickMarks
         /// that specified in Ticks collection.
         /// </summary>
-        private TickPlacement _tickPlacement;
-
         public TickPlacement TickPlacement
         {
-            get { return _tickPlacement; }
-            set { SetAndRaise(TickPlacementProperty, ref _tickPlacement, value); }
+            get { return (TickPlacement)GetValue(TickPlacementProperty); }
+            set { SetValue(TickPlacementProperty, value); }
         }
 
         /// <summary>
         /// Defines the <see cref="TickPlacement"/> property.
         /// </summary>
-        public static readonly DirectProperty<SliderEx, TickPlacement> TickPlacementProperty =
-            AvaloniaProperty.RegisterDirect<SliderEx, TickPlacement>(nameof(TickPlacement), o => o._tickPlacement);
+        public static readonly StyledProperty<TickPlacement> TickPlacementProperty =
+            AvaloniaProperty.Register<SliderEx, TickPlacement>(nameof(TickPlacement)
+                , defaultValue: TickPlacement.None);
 
         /// <summary>
         ///     Slider uses this value to determine where to show the Ticks.
@@ -298,9 +297,9 @@ namespace Avalonia.Controlz.Controls
             Thumb.DragCompletedEvent.AddClassHandler<SliderEx>((o, e) => OnThumbDragCompleted(o, e), RoutingStrategies.Bubble);
 
             SelectionStartProperty.Changed.AddClassHandler<SliderEx>((Action<SliderEx, AvaloniaPropertyChangedEventArgs>)((o, e) => OnSelectionStartChanged(o, e)));
-            SelectionEndProperty.Changed.AddClassHandler<SliderEx>((Action<SliderEx, AvaloniaPropertyChangedEventArgs>)((o, e) => OnSelectionEndChanged(o, e)));
-            ValueProperty.Changed.AddClassHandler<SliderEx>((Action<SliderEx, AvaloniaPropertyChangedEventArgs>)((o, e) => OnValueChanged(o, e)));
-            TickPlacementProperty.Changed.AddClassHandler<SliderEx>((Action<SliderEx, AvaloniaPropertyChangedEventArgs>)((o, e) => OnTickPlacementChanged(o, e)));
+            SelectionEndProperty.Changed.AddClassHandler<SliderEx>((Action<SliderEx, AvaloniaPropertyChangedEventArgs>)((o,   e) => OnSelectionEndChanged(o, e)));
+            ValueProperty.Changed.AddClassHandler<SliderEx>((Action<SliderEx, AvaloniaPropertyChangedEventArgs>)((o,          e) => OnValueChanged(o, e)));
+            TickPlacementProperty.Changed.AddClassHandler<SliderEx>((Action<SliderEx, AvaloniaPropertyChangedEventArgs>)((o,  e) => OnTickPlacementChanged(o, e)));
         }
 
 
@@ -487,16 +486,16 @@ namespace Avalonia.Controlz.Controls
         /// updates the pseudo classes
         /// </summary>
         /// <param name="e"></param>
-        //protected override void OnPropertyChanged<T>(AvaloniaPropertyChangedEventArgs<T> e)
-        //{
-        //    base.OnPropertyChanged(e);
-        //    if(e.Property == OrientationProperty && e.NewValue is Orientation newValue)
-        //    {
-        //        UpdatePseudoClassesForOrientation(newValue);
-        //    }
+        protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs e)
+        {
+            base.OnPropertyChanged(e);
+            if(e.Property == OrientationProperty && e.NewValue is Orientation newValue)
+            {
+                UpdatePseudoClassesForOrientation(newValue);
+            }
 
 
-        //}
+        }
         //protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs e)
         //{
         //    if (e.Property == OrientationProperty && e.NewValue is Orientation newValue)
@@ -916,8 +915,8 @@ namespace Avalonia.Controlz.Controls
             //{
             //    _autoToolTip.PlacementTarget = Track != null ? Track.Thumb : null;
             //}
-
-            RaisePropertyChanged(TickPlacementProperty, TickPlacement.None, TickPlacement);
+            //.orig
+            //RaisePropertyChanged(TickPlacementProperty, TickPlacement.None, TickPlacement);
             base.OnApplyTemplate(e);
         }
 

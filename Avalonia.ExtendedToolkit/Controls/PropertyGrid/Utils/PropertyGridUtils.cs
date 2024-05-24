@@ -79,7 +79,7 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Utils
             List<T> result = new List<T>();
             foreach(var item in VisualTree.VisualExtensions.GetVisualChildren(element))
             {
-                var child = item.FindVisualChild<T>();
+                var child= item.FindVisualChild<T>();
                 if(child!=null)
                 {
                     result.Add(child);

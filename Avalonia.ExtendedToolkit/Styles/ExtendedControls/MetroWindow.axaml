@@ -15,7 +15,6 @@
     <Setter Property="FontSize" Value="{DynamicResource FontSizeNormal}" />
     <Setter Property="FontFamily" Value="{TemplateBinding FontFamily}" />
     <Setter Property="FlyoutOverlayBrush" Value="{DynamicResource MetroWindow.FlyoutOverlayBrush}" />
-    <Setter Property="HasSystemDecorations" Value="false" />
     <Setter Property="BorderThickness" Value="1" />
     <Setter Property="Background" Value="{DynamicResource MahApps.Brushes.Gray10}" />
     <Setter Property="Foreground" Value="{DynamicResource MahApps.Brushes.Black}" />

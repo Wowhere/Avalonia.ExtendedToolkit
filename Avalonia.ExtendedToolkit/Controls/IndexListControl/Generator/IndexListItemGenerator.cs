@@ -1,103 +1,103 @@
-//using Avalonia.Controls;
-//using Avalonia.Controls.Generators;
-//using Avalonia.Controls.Templates;
-//using Avalonia.Data;
-//.orig
-//namespace Avalonia.ExtendedToolkit.Controls
-//{
-//    /// <summary>
-//    /// generator for indexlist items
-//    /// partial taken from <see cref="TreeItemContainerGenerator{T}"/>
-//    /// </summary>
-//    public class IndexListItemGenerator : ItemContainerGenerator<IndexListHeaderItem>
+using Avalonia.Controls;
+using Avalonia.Controls.Generators;
+using Avalonia.Controls.Templates;
+using Avalonia.Data;
 
-//    {
-//        /// <summary>
-//        /// Gets the item container's Items property.
-//        /// </summary>
-//        protected AvaloniaProperty ItemsProperty { get; }
+namespace Avalonia.ExtendedToolkit.Controls
+{
+    /// <summary>
+    /// generator for indexlist items
+    /// partial taken from <see cref="TreeItemContainerGenerator{T}"/>
+    /// </summary>
+    public class IndexListItemGenerator : ItemContainerGenerator<IndexListHeaderItem>
 
-//        /// <summary>
-//        /// sets the itemsproperty parameter
-//        /// </summary>
-//        /// <param name="owner"></param>
-//        /// <param name="contentProperty"></param>
-//        /// <param name="contentTemplateProperty"></param>
-//        /// <param name="itemsProperty"></param>
-//        public IndexListItemGenerator(Control owner,
-//            AvaloniaProperty contentProperty,
-//            AvaloniaProperty contentTemplateProperty,
-//            AvaloniaProperty itemsProperty)
-//            : base(owner, contentProperty, contentTemplateProperty)
-//        {
-//            ItemsProperty = itemsProperty;
-//        }
+    {
+        /// <summary>
+        /// Gets the item container's Items property.
+        /// </summary>
+        protected AvaloniaProperty ItemsProperty { get; }
 
-//        /// <summary>
-//        /// tries to create a container from this item
-//        /// </summary>
-//        /// <param name="item"></param>
-//        /// <returns></returns>
-//        protected override Control CreateContainer(object item)
-//        {
-//            var container = item as IndexListHeaderItem;
-//            if (item == null)
-//            {
-//                return null;
-//            }
-//            else if (container != null)
-//            {
-//                return container;
-//            }
-//            else
-//            {
-//                IndexList owner = Owner as IndexList;
+        /// <summary>
+        /// sets the itemsproperty parameter
+        /// </summary>
+        /// <param name="owner"></param>
+        /// <param name="contentProperty"></param>
+        /// <param name="contentTemplateProperty"></param>
+        /// <param name="itemsProperty"></param>
+        public IndexListItemGenerator(Control owner,
+            AvaloniaProperty contentProperty,
+            AvaloniaProperty contentTemplateProperty,
+            AvaloniaProperty itemsProperty)
+            : base(owner, contentProperty, contentTemplateProperty)
+        {
+            ItemsProperty = itemsProperty;
+        }
 
-//                var template = GetTreeDataTemplate(item, ItemTemplate);
-//                var result = new IndexListHeaderItem();
+        /// <summary>
+        /// tries to create a container from this item
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        protected override Control CreateContainer(object item)
+        {
+            var container = item as IndexListHeaderItem;
+            if (item == null)
+            {
+                return null;
+            }
+            else if (container != null)
+            {
+                return container;
+            }
+            else
+            {
+                IndexList owner = Owner as IndexList;
 
-//                result.SetValue(ContentProperty, template.Build(item), BindingPriority.Style);
-//                Binding binding = new Binding();
-//                binding.Source = owner;
-//                binding.Path = nameof(owner.ShowEmptyItems);
-//                result.Bind(IndexListHeaderItem.ShowEmptyItemsProperty, binding, BindingPriority.Style);
+                var template = GetTreeDataTemplate(item, ItemTemplate);
+                var result = new IndexListHeaderItem();
 
-//                var itemsSelector = template.ItemsSelector(item);
+                result.SetValue(ContentProperty, template.Build(item), BindingPriority.Style);
+                Binding binding = new Binding();
+                binding.Source = owner;
+                binding.Path = nameof(owner.ShowEmptyItems);
+                result.Bind(IndexListHeaderItem.ShowEmptyItemsProperty, binding, BindingPriority.Style);
 
-//                if (itemsSelector != null)
-//                {
-//                    BindingOperations.Apply(result, ItemsProperty, itemsSelector, null);
-//                }
+                var itemsSelector = template.ItemsSelector(item);
 
-//                if ((item is Control) == false)
-//                {
-//                    result.DataContext = item;
-//                }
+                if (itemsSelector != null)
+                {
+                    BindingOperations.Apply(result, ItemsProperty, itemsSelector, null);
+                }
 
-//                return result;
-//            }
-//        }
+                if ((item is IControl) == false)
+                {
+                    result.DataContext = item;
+                }
 
-//        private class WrapperTreeDataTemplate : ITreeDataTemplate
-//        {
-//            private readonly IDataTemplate _inner;
+                return result;
+            }
+        }
 
-//            public WrapperTreeDataTemplate(IDataTemplate inner) => _inner = inner;
+        private class WrapperTreeDataTemplate : ITreeDataTemplate
+        {
+            private readonly IDataTemplate _inner;
 
-//            public Control Build(object param) => _inner.Build(param);
+            public WrapperTreeDataTemplate(IDataTemplate inner) => _inner = inner;
 
-//            //public bool SupportsRecycling => _inner.SupportsRecycling;
+            public Control Build(object param) => _inner.Build(param);
 
-//            public bool Match(object data) => _inner.Match(data);
+            //public bool SupportsRecycling => _inner.SupportsRecycling;
 
-//            public InstancedBinding ItemsSelector(object item) => null;
-//        }
+            public bool Match(object data) => _inner.Match(data);
 
-//        private ITreeDataTemplate GetTreeDataTemplate(object item, IDataTemplate primary)
-//        {
-//            var template = Owner.FindDataTemplate(item, primary) ?? FuncDataTemplate.Default;
-//            var treeTemplate = template as ITreeDataTemplate ?? new WrapperTreeDataTemplate(template);
-//            return treeTemplate;
-//        }
-//    }
-//}
+            public InstancedBinding ItemsSelector(object item) => null;
+        }
+
+        private ITreeDataTemplate GetTreeDataTemplate(object item, IDataTemplate primary)
+        {
+            var template = Owner.FindDataTemplate(item, primary) ?? FuncDataTemplate.Default;
+            var treeTemplate = template as ITreeDataTemplate ?? new WrapperTreeDataTemplate(template);
+            return treeTemplate;
+        }
+    }
+}

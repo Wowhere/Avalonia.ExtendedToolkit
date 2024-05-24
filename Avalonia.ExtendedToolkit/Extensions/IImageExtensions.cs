@@ -1,4 +1,5 @@
 using System;
+using System.Drawing;
 using System.IO;
 using Avalonia.Media;
 using Avalonia.Media.Imaging;
@@ -29,11 +30,11 @@ namespace Avalonia.ExtendedToolkit.Extensions
                 var dpiVector = new Vector(96, 96);
                 using (var renderBitmap = new RenderTargetBitmap(pixelSize, dpiVector))
                 {
-                    using (var context = new DrawingContext(renderBitmap.CreateDrawingContext()))
+                    using (var context = new DrawingContext(renderBitmap.CreateDrawingContext(null)))
                     {
                         var source = new Rect(0, 0, croppedBitmap.Size.Width, croppedBitmap.Size.Height);
                         var rect = new Rect(croppedBitmap.SourceRect.X, croppedBitmap.SourceRect.Y, croppedBitmap.SourceRect.Width, croppedBitmap.SourceRect.Height);
-                        croppedBitmap.Draw(context, source, rect);
+                        croppedBitmap.Draw(context, source, rect, BitmapInterpolationMode.HighQuality);
                     }
                     renderBitmap.Save(path);
                 }
@@ -63,7 +64,7 @@ namespace Avalonia.ExtendedToolkit.Extensions
                     {
                         var source = new Rect(0, 0, croppedBitmap.Size.Width, croppedBitmap.Size.Height);
                         var rect = new Rect(croppedBitmap.SourceRect.X, croppedBitmap.SourceRect.Y, croppedBitmap.SourceRect.Width, croppedBitmap.SourceRect.Height);
-                        croppedBitmap.Draw(context, source, rect);
+                        croppedBitmap.Draw(context, source, rect, BitmapInterpolationMode.HighQuality);
                     }
                     renderBitmap.Save(stream);
                 }

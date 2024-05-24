@@ -281,20 +281,17 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <summary>
         /// Gets or sets whether the overflow menu of the available sections is visible.
         /// </summary>
-        //.orig
-        //private bool _isOverflowVisible;
-        //public bool IsOverflowVisible
-        //{
-        //    get { return _isOverflowVisible; }
-        //    set { SetAndRaise(IsOverflowVisibleProperty, ref _isOverflowVisible, value); }
-        //}
+        public bool IsOverflowVisible
+        {
+            get { return (bool)GetValue(IsOverflowVisibleProperty); }
+            set { SetValue(IsOverflowVisibleProperty, value); }
+        }
 
         /// <summary>
         /// <see cref="IsOverflowVisible"/>
         /// </summary>
-        //.orig
-        //public static readonly DirectProperty<OutlookBar, bool> IsOverflowVisibleProperty =
-        //    AvaloniaProperty.Register<OutlookBar, bool>(nameof(IsOverflowVisible), o => o.);
+        public static readonly StyledProperty<bool> IsOverflowVisibleProperty =
+            AvaloniaProperty.Register<OutlookBar, bool>(nameof(IsOverflowVisible), defaultValue: false);
 
         /// <summary>
         /// Toggles the IsExpanded property.

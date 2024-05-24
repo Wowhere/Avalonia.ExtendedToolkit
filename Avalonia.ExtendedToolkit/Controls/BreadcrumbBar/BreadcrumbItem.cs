@@ -66,8 +66,7 @@ namespace Avalonia.ExtendedToolkit.Controls
             if (item == null && dataContext != null)
             {
                 item = new BreadcrumbItem();
-                //.edited
-                item.ItemsSource = dataContext as IEnumerable;
+                item.Items = dataContext as IEnumerable;
             }
             return item;
         }
@@ -283,8 +282,7 @@ namespace Avalonia.ExtendedToolkit.Controls
             if (hdt != null)
             {
                 // bind the Items to the hierarchical data template:
-                //.edited
-                root.Bind(BreadcrumbItem.ItemsSourceProperty, hdt.ItemsSource);
+                root.Bind(BreadcrumbItem.ItemsProperty, hdt.ItemsSource);
             }
 
             BreadcrumbBar bar = BreadcrumbBar;

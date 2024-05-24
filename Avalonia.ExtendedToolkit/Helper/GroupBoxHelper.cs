@@ -21,7 +21,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <returns></returns>
         public static IBrush GetHeaderForeground(Control element)
         {
-            return element.GetValue(HeaderForegroundProperty);
+            return element.GetValue<IBrush>(HeaderForegroundProperty);
         }
 
         /// <summary>

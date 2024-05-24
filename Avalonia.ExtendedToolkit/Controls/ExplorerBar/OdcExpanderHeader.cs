@@ -126,9 +126,9 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <summary>
         /// for styling the circle button
         /// </summary>
-        public IBrush CircleButtonForeground
+        public Brush CircleButtonForeground
         {
-            get { return (IBrush)GetValue(CircleButtonForegroundProperty); }
+            get { return (Brush)GetValue(CircleButtonForegroundProperty); }
             set { SetValue(CircleButtonForegroundProperty, value); }
         }
 

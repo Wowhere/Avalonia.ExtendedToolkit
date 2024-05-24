@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing;
 using System.Runtime.InteropServices;
 using Avalonia.Media;
 
@@ -136,7 +135,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <param name='rect1'>The first rectangle to compare</param>
         /// <param name='rect2'>The second rectangle to compare</param>
         /// <returns>Whether or not the two rectangles are equal</returns>
-        public static bool IsCloseTo(this Rectangle rect1, Rectangle rect2)
+        public static bool IsCloseTo(this Rect rect1, Rect rect2)
         {
             // If they're both empty, don't bother with the double logic.
             if (rect1.IsEmpty)

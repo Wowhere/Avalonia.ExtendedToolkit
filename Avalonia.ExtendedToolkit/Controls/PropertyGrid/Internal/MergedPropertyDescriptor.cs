@@ -8,7 +8,6 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
-using MessagePack;
 
 namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Internal
 {
@@ -155,12 +154,11 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Internal
                 }
                 if ((obj2 == null) && type.IsSerializable)
                 {
-                    MessagePack
-                    //BinaryFormatter formatter = new BinaryFormatter();
+                    BinaryFormatter formatter = new BinaryFormatter();
                     MemoryStream serializationStream = new MemoryStream();
-                    //formatter.Serialize(serializationStream, value);
+                    formatter.Serialize(serializationStream, value);
                     serializationStream.Position = 0L;
-                    //obj2 = formatter.Deserialize(serializationStream);
+                    obj2 = formatter.Deserialize(serializationStream);
                 }
                 if (obj2 != null)
                 {

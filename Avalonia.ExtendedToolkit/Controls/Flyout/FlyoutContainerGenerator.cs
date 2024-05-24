@@ -1,78 +1,78 @@
-﻿//using Avalonia.Controls;
-//using Avalonia.Controls.Generators;
-//using Avalonia.Controls.Primitives;
-//.orig
-//namespace Avalonia.ExtendedToolkit.Controls
-//{
-//    /// <summary>
-//    /// FlyoutContainerGenerator
-//    /// </summary>
-//    public class FlyoutContainerGenerator : ItemContainerGenerator<Flyout>
-//    {
-//        /// <summary>
-//        /// sets the owner
-//        /// </summary>
-//        /// <param name="owner"></param>
-//        public FlyoutContainerGenerator(FlyoutsControl owner)
-//            : base(owner, ContentControl.ContentProperty, ContentControl.ContentTemplateProperty)
-//        {
-//            Owner = owner;
-//        }
+﻿using Avalonia.Controls;
+using Avalonia.Controls.Generators;
+using Avalonia.Controls.Primitives;
 
-//        /// <summary>
-//        /// gets FlyoutsControl
-//        /// </summary>
-//        public new FlyoutsControl Owner { get; }
+namespace Avalonia.ExtendedToolkit.Controls
+{
+    /// <summary>
+    /// FlyoutContainerGenerator
+    /// </summary>
+    public class FlyoutContainerGenerator : ItemContainerGenerator
+    {
+        /// <summary>
+        /// sets the owner
+        /// </summary>
+        /// <param name="owner"></param>
+        public FlyoutContainerGenerator(FlyoutsControl owner)
+            : base(owner, ContentControl.ContentProperty, ContentControl.ContentTemplateProperty)
+        {
+            Owner = owner;
+        }
 
-//        /// <summary>
-//        /// sets the item and attach the handlers
-//        /// </summary>
-//        /// <param name="item"></param>
-//        /// <returns></returns>
-//        protected override Control CreateContainer(object item)
-//        {
-//            var flyout = (Flyout)item;
+        /// <summary>
+        /// gets FlyoutsControl
+        /// </summary>
+        public new FlyoutsControl Owner { get; }
 
-//            var headerTemplate = flyout?.HeaderTemplate;
+        /// <summary>
+        /// sets the item and attach the handlers
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        protected override Control CreateContainer(object item)
+        {
+            var flyout = (Flyout)item;
 
-//            if (headerTemplate != null)
-//            {
-//                flyout.SetValue(HeaderedContentControl.HeaderTemplateProperty, (object)headerTemplate);
-//            }
+            var headerTemplate = flyout?.HeaderTemplate;
 
-//            if (ItemTemplate != null && null == flyout.ContentTemplate)
-//            {
-//                flyout.SetValue(HeaderedContentControl.ContentTemplateProperty, (object)ItemTemplate);
-//            }
+            if (headerTemplate != null)
+            {
+                flyout.SetValue(HeaderedContentControl.HeaderTemplateProperty, (object)headerTemplate);
+            }
 
-//            //if (flyout.HeaderTemplate == null)
-//            //{
-//            //    flyout[~HeaderedContentControl.HeaderTemplateProperty] = Owner[~ItemsControl.ItemTemplateProperty];
-//            //}
+            if (ItemTemplate != null && null == flyout.ContentTemplate)
+            {
+                flyout.SetValue(HeaderedContentControl.ContentTemplateProperty, (object)ItemTemplate);
+            }
 
-//            //if (flyout.Header == null)
-//            //{
-//            //    if (item is IHeadered headered)
-//            //    {
-//            //        flyout.Header = headered.Header;
-//            //    }
-//            //    else
-//            //    {
-//            //        if (!(flyout.DataContext is IControl))
-//            //        {
-//            //            flyout.Header = flyout.DataContext;
-//            //        }
-//            //    }
-//            //}
+            //if (flyout.HeaderTemplate == null)
+            //{
+            //    flyout[~HeaderedContentControl.HeaderTemplateProperty] = Owner[~ItemsControl.ItemTemplateProperty];
+            //}
 
-//            //if (!(flyout.Content is IControl))
-//            //{
-//            //    flyout[~ContentControl.ContentTemplateProperty] = Owner[~TabControl.ContentTemplateProperty];
-//            //}
+            //if (flyout.Header == null)
+            //{
+            //    if (item is IHeadered headered)
+            //    {
+            //        flyout.Header = headered.Header;
+            //    }
+            //    else
+            //    {
+            //        if (!(flyout.DataContext is IControl))
+            //        {
+            //            flyout.Header = flyout.DataContext;
+            //        }
+            //    }
+            //}
 
-//            Owner.AttachHandlers(flyout);
+            //if (!(flyout.Content is IControl))
+            //{
+            //    flyout[~ContentControl.ContentTemplateProperty] = Owner[~TabControl.ContentTemplateProperty];
+            //}
 
-//            return flyout;
-//        }
-//    }
-//}
+            Owner.AttachHandlers(flyout);
+
+            return flyout;
+        }
+    }
+}

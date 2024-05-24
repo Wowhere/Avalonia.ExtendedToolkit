@@ -117,32 +117,32 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <summary>
         /// Gets or sets a value indicating the style to use for the overlay.
         /// </summary>
-        public Style OverlayStyle
+        public IStyle OverlayStyle
         {
-            get { return (Style)GetValue(OverlayStyleProperty); }
+            get { return (IStyle)GetValue(OverlayStyleProperty); }
             set { SetValue(OverlayStyleProperty, value); }
         }
 
         /// <summary>
         /// <see cref="OverlayStyle"/>
         /// </summary>
-        public static readonly StyledProperty<Style> OverlayStyleProperty =
-            AvaloniaProperty.Register<BusyIndicator, Style>(nameof(OverlayStyle));
+        public static readonly StyledProperty<IStyle> OverlayStyleProperty =
+            AvaloniaProperty.Register<BusyIndicator, IStyle>(nameof(OverlayStyle));
 
         /// <summary>
         /// Gets or sets a value indicating the style to use for the progress bar.
         /// </summary>
-        public Style ProgressBarStyle
+        public IStyle ProgressBarStyle
         {
-            get { return (Style)GetValue(ProgressBarStyleProperty); }
+            get { return (IStyle)GetValue(ProgressBarStyleProperty); }
             set { SetValue(ProgressBarStyleProperty, value); }
         }
 
         /// <summary>
         /// <see cref="ProgressBarStyle"/>
         /// </summary>
-        public static readonly StyledProperty<Style> ProgressBarStyleProperty =
-            AvaloniaProperty.Register<BusyIndicator, Style>(nameof(ProgressBarStyle));
+        public static readonly StyledProperty<IStyle> ProgressBarStyleProperty =
+            AvaloniaProperty.Register<BusyIndicator, IStyle>(nameof(ProgressBarStyle));
 
         /// <summary>
         /// init _displayAfterTimer.Tick

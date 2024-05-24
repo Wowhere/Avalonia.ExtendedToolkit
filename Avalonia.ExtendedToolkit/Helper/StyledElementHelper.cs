@@ -21,7 +21,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <returns></returns>
         public static IStyle GetStyle(StyledElement element)
         {
-            return element.GetValue(StyleProperty);
+            return element.GetValue<IStyle>(StyleProperty);
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <returns></returns>
         public static Classes GetClasses(StyledElement element)
         {
-            return element.GetValue(ClassesProperty);
+            return element.GetValue<Classes>(ClassesProperty);
         }
 
         /// <summary>
@@ -64,18 +64,18 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         /// <param name="element"></param>
         /// <param name="value"></param>
-        //public static void SetClasses(StyledElement element, Classes value)
-        //{
-        //    element.SetValue(ClassesProperty, value);
-        //    OnClassesChanged(element, value);
-        //}
+        public static void SetClasses(StyledElement element, Classes value)
+        {
+            element.SetValue(ClassesProperty, value);
+            OnClassesChanged(element, value);
+        }
 
-        //private static void OnClassesChanged(StyledElement element, Classes value)
-        //{
-        //    if(value!=null)
-        //    {
-        //        element.Classes = value;
-        //    }
-        //}
+        private static void OnClassesChanged(StyledElement element, Classes value)
+        {
+            if(value!=null)
+            {
+                element.Classes = value;
+            }
+        }
     }
 }

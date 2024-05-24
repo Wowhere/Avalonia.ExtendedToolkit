@@ -276,7 +276,7 @@
                                         <ToggleButton Content="{TemplateBinding NavigationPaneText}" ClickMode="Press"
                                                 x:Name="PART_ToggleButton"
                                                 IsChecked="{Binding IsPopupVisible,RelativeSource={RelativeSource TemplatedParent},Mode=TwoWay}"
-                                                TextBlock.FontSize="14" BorderThickness="1"
+                                                 BorderThickness="1"
                                                       Classes="verticalToggleButtonStyle" />
                                         <DockPanel.Resources>
                                             <!--<Style TargetType="{x:Type Button}" BasedOn="{StaticResource verticalButtonStyle}" />
@@ -284,7 +284,7 @@
                                         </DockPanel.Resources>
                                     </DockPanel>
                                     <Popup x:Name="PART_Popup" PlacementMode="Right"
-                                            StaysOpen="False">
+                                            IsLightDismissEnabled="False">
                                         <!--
                     PopupAnimation="Fade"
                     AllowsTransparency="True"

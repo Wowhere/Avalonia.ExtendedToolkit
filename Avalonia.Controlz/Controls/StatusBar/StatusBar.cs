@@ -32,6 +32,7 @@ namespace Avalonia.Controlz.Controls
         /// creates an item container of an <see cref="StatusBarItem"/>
         /// </summary>
         /// <returns></returns>
+        //.orig
         //protected override ItemContainerGenerator CreateItemContainerGenerator()
         //{
         //    var itemContainer = new ItemContainerGenerator<StatusBarItem>(

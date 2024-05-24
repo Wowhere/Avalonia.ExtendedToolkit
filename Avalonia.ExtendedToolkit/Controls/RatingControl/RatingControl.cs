@@ -267,12 +267,11 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// updates the items
         /// </summary>
         /// <param name="e"></param>
-        //.orig
-        //protected override void OnPointerLeave(PointerEventArgs e)
-        //{
-        //    base.OnPointerLeave(e);
-        //    UpdateItems();
-        //}
+        protected override void OnPointerExited(PointerEventArgs e)
+        {
+            base.OnPointerExited(e);
+            UpdateItems();
+        }
 
         /// <summary>
         /// updates the items state

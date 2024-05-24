@@ -9,13 +9,12 @@
     <Setter Property="Foreground" />
     <Setter Property="Template">
       <ControlTemplate>
-        <DockPanel LastChildFill="True" TextBlock.Foreground="AliceBlue">
+        <DockPanel LastChildFill="True">
           <ContentControl DockPanel.Dock="Right"
                           ContentTemplate="{TemplateBinding ErrorTemplate}"
                           DataContext="{TemplateBinding Owner}"
                           Content="{Binding (DataValidationErrors.Errors)}"
                           IsVisible="{Binding (DataValidationErrors.HasErrors)}"
-                          TextBlock.Foreground="AliceBlue"  
                           />
           <ContentPresenter Name="PART_ContentPresenter"
                             Background="{TemplateBinding Background}"
@@ -24,7 +23,6 @@
                             ContentTemplate="{TemplateBinding ContentTemplate}"
                             Content="{TemplateBinding Content}"
                             Padding="{TemplateBinding Padding}"
-                            TextBlock.Foreground="AliceBlue"  
       />
         </DockPanel>
       </ControlTemplate>

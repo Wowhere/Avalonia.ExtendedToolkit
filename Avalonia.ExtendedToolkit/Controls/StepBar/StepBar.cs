@@ -1,7 +1,6 @@
 using System;
 using System.Linq;
 using System.Windows.Input;
-using System.Collections.Generic;
 using Avalonia.Controls;
 using Avalonia.Controls.Generators;
 using Avalonia.Controls.Primitives;
@@ -151,8 +150,8 @@ namespace Avalonia.ExtendedToolkit.Controls
         {
             NextCommand = ReactiveCommand.Create(() => Next(), outputScheduler: RxApp.MainThreadScheduler);
             PreviousCommand = ReactiveCommand.Create(() => Prev(), outputScheduler: RxApp.MainThreadScheduler);
-            //.orig
-            //ItemContainerGenerator.Materialized += ItemContainerGenerator_StatusChanged;
+
+            ItemContainerGenerator.Materialized += ItemContainerGenerator_StatusChanged;
             StepIndexProperty.Changed.AddClassHandler<StepBar>((o, e) => OnStepIndexChanged(o, e));
         }
 
@@ -160,46 +159,44 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// returns <see cref="ItemContainerGenerator"/> of type <see cref="StepBarItem"/>
         /// </summary>
         /// <returns></returns>
-        //.orig
-        //protected override IItemContainerGenerator CreateItemContainerGenerator()
-        //{
-        //    return new ItemContainerGenerator<StepBarItem>(
-        //        this,
-        //        StepBarItem.ContentProperty,
-        //        StepBarItem.ContentTemplateProperty);
-        //}
+        protected override ItemContainerGenerator CreateItemContainerGenerator()
+        {
+            return new ItemContainerGenerator<StepBarItem>(
+                this,
+                StepBarItem.ContentProperty,
+                StepBarItem.ContentTemplateProperty);
+        }
 
         /// <summary>
         /// sets the step index of the items and property
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        //.orig
-        //private void ItemContainerGenerator_StatusChanged(object sender, ItemContainerEventArgs e)
-        //{
-        //    var count = Items.OfType<StepBarItem>().Count();
+        private void ItemContainerGenerator_StatusChanged(object sender, ItemContainerEventArgs e)
+        {
+            var count = Items.OfType<StepBarItem>().Count();
 
-        //    if (count <= 0)
-        //        return;
+            if (count <= 0)
+                return;
 
-        //    for (var i = 0; i < count; i++)
-        //    {
-        //        if (ItemContainerGenerator.ContainerFromIndex(i) is StepBarItem stepBarItem)
-        //        {
-        //            stepBarItem.Index = i + 1;
-        //        }
-        //    }
+            for (var i = 0; i < count; i++)
+            {
+                if (ItemContainerGenerator.ContainerFromIndex(i) is StepBarItem stepBarItem)
+                {
+                    stepBarItem.Index = i + 1;
+                }
+            }
 
-        //    if (_oriStepIndex > 0)
-        //    {
-        //        StepIndex = _oriStepIndex;
-        //        _oriStepIndex = -1;
-        //    }
-        //    else
-        //    {
-        //        OnStepIndexChanged(StepIndex);
-        //    }
-        //}
+            if (_oriStepIndex > 0)
+            {
+                StepIndex = _oriStepIndex;
+                _oriStepIndex = -1;
+            }
+            else
+            {
+                OnStepIndexChanged(StepIndex);
+            }
+        }
 
         /// <summary>
         /// calls <see cref="OnStepIndexChanged(int)"/>

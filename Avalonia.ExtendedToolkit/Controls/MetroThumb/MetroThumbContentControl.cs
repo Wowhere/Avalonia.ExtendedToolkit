@@ -12,7 +12,7 @@ namespace Avalonia.ExtendedToolkit.Controls
     /// for titles or something else and 
     /// enables basic drag movement functionality.
     /// </summary>
-    public class MetroThumbContentControl : ContentControlEx//.edited, IMetroThumb
+    public class MetroThumbContentControl : ContentControlEx, IMetroThumb
     {
         /// <summary>
         /// style key for this control
@@ -85,6 +85,7 @@ namespace Avalonia.ExtendedToolkit.Controls
                 RemoveHandler(DragCompletedEvent, value);
             }
         }
+        public event EventHandler<RoutedEventArgs> DoubleTapped;
 
         /// <summary>
         /// Indicates that the left mouse button is pressed and is over the MetroThumbContentControl.

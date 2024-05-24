@@ -336,24 +336,23 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// sets is half and sets the pointer enter pseudo class
         /// </summary>
         /// <param name="e"></param>
-        //.orig
-        //protected override void Pointer(PointerEventArgs e)
-        //{
-        //    PointerPseudoClasses.ForEach(item => PseudoClasses.Remove(item));
+        protected override void OnPointerEntered(PointerEventArgs e)
+        {
+            PointerPseudoClasses.ForEach(item => PseudoClasses.Remove(item));
 
-        //    PseudoClasses.Add(PointerEnter_PseudoClass);
+            PseudoClasses.Add(PointerEnter_PseudoClass);
 
-        //    base.OnPointerEnter(e);
-        //    if (IsReadOnly)
-        //        return;
-        //    _isSentValue = false;
+            base.OnPointerEntered(e);
+            if (IsReadOnly)
+                return;
+            _isSentValue = false;
 
-        //    IsSelected = true;
-        //    var p = e.GetPosition(this);
-        //    IsHalf = p.X < Width / 2;
+            IsSelected = true;
+            var p = e.GetPosition(this);
+            IsHalf = p.X < Width / 2;
 
-        //    RaiseEvent(new RoutedEventArgs(SelectedChangedEvent) { Source = this });
-        //}
+            RaiseEvent(new RoutedEventArgs(SelectedChangedEvent) { Source = this });
+        }
 
         /// <summary>
         /// handles left button click
@@ -407,18 +406,17 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// sets pointerleave pseudo class
         /// </summary>
         /// <param name="e"></param>
-        //.orig
-        //protected override void OnPointerLeave(PointerEventArgs e)
-        //{
-        //    PointerPseudoClasses.ForEach(item => PseudoClasses.Remove(item));
+        protected override void OnPointerExited(PointerEventArgs e)
+        {
+            PointerPseudoClasses.ForEach(item => PseudoClasses.Remove(item));
 
-        //    PseudoClasses.Add(PointerLeave_PseudoClass);
+            PseudoClasses.Add(PointerLeave_PseudoClass);
 
-        //    base.OnPointerLeave(e);
-        //    if (IsReadOnly)
-        //        return;
+            base.OnPointerExited(e);
+            if (IsReadOnly)
+                return;
 
-        //    _isMouseLeftButtonDown = false;
-        //}
+            _isMouseLeftButtonDown = false;
+        }
     }
 }

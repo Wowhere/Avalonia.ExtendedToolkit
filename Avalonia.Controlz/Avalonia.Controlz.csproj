@@ -6,7 +6,6 @@
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
 		<IsPackable>true</IsPackable>
-    <EnableUnsafeBinaryFormatterSerialization>false</EnableUnsafeBinaryFormatterSerialization>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -29,9 +28,9 @@
 		<PackageReference Include="Avalonia.Controls.DataGrid" Version="11.0.10" />
 		<PackageReference Include="Avalonia.Desktop" Version="11.0.10" />
 		<PackageReference Include="Avalonia.ReactiveUI" Version="11.0.10" />
-		<PackageReference Include="Avalonia.Xaml.Behaviors" Version="11.0.10" />
-		<PackageReference Include="Avalonia.Xaml.Interactions" Version="11.0.10" />
-		<PackageReference Include="Avalonia.Xaml.Interactivity" Version="11.0.10" />
+		<PackageReference Include="Avalonia.Xaml.Behaviors" Version="11.0.10.9" />
+		<PackageReference Include="Avalonia.Xaml.Interactions" Version="11.0.10.9" />
+		<PackageReference Include="Avalonia.Xaml.Interactivity" Version="11.0.10.9" />
 		<PackageReference Include="GridExtra.Avalonia" Version="0.9.1" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	</ItemGroup>

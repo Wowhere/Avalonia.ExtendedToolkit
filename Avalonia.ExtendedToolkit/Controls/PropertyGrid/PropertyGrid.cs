@@ -43,12 +43,12 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid
             // Wire command bindings
             InitializeCommandBindings();
 
-            CurrentDescriptionProperty.Changed.AddClassHandler((Action<PropertyGrid, AvaloniaPropertyChangedEventArgs>)((o, e) => OnCurrentDescriptionChanged(o, e)));
-            LayoutProperty.Changed.AddClassHandler((Action<PropertyGrid, AvaloniaPropertyChangedEventArgs>)((o, e) => OnLayoutChanged(o, e)));
-            ShowReadOnlyPropertiesProperty.Changed.AddClassHandler((Action<PropertyGrid, AvaloniaPropertyChangedEventArgs>)((o, e) => OnShowReadOnlyPropertiesChanged(o, e)));
-            ShowAttachedPropertiesProperty.Changed.AddClassHandler((Action<PropertyGrid, AvaloniaPropertyChangedEventArgs>)((o, e) => OnShowAttachedPropertiesChanged(o, e)));
-            PropertyFilterProperty.Changed.AddClassHandler((Action<PropertyGrid, AvaloniaPropertyChangedEventArgs>)((o, e) => OnPropertyFilterChanged(o, e)));
-            PropertyDisplayModeProperty.Changed.AddClassHandler((Action<PropertyGrid, AvaloniaPropertyChangedEventArgs>)((o, e) => OnPropertyDisplayModePropertyChanged(o, e)));
+            CurrentDescriptionProperty.Changed.AddClassHandler<PropertyGrid>((Action<PropertyGrid, AvaloniaPropertyChangedEventArgs>)((o,     e) => OnCurrentDescriptionChanged(o, e)));
+            LayoutProperty.Changed.AddClassHandler<PropertyGrid>((Action<PropertyGrid, AvaloniaPropertyChangedEventArgs>)((o,                 e) => OnLayoutChanged(o, e)));
+            ShowReadOnlyPropertiesProperty.Changed.AddClassHandler<PropertyGrid>((Action<PropertyGrid, AvaloniaPropertyChangedEventArgs>)((o, e) => OnShowReadOnlyPropertiesChanged(o, e)));
+            ShowAttachedPropertiesProperty.Changed.AddClassHandler<PropertyGrid>((Action<PropertyGrid, AvaloniaPropertyChangedEventArgs>)((o, e) => OnShowAttachedPropertiesChanged(o, e)));
+            PropertyFilterProperty.Changed.AddClassHandler<PropertyGrid>((Action<PropertyGrid, AvaloniaPropertyChangedEventArgs>)((o,         e) => OnPropertyFilterChanged(o, e)));
+            PropertyDisplayModeProperty.Changed.AddClassHandler<PropertyGrid>((Action<PropertyGrid, AvaloniaPropertyChangedEventArgs>)((o,    e) => OnPropertyDisplayModePropertyChanged(o, e)));
         }
 
         private void RaisePropertyValueChangedEvent(PropertyItem property, object oldValue)

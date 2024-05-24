@@ -109,7 +109,7 @@ namespace Avalonia.ExtendedToolkit.Extensions
                     return result;
                 }
 
-                parent = (Control)parent.Parent;
+                parent = parent.Parent;
             }
             return default(T);
         }
@@ -125,7 +125,7 @@ namespace Avalonia.ExtendedToolkit.Extensions
             //if (control.Parent is T)
             //    return (T)control.Parent;
 
-            //IControl parent = control.Parent.Parent;
+            //Control parent = control.Parent.Parent;
 
             //while (parent != null)
             //{

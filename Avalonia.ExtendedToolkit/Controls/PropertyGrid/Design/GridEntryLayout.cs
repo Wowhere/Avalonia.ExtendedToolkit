@@ -17,11 +17,10 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Design
         /// uses the GridEntryLayoutContainer as Generator
         /// </summary>
         /// <returns></returns>
-        //.orig
-        //protected override IItemContainerGenerator CreateItemContainerGenerator()
-        //{
-        //    var result = new GridEntryLayoutContainer<T>(this);
-        //    return result;
-        //}
+        protected override ItemContainerGenerator CreateItemContainerGenerator()
+        {
+            var result = new GridEntryLayoutContainer<T>(this);
+            return result;
+        }
     }
 }

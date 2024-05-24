@@ -20,7 +20,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <returns></returns>
         public static string GetHeaderUpClass(Control element)
         {
-            return element.GetValue(HeaderUpClassProperty);
+            return element.GetValue<string>(HeaderUpClassProperty);
         }
 
         /// <summary>
@@ -46,7 +46,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <returns></returns>
         public static string GetHeaderDownClass(Control element)
         {
-            return element.GetValue(HeaderDownClassProperty);
+            return element.GetValue<string>(HeaderDownClassProperty);
         }
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <returns></returns>
         public static string GetHeaderLeftClass(Control element)
         {
-            return element.GetValue(HeaderLeftClassProperty);
+            return element.GetValue<string>(HeaderLeftClassProperty);
         }
 
         /// <summary>
@@ -98,7 +98,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <returns></returns>
         public static string GetHeaderRightClass(Control element)
         {
-            return element.GetValue(HeaderRightClassProperty);
+            return element.GetValue<string>(HeaderRightClassProperty);
         }
 
         /// <summary>

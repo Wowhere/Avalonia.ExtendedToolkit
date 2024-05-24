@@ -35,8 +35,6 @@
                                 Content="{TemplateBinding Header}"
                                 HorizontalContentAlignment="{TemplateBinding HorizontalAlignment}"
                                 Padding="{TemplateBinding Padding}"
-                                TextBlock.FontWeight="Bold" 
-                                TextBlock.FontSize="{TemplateBinding FontSize}"
                                 />
             </Grid>
           </Border>

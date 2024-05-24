@@ -3,6 +3,7 @@ using Avalonia.Controls.Primitives;
 using Avalonia.Controlz.Helper;
 using Avalonia.Data;
 using Avalonia.Media;
+using Avalonia.ReactiveUI;
 using System;
 using System.Diagnostics;
 
@@ -621,7 +622,7 @@ namespace Avalonia.Controlz.Controls
         //        {
         //            var sourceBinding = this.GetSubject(source);
 
-        //            InstancedBinding instancedBinding = new InstancedBinding(sourceBinding, BindingMode.TwoWay, BindingPriority.TemplatedParent);
+        //            InstancedBinding instancedBinding = new InstancedBinding(sourceBinding, BindingMode.TwoWay, BindingPriority.TemplatedParent, true);
         //            BindingOperations.Apply(this, target, instancedBinding, TemplatedParent);
         //        }
         //        catch (Exception ex)

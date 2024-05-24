@@ -16,7 +16,7 @@ namespace Avalonia.ExtendedToolkit.Extensions
         /// </summary>
         public static bool GetIsAttached(Control element)
         {
-            return element.GetValue(IsAttachedProperty);
+            return element.GetValue<bool>(IsAttachedProperty);
         }
 
         /// <summary>
@@ -30,7 +30,7 @@ namespace Avalonia.ExtendedToolkit.Extensions
               {
                   element?.InvalidateArrange();
                   element?.InvalidateMeasure();
-                  //element?.InvalidateStyles();
+                  element?.InvalidateStyles();
                   element?.InvalidateVisual();
               };
 

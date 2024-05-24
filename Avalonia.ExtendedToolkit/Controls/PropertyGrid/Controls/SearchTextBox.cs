@@ -170,8 +170,8 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Controls
             {
                 iconBorder.PointerPressed += IconBorderMouseLeftButtonDown;
                 iconBorder.PointerReleased += IconBorderMouseLeftButtonUp;
-                //.edited
                 iconBorder.PointerExited += IconBorderMouseLeave;
+                ;
             }
             base.OnApplyTemplate(e);
         }
@@ -183,7 +183,7 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Controls
 
         private void IconBorderMouseLeftButtonUp(object sender, Input.PointerReleasedEventArgs e)
         {
-            var prop = e.GetCurrentPoint(sender as Visual).Properties;
+            var prop = e.GetCurrentPoint(sender as IVisual).Properties;
             if (IsMouseLeftButtonDown==false)
             {
                 return;
@@ -207,7 +207,7 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Controls
 
         private void IconBorderMouseLeftButtonDown(object sender, Input.PointerPressedEventArgs e)
         {
-            var prop = e.GetCurrentPoint(sender as Visual).Properties;
+            var prop = e.GetCurrentPoint(sender as IVisual).Properties;
             if (prop.IsLeftButtonPressed)
             {
                 IsMouseLeftButtonDown = true;
@@ -252,15 +252,14 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Controls
         /// that exist on the element have had their effective values changed.
         /// </summary>
         /// <param name="e">Arguments for the associated event.</param>
-        //.orig
-    //    protected override void OnPropertyChanged<T>(AvaloniaPropertyChangedEventArgs<T> e)
-    //    {
-    //        if(e.Property== IsVisibleProperty)
-    //        {
-    //            Text = string.Empty;
-    //        }
+        protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs e)
+        {
+            if(e.Property== IsVisibleProperty)
+            {
+                Text = string.Empty;
+            }
 
-    //        base.OnPropertyChanged(e);
-    //    }
+            base.OnPropertyChanged(e);
+        }
     }
 }

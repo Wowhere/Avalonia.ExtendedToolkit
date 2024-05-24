@@ -21,7 +21,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <returns></returns>
         public static CharacterCasing GetContentCharacterCasing(Control element)
         {
-            return element.GetValue(ContentCharacterCasingProperty);
+            return element.GetValue<CharacterCasing>(ContentCharacterCasingProperty);
         }
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <returns></returns>
         public static CornerRadius GetCornerRadius(Control element)
         {
-            return element.GetValue(CornerRadiusProperty);
+            return element.GetValue<CornerRadius>(CornerRadiusProperty);
         }
 
         /// <summary>
@@ -73,7 +73,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <returns></returns>
         public static IBrush GetFocusBorderBrush(Control element)
         {
-            return element.GetValue(FocusBorderBrushProperty);
+            return element.GetValue<IBrush>(FocusBorderBrushProperty);
         }
 
         /// <summary>
@@ -99,7 +99,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <returns></returns>
         public static Thickness GetFocusBorderThickness(Control element)
         {
-            return element.GetValue(FocusBorderThicknessProperty);
+            return element.GetValue<Thickness>(FocusBorderThicknessProperty);
         }
 
         /// <summary>
@@ -125,7 +125,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <returns></returns>
         public static Thickness GetHeaderMargin(Control element)
         {
-            return element.GetValue(HeaderMarginProperty);
+            return element.GetValue<Thickness>(HeaderMarginProperty);
         }
 
         /// <summary>
@@ -151,7 +151,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <returns></returns>
         public static FontFamily GetHeaderFontFamily(Control element)
         {
-            return element.GetValue(HeaderFontFamilyProperty);
+            return element.GetValue<FontFamily>(HeaderFontFamilyProperty);
         }
 
         /// <summary>
@@ -177,7 +177,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <returns></returns>
         public static double GetHeaderFontSize(Control element)
         {
-            return element.GetValue(HeaderFontSizeProperty);
+            return element.GetValue<double>(HeaderFontSizeProperty);
         }
 
         /// <summary>
@@ -203,7 +203,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <returns></returns>
         public static FontWeight GetHeaderFontWeight(Control element)
         {
-            return element.GetValue(HeaderFontWeightProperty);
+            return element.GetValue<FontWeight>(HeaderFontWeightProperty);
         }
 
         /// <summary>

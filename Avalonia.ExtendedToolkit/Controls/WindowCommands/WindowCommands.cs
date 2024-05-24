@@ -349,8 +349,8 @@ namespace Avalonia.ExtendedToolkit.Controls
                 return windowCommandsItem;
             }
 
-            Control control = item as Control;
-            Control parent = (Control)control.Parent;
+            IControl control = item as IControl;
+            IControl parent = control.Parent;
 
             var index = ItemContainerGenerator.IndexFromContainer(parent);
             return (WindowCommandsItem)ItemContainerGenerator.ContainerFromIndex(index);

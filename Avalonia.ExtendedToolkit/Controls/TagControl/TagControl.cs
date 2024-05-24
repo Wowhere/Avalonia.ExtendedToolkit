@@ -108,20 +108,19 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <summary>
         /// sets the selection on left or right button click
         /// </summary>
-        //.orig
-        //protected override void OnPointerPressed(PointerPressedEventArgs e)
-        //{
-        //    base.OnPointerPressed(e);
+        protected override void OnPointerPressed(PointerPressedEventArgs e)
+        {
+            base.OnPointerPressed(e);
 
-        //    var prop = e.GetCurrentPoint(this).Properties;
+            var prop = e.GetCurrentPoint(this).Properties;
 
-        //    if (prop.IsLeftButtonPressed || prop.IsRightButtonPressed)
-        //    {
-        //        e.Handled = UpdateSelectionFromEventSource(
-        //            e.Source,
-        //            true);
-        //    }
-        //}
+            if (prop.IsLeftButtonPressed || prop.IsRightButtonPressed)
+            {
+                e.Handled = UpdateSelectionFromEventSource(
+                    e.Source,
+                    true);
+            }
+        }
 
         /// <summary>
         /// updates the selection from container

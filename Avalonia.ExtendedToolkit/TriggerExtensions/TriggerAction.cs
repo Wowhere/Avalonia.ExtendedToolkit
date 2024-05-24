@@ -7,7 +7,7 @@ namespace Avalonia.ExtendedToolkit.TriggerExtensions
     /// <summary>
     /// class which implements <see cref="IBehavior"/> and <see cref="IAction"/>
     /// </summary>
-    public abstract class TriggerAction :Animatable, IBehavior, IAction
+    public abstract class TriggerAction :Animatable, Behavior, IAction
     {
         private AvaloniaObject _associatedObject;
         private Type associatedObjectTypeConstraint;
@@ -128,10 +128,10 @@ namespace Avalonia.ExtendedToolkit.TriggerExtensions
 
             return true;
         }
-        //.orig
-        //public void Attach(AvaloniaObject associatedObject)
-        //{
-        //    _associatedObject = associatedObject;
-        //}
+
+        public void Attach(IAvaloniaObject associatedObject)
+        {
+            _associatedObject = associatedObject;
+        }
     }
 }
