@@ -12,7 +12,7 @@ namespace Avalonia.ExtendedToolkit.Controls
     /// for titles or something else and 
     /// enables basic drag movement functionality.
     /// </summary>
-    public class MetroThumbContentControl : ContentControlEx, IMetroThumb
+    public class MetroThumbContentControl : ContentControlEx//.edited, IMetroThumb
     {
         /// <summary>
         /// style key for this control

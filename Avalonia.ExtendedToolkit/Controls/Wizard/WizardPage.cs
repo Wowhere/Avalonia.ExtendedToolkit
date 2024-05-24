@@ -392,18 +392,20 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// 
         /// </summary>
         /// <param name="e"></param>
-        protected override void OnPointerEnter(PointerEventArgs e)
-        {
-            base.OnPointerEnter(e);
-        }
+        //.orig
+        //protected override void OnPointerEnter(PointerEventArgs e)
+        //{
+        //    base.OnPointerEnter(e);
+        //}
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="e"></param>
-        protected override void OnPointerLeave(PointerEventArgs e)
-        {
-            base.OnPointerLeave(e);
-        }
+        //.orig
+        //protected override void OnPointerLeave(PointerEventArgs e)
+        //{
+        //    base.OnPointerLeave(e);
+        //}
     }
 }

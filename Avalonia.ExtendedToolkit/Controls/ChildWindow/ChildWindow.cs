@@ -170,7 +170,7 @@ namespace Avalonia.ExtendedToolkit.Controls
                 // first focus itself
                 this.Focus();
 
-                var elementToFocus = this.FocusedElement ?? /*TreeHelper.FindChildren<UIElement>(this)*/VisualTree.VisualExtensions.GetVisualChildren(this).OfType<IControl>().FirstOrDefault(c => c.Focusable);
+                var elementToFocus = this.FocusedElement ?? /*TreeHelper.FindChildren<UIElement>(this)*/VisualTree.VisualExtensions.GetVisualChildren(this).OfType<Control>().FirstOrDefault(c => c.Focusable);
                 if (this.ShowCloseButton && this._closeButton != null && elementToFocus == null)
                 {
                     this._closeButton.SetValue(FocusableProperty, true);
@@ -237,7 +237,7 @@ namespace Avalonia.ExtendedToolkit.Controls
             if (e.Handled == false)
             {
                 var container = this.Parent as Panel;
-                var elementOnTop = container?.Children.OfType<IControl>().OrderBy(c => c.GetValue(Panel.ZIndexProperty)).LastOrDefault();
+                var elementOnTop = container?.Children.OfType<Control>().OrderBy(c => c.GetValue(Panel.ZIndexProperty)).LastOrDefault();
 
                 if (elementOnTop != null && !Equals(elementOnTop, this))
                 {

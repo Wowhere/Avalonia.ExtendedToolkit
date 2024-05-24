@@ -21,11 +21,12 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         public Wizard()
         {
-            Items = new AvaloniaList<WizardPage>();
-
-            CurrentPageProperty.Changed.AddClassHandler((Action<Wizard, AvaloniaPropertyChangedEventArgs>)((o, e) => OnCurrentPageChanged(o, e)));
-            ItemsPanelProperty.Changed.AddClassHandler((Action<Wizard, AvaloniaPropertyChangedEventArgs>)((o, e) => OnItemChanged(o, e)));
-            ItemsProperty.Changed.AddClassHandler((Action<Wizard, AvaloniaPropertyChangedEventArgs>)((o, e) => OnItemSourceChanged(o, e)));
+            //.edited
+            ItemsSource = new AvaloniaList<WizardPage>();
+            //.orig
+            //CurrentPageProperty.Changed.AddClassHandler((Action<Wizard, AvaloniaPropertyChangedEventArgs>)((o, e) => OnCurrentPageChanged(o, e)));
+            //ItemsPanelProperty.Changed.AddClassHandler((Action<Wizard, AvaloniaPropertyChangedEventArgs>)((o, e) => OnItemChanged(o, e)));
+            //ItemsProperty.Changed.AddClassHandler((Action<Wizard, AvaloniaPropertyChangedEventArgs>)((o, e) => OnItemSourceChanged(o, e)));
 
             Initialized += (o, e) =>
             {
@@ -51,7 +52,8 @@ namespace Avalonia.ExtendedToolkit.Controls
         private void OnItemSourceChanged(Wizard wizard, AvaloniaPropertyChangedEventArgs e)
         {
             if (Items == null)
-                Items = new AvaloniaList<WizardPage>();
+                //.edited
+                ItemsSource = new AvaloniaList<WizardPage>();
 
             if (e.NewValue == null)
                 return;
@@ -66,7 +68,8 @@ namespace Avalonia.ExtendedToolkit.Controls
                     WizardPage wizardPage = new WizardPage();
                     wizardPage.DataContext = vm;
                     wizardPage.CanCancel = CanCancel;
-                    (Items as AvaloniaList<WizardPage>).Add(wizardPage);
+                    //.edited
+                    (ItemsSource as AvaloniaList<WizardPage>).Add(wizardPage);
                 }
             }
         }
@@ -75,7 +78,8 @@ namespace Avalonia.ExtendedToolkit.Controls
         {
             if (Items == null)
             {
-                Items = new AvaloniaList<WizardPage>();
+                //.edited
+                ItemsSource = new AvaloniaList<WizardPage>();
             }
 
             if (e.NewValue == null)
@@ -89,26 +93,27 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// fires can execute on the commands
         /// </summary>
         /// <param name="e"></param>
-        protected override void OnPropertyChanged<T>(AvaloniaPropertyChangedEventArgs<T> e)
-        {
-            base.OnPropertyChanged(e);
-            if (
-                    e.Property.Name == nameof(CanSelectNextPage)
-                    || (e.Property.Name == nameof(CanHelp))
-                    || (e.Property.Name == nameof(CanFinish))
-                    || (e.Property.Name == nameof(CanCancel))
-                    || (e.Property.Name == nameof(CanSelectPreviousPage))
-                    || (e.Property.Name == nameof(CurrentPage))
-                )
-            {
-                CancelCommand?.CanExecute(CanCancel);
-                FinishCommand?.CanExecute(CanFinish);
-                PreviousPageCommand?.CanExecute(CanSelectPreviousPage);
-                NextPageCommand?.CanExecute(CanSelectNextPage);
-                HelpCommand?.CanExecute(CanHelp);
-                UpdateButtonState();
-            }
-        }
+        //.orig
+        //protected override void OnPropertyChanged<T>(AvaloniaPropertyChangedEventArgs<T> e)
+        //{
+        //    base.OnPropertyChanged(e);
+        //    if (
+        //            e.Property.Name == nameof(CanSelectNextPage)
+        //            || (e.Property.Name == nameof(CanHelp))
+        //            || (e.Property.Name == nameof(CanFinish))
+        //            || (e.Property.Name == nameof(CanCancel))
+        //            || (e.Property.Name == nameof(CanSelectPreviousPage))
+        //            || (e.Property.Name == nameof(CurrentPage))
+        //        )
+        //    {
+        //        CancelCommand?.CanExecute(CanCancel);
+        //        FinishCommand?.CanExecute(CanFinish);
+        //        PreviousPageCommand?.CanExecute(CanSelectPreviousPage);
+        //        NextPageCommand?.CanExecute(CanSelectNextPage);
+        //        HelpCommand?.CanExecute(CanHelp);
+        //        UpdateButtonState();
+        //    }
+        //}
 
         /// <summary>
         /// if CancelButtonClosesWindow is true the parent window is closed

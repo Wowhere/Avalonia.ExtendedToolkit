@@ -172,8 +172,8 @@ namespace Avalonia.ExtendedToolkit.Controls
             }
 
             btnMenu = e.NameScope.Find<ToggleButton>("toggleMenu");
-
-            btnMenu.PointerLeave += (o, e) =>
+            //.edited
+            btnMenu.PointerExited += (o, e) =>
             {
                 e.Pointer.Capture(null);
             };
@@ -189,7 +189,8 @@ namespace Avalonia.ExtendedToolkit.Controls
 
                 if (btnMenu.ContextMenu.IsOpen == false)
                 {
-                    btnMenu.ContextMenu.Items = OverflowMenuItems;
+                    //.edited
+                    btnMenu.ContextMenu.ItemsSource = OverflowMenuItems;
                     try
                     {
                         //alway set to null otherwise an exeption is raised on second call
@@ -300,8 +301,8 @@ namespace Avalonia.ExtendedToolkit.Controls
                 MaxWidth = MinimizedWidth + (CanResize ? 4 : 0);
                 RaiseEvent(new RoutedEventArgs(CollapsedEvent));
             }
-
-            RaisePropertyChanged(IsOverflowVisibleProperty, !IsOverflowVisible, IsOverflowVisible);
+            //.orig
+            //RaisePropertyChanged(IsOverflowVisibleProperty, !IsOverflowVisible, IsOverflowVisible);
         }
 
         /// <summary>
@@ -329,8 +330,9 @@ namespace Avalonia.ExtendedToolkit.Controls
 
             _maximizedSections = new ObservableCollection<OutlookSection>();
             _minimizedSections = new ObservableCollection<OutlookSection>();
-            Items = new ObservableCollection<OutlookSection>();
-            (Items as ObservableCollection<OutlookSection>).CollectionChanged += new NotifyCollectionChangedEventHandler(SectionsCollectionChanged);
+            //.edited
+            ItemsSource = new ObservableCollection<OutlookSection>();
+            (ItemsSource as ObservableCollection<OutlookSection>).CollectionChanged += new NotifyCollectionChangedEventHandler(SectionsCollectionChanged);
 
             WidthProperty.Changed.AddClassHandler<OutlookBar>((o, e) => SizeChanged(o, e));
             HeightProperty.Changed.AddClassHandler<OutlookBar>((o, e) => SizeChanged(o, e));
@@ -349,7 +351,8 @@ namespace Avalonia.ExtendedToolkit.Controls
             IsPopupVisibleProperty.Changed.AddClassHandler<OutlookBar>((o, e) => IsPopupVisibleChanged(o, e));
             SelectedSectionIndexProperty.Changed.AddClassHandler<OutlookBar>((o, e) => SelectedIndexPropertyChanged(o, e));
             SelectedSectionProperty.Changed.AddClassHandler<OutlookBar>((o, e) => SelectedSectionPropertyChanged(o, e));
-            IsOverflowVisibleProperty.Changed.AddClassHandler<OutlookBar>((o, e) => OverflowVisiblePropertyChanged(o, e));
+            //.orig
+            //IsOverflowVisibleProperty.Changed.AddClassHandler<OutlookBar>((o, e) => OverflowVisiblePropertyChanged(o, e));
 
             CollapseCommand = ReactiveCommand.Create<object>(x => CollapseCommandExecuted(x), outputScheduler: RxApp.MainThreadScheduler);
             ShowPopupCommand = ReactiveCommand.Create<object>(x => ShowPopupCommandExecuted(x), outputScheduler: RxApp.MainThreadScheduler);
@@ -430,7 +433,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         {
             if (OdcExpanderClasses != null)
             {
-                foreach (var item in Items.OfType<IControl>().SelectMany(x => x.GetLogicalChildren().OfType<OdcExpander>()))
+                foreach (var item in Items.OfType<Control>().SelectMany(x => x.GetLogicalChildren().OfType<OdcExpander>()))
                 {
                     foreach (string cls in OdcExpanderClasses.ToList())
                         item.Classes.Add(cls);
@@ -813,16 +816,17 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// create an ItemContainerGenerator from outlooksection
         /// </summary>
         /// <returns></returns>
-        protected override IItemContainerGenerator CreateItemContainerGenerator()
-        {
-            var result = new ItemContainerGenerator<OutlookSection>
-                (
-                    this,
-                    OutlookSection.ContentProperty,
-                    OutlookSection.ContentTemplateProperty
-                );
+        //.orig
+        //protected override ItemContainerGenerator CreateItemContainerGenerator()
+        //{
+        //    var result = new ItemContainerGenerator<OutlookSection>
+        //        (
+        //            this,
+        //            OutlookSection.ContentProperty,
+        //            OutlookSection.ContentTemplateProperty
+        //        );
 
-            return result;
-        }
+        //    return result;
+        //}
     }
 }

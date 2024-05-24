@@ -9,7 +9,7 @@ namespace Avalonia.ExtendedToolkit.Controls
     /// <summary>
     /// metro thumb
     /// </summary>
-    public class MetroThumb : Thumb, IMetroThumb
+    public class MetroThumb : Thumb//.edited, IMetroThumb
     {
         /// <summary>
         /// style key for this control

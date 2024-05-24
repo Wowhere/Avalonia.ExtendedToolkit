@@ -30,7 +30,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         public BreadcrumbButton()
         {
             ImageProperty.Changed.AddClassHandler<BreadcrumbButton>((o, e) => OnImageChanged(o, e));
-            ItemsProperty.Changed.AddClassHandler<BreadcrumbButton>((o, e) => OnItemsCollectionChanged(o, e));
+            //ItemsProperty.Changed.AddClassHandler<BreadcrumbButton>((o, e) => OnItemsCollectionChanged(o, e));
 
             SelectedItemProperty.Changed.AddClassHandler<BreadcrumbButton>(((o, e) => OnSelectedItemChanged(o, e)));
             IsDropDownPressedProperty.Changed.AddClassHandler<BreadcrumbButton>(((o, e) => OverflowPressedChanged(o, e)));
@@ -56,84 +56,85 @@ namespace Avalonia.ExtendedToolkit.Controls
 
         private void OnImageChanged(BreadcrumbButton o, AvaloniaPropertyChangedEventArgs e)
         {
-            HasImage = e.NewValue is IBitmap;
+            HasImage = e.NewValue is Bitmap;
         }
 
         /// <summary>
         /// sets the context menu
         /// </summary>
         /// <param name="e"></param>
-        protected override void ItemsChanged(AvaloniaPropertyChangedEventArgs e)
-        {
-            base.ItemsChanged(e);
+        //.orig
+        //protected override void ItemsChanged(AvaloniaPropertyChangedEventArgs e)
+        //{
+        //    base.ItemsChanged(e);
 
-            if (contextMenu != null && e.NewValue != null)
-            {
-                var currentItems = Items.OfType<object>().Where(x => x != null).ToList();
+        //    if (contextMenu != null && e.NewValue != null)
+        //    {
+        //        var currentItems = Items.OfType<object>().Where(x => x != null).ToList();
 
-                //dropPanel.ContextMenu.IsVisible = true;
+        //        //dropPanel.ContextMenu.IsVisible = true;
 
-                if (currentItems.Count == 0)
-                {
-                    //    dropPanel.ContextMenu.IsVisible = false;
-                    return;
-                }
+        //        if (currentItems.Count == 0)
+        //        {
+        //            //    dropPanel.ContextMenu.IsVisible = false;
+        //            return;
+        //        }
 
-                contextMenu.ItemTemplate = ItemTemplate;
+        //        contextMenu.ItemTemplate = ItemTemplate;
 
-                //if (contextMenu.IsOpen)
-                //    contextMenu.Close();
+        //        //if (contextMenu.IsOpen)
+        //        //    contextMenu.Close();
 
-                var items = new AvaloniaList<object>();
-                contextMenu.Items = new AvaloniaList<object>();
+        //        var items = new AvaloniaList<object>();
+        //        contextMenu.Items = new AvaloniaList<object>();
 
-                foreach (object item in Items)
-                {
-                    if (item == null)
-                        continue;
+        //        foreach (object item in Items)
+        //        {
+        //            if (item == null)
+        //                continue;
 
-                    if (!(item is MenuItem) && !(item is Separator))
-                    {
-                        items.Add(CreateMenuItem(item));
-                    }
-                    else
-                    {
-                        if (item is Separator)
-                        {
-                            items.Add(new Separator());
-                        }
-                        else if (item is MenuItem)
-                        {
-                            MenuItem originalMenuItem = item as MenuItem;
-                            originalMenuItem.Click -= item_Click;
-                            Image image = originalMenuItem.Icon as Image;
-                            MenuItem menuItem = new MenuItem();
-                            menuItem.DataContext = originalMenuItem.DataContext;
-                            menuItem.Header = originalMenuItem.Header;
-                            menuItem.Icon = image;
-                            menuItem.Click += item_Click;
-                            if (menuItem.DataContext != null && menuItem.DataContext.Equals(SelectedItem))
-                            {
-                                menuItem.FontWeight = FontWeight.Bold;
-                            }
-                            menuItem.ItemTemplate = ItemTemplate;
-                            items.Add(menuItem);
-                        }
-                        else
-                        {
-                            Debug.WriteLine("Error [contextMenu_Opened]: item is not a MenuItem or Seperator");
-                        }
-                    }
-                }
+        //            if (!(item is MenuItem) && !(item is Separator))
+        //            {
+        //                items.Add(CreateMenuItem(item));
+        //            }
+        //            else
+        //            {
+        //                if (item is Separator)
+        //                {
+        //                    items.Add(new Separator());
+        //                }
+        //                else if (item is MenuItem)
+        //                {
+        //                    MenuItem originalMenuItem = item as MenuItem;
+        //                    originalMenuItem.Click -= item_Click;
+        //                    Image image = originalMenuItem.Icon as Image;
+        //                    MenuItem menuItem = new MenuItem();
+        //                    menuItem.DataContext = originalMenuItem.DataContext;
+        //                    menuItem.Header = originalMenuItem.Header;
+        //                    menuItem.Icon = image;
+        //                    menuItem.Click += item_Click;
+        //                    if (menuItem.DataContext != null && menuItem.DataContext.Equals(SelectedItem))
+        //                    {
+        //                        menuItem.FontWeight = FontWeight.Bold;
+        //                    }
+        //                    menuItem.ItemTemplate = ItemTemplate;
+        //                    items.Add(menuItem);
+        //                }
+        //                else
+        //                {
+        //                    Debug.WriteLine("Error [contextMenu_Opened]: item is not a MenuItem or Seperator");
+        //                }
+        //            }
+        //        }
 
-                contextMenu.Items = items;
+        //        contextMenu.Items = items;
 
-                //if(contextMenuWasOpen)
-                //{
-                //    contextMenu.Open(dropPanel);
-                //}
-            }
-        }
+        //        //if(contextMenuWasOpen)
+        //        //{
+        //        //    contextMenu.Open(dropPanel);
+        //        //}
+        //    }
+        //}
 
         private void OverflowPressedChanged(BreadcrumbButton o, AvaloniaPropertyChangedEventArgs e)
         {
@@ -200,10 +201,11 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// sets <see cref="IsPressed"/> to false
         /// </summary>
         /// <param name="e"></param>
-        protected override void OnPointerLeave(PointerEventArgs e)
-        {
-            IsPressed = false;
-        }
+        //.orig
+        //protected override void OnPointerLeave(PointerEventArgs e)
+        //{
+        //    IsPressed = false;
+        //}
 
         /// <summary>
         /// sets <see cref="IsPressed"/> to true
@@ -253,54 +255,56 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// updates <see cref="IsPressed"/> 
         /// </summary>
         /// <param name="e"></param>
-        protected override void OnPointerEnter(PointerEventArgs e)
-        {
-            var prop = e.GetCurrentPoint(this).Properties;
+        //.orig
+        //protected override void OnPointerEnter(PointerEventArgs e)
+        //{
+        //    var prop = e.GetCurrentPoint(this).Properties;
 
-            isPressed = prop.IsLeftButtonPressed;
-            IVisual parent = TemplatedParent as IVisual;
-            while (parent != null && !(parent is BreadcrumbBar))
-            {
-                parent = VisualTree.VisualExtensions.GetVisualParent(parent);
-            }
+        //    isPressed = prop.IsLeftButtonPressed;
+        //    Visual parent = TemplatedParent as Visual;
+        //    while (parent != null && !(parent is BreadcrumbBar))
+        //    {
+        //        parent = VisualTree.VisualExtensions.GetVisualParent(parent);
+        //    }
 
-            BreadcrumbBar bar = parent as BreadcrumbBar;
-            if (bar != null/* && bar.IsKeyboardFocusWithin*/)  //?
-            {
-                Focus();
-            }
+        //    BreadcrumbBar bar = parent as BreadcrumbBar;
+        //    if (bar != null/* && bar.IsKeyboardFocusWithin*/)  //?
+        //    {
+        //        Focus();
+        //    }
 
-            IsPressed = isPressed;
+        //    IsPressed = isPressed;
 
-            base.OnPointerEnter(e);
-        }
+        //    base.OnPointerEnter(e);
+        //}
 
         /// <summary>
         /// gets some controls from the style
         /// </summary>
         /// <param name="e"></param>
-        protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
-        {
-            dropDownBtn = e.NameScope.Find<Control>(partDropDown);
+        //.orig
+        //protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
+        //{
+        //    dropDownBtn = e.NameScope.Find<Control>(partDropDown);
 
-            dropPanel = e.NameScope.Find<Control>("borderBtn");
+        //    dropPanel = e.NameScope.Find<Control>("borderBtn");
 
-            contextMenu = e.NameScope.Find<ContextMenu>(partMenu);
-            if (contextMenu != null)
-            {
-                //contextMenu.Opened += new RoutedEventHandler(contextMenu_Opened);
-                contextMenu.PropertyChanged += ContextMenu_PropertyChanged;
-                //contextMenu.Items = Items;
-            }
-            if (dropDownBtn != null)
-            {
-                dropDownBtn.PointerPressed += dropDownBtn_MouseDown;// += new MouseButtonEventHandler(dropDownBtn_MouseDown);
-            }
+        //    contextMenu = e.NameScope.Find<ContextMenu>(partMenu);
+        //    if (contextMenu != null)
+        //    {
+        //        //contextMenu.Opened += new RoutedEventHandler(contextMenu_Opened);
+        //        contextMenu.PropertyChanged += ContextMenu_PropertyChanged;
+        //        //contextMenu.Items = Items;
+        //    }
+        //    if (dropDownBtn != null)
+        //    {
+        //        dropDownBtn.PointerPressed += dropDownBtn_MouseDown;// += new MouseButtonEventHandler(dropDownBtn_MouseDown);
+        //    }
 
-            base.OnApplyTemplate(e);
+        //    base.OnApplyTemplate(e);
 
-            RaisePropertyChanged(ItemsProperty, new Data.Optional<IEnumerable>(), new Data.Optional<IEnumerable>(Items));
-        }
+        //    RaisePropertyChanged(ItemsProperty, new Data.Optional<IEnumerable>(), new Data.Optional<IEnumerable>(Items));
+        //}
 
         private void dropDownBtn_MouseDown(object sender, EventArgs e)
         {
@@ -322,27 +326,27 @@ namespace Avalonia.ExtendedToolkit.Controls
                 //already parent exception
             }
         }
+        //.orig
+        //private void ContextMenu_PropertyChanged(object sender, AvaloniaPropertyChangedEventArgs e)
+        //{
+        //    if (e.Property.Name == nameof(ContextMenu.IsOpen))
+        //    {
+        //        ContextMenu contextMenu = sender as ContextMenu;
 
-        private void ContextMenu_PropertyChanged(object sender, AvaloniaPropertyChangedEventArgs e)
-        {
-            if (e.Property.Name == nameof(ContextMenu.IsOpen))
-            {
-                ContextMenu contextMenu = sender as ContextMenu;
+        //        var parent = VisualTree.VisualExtensions.GetVisualParent<BreadcrumbBar>(this.Parent);
 
-                var parent = VisualTree.VisualExtensions.GetVisualParent<BreadcrumbBar>(this.Parent);
-
-                if (contextMenu.IsOpen)
-                {
-                    //contextMenu.SelectedItem = contextMenu.Items.OfType<object>().FirstOrDefault();
-                    //contextMenu_Opened(sender, new RoutedEventArgs());
-                    //contextMenu.Focus();
-                }
-                else
-                {
-                    //contextMenu.Focusable = false;
-                }
-            }
-        }
+        //        if (contextMenu.IsOpen)
+        //        {
+        //            //contextMenu.SelectedItem = contextMenu.Items.OfType<object>().FirstOrDefault();
+        //            //contextMenu_Opened(sender, new RoutedEventArgs());
+        //            //contextMenu.Focus();
+        //        }
+        //        else
+        //        {
+        //            //contextMenu.Focusable = false;
+        //        }
+        //    }
+        //}
 
         //TODO: Menu needs too long to render if there are too many items (> 20000).
         private void contextMenu_Opened(object sender, RoutedEventArgs e)

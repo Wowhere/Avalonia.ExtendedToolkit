@@ -78,7 +78,8 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Controls
                 return;
 
             dropdown.SelectedItem = newValue.Value;
-            dropdown.Items = newValue.ParentProperty.StandardValues;
+            //.edited
+            dropdown.ItemsSource = newValue.ParentProperty.StandardValues;
             dropdown.WrapEventHandlers(newValue);
         }
 

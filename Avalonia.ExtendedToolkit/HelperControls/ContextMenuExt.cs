@@ -51,8 +51,9 @@ namespace Avalonia.ExtendedToolkit.Controls
                 {
                     PlacementMode = PlacementMode.Pointer,
                     PlacementTarget = control,
-                    StaysOpen = false,
-                    ObeyScreenEdges = true
+                    //.orig
+                    //StaysOpen = false,
+                    //ObeyScreenEdges = true
                 };
 
                 _popup.Opened += PopupOpened;
@@ -71,7 +72,8 @@ namespace Avalonia.ExtendedToolkit.Controls
 
             RaiseEvent(new RoutedEventArgs
             {
-                RoutedEvent = MenuOpenedEvent,
+                //.orig
+                //RoutedEvent = MenuOpenedEvent,
                 Source = this,
             });
         }
@@ -103,7 +105,8 @@ namespace Avalonia.ExtendedToolkit.Controls
 
             RaiseEvent(new RoutedEventArgs
             {
-                RoutedEvent = MenuClosedEvent,
+                //.orig
+                //RoutedEvent = MenuClosedEvent,
                 Source = this,
             });
         }
