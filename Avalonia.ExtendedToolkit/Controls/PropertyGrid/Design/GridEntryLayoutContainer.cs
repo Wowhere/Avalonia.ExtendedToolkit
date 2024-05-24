@@ -27,7 +27,7 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Design
         /// </summary>
         /// <param name="element"></param>
         /// <returns></returns>
-        protected override IControl CreateContainer(object element)
+        protected override Control CreateContainer(object element)
         {
             if (element is GridEntryContainer)
             {

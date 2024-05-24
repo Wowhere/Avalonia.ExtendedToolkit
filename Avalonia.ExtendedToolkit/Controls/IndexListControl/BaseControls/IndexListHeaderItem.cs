@@ -26,8 +26,8 @@ namespace Avalonia.ExtendedToolkit.Controls
             //AvaloniaProperty.Register<IndexList, bool>(nameof(ShowEmptyItems));
             IndexList.ShowEmptyItemsProperty.AddOwner<IndexListHeaderItem>();
 
-        private static readonly ITemplate<IPanel> DefaultPanel =
-            new FuncTemplate<IPanel>(() => new StackPanel());
+        private static readonly ITemplate<Panel> DefaultPanel =
+            new FuncTemplate<Panel>(() => new StackPanel());
 
         /// <summary>
         /// overrides some default values
@@ -42,7 +42,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// generates <see cref="IndexListItem"/> subitems
         /// </summary>
         /// <returns></returns>
-        protected override IItemContainerGenerator CreateItemContainerGenerator()
+        protected override ItemContainerGenerator CreateItemContainerGenerator()
         {
             return new ItemContainerGenerator<IndexListItem>(
                 this,

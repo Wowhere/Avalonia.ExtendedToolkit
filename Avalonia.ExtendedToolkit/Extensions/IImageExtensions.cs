@@ -29,11 +29,11 @@ namespace Avalonia.ExtendedToolkit.Extensions
                 var dpiVector = new Vector(96, 96);
                 using (var renderBitmap = new RenderTargetBitmap(pixelSize, dpiVector))
                 {
-                    using (var context = new DrawingContext(renderBitmap.CreateDrawingContext(null)))
+                    using (var context = new DrawingContext(renderBitmap.CreateDrawingContext()))
                     {
                         var source = new Rect(0, 0, croppedBitmap.Size.Width, croppedBitmap.Size.Height);
                         var rect = new Rect(croppedBitmap.SourceRect.X, croppedBitmap.SourceRect.Y, croppedBitmap.SourceRect.Width, croppedBitmap.SourceRect.Height);
-                        croppedBitmap.Draw(context, source, rect, Avalonia.Visuals.Media.Imaging.BitmapInterpolationMode.HighQuality);
+                        croppedBitmap.Draw(context, source, rect);
                     }
                     renderBitmap.Save(path);
                 }
@@ -63,7 +63,7 @@ namespace Avalonia.ExtendedToolkit.Extensions
                     {
                         var source = new Rect(0, 0, croppedBitmap.Size.Width, croppedBitmap.Size.Height);
                         var rect = new Rect(croppedBitmap.SourceRect.X, croppedBitmap.SourceRect.Y, croppedBitmap.SourceRect.Width, croppedBitmap.SourceRect.Height);
-                        croppedBitmap.Draw(context, source, rect, Avalonia.Visuals.Media.Imaging.BitmapInterpolationMode.HighQuality);
+                        croppedBitmap.Draw(context, source, rect);
                     }
                     renderBitmap.Save(stream);
                 }

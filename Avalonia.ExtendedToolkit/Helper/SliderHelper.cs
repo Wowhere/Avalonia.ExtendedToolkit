@@ -12,14 +12,14 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// ThumbFillBrush AttachedProperty
         /// </summary>
         public static readonly AttachedProperty<IBrush> ThumbFillBrushProperty =
-            AvaloniaProperty.RegisterAttached<IControl, IBrush>("ThumbFillBrush", typeof(SliderHelper));
+            AvaloniaProperty.RegisterAttached<Control, IBrush>("ThumbFillBrush", typeof(SliderHelper));
 
         /// <summary>
         /// get ThumbFillBrush
         /// </summary>
         /// <param name="element"></param>
         /// <returns></returns>
-        public static IBrush GetThumbFillBrush(IControl element)
+        public static IBrush GetThumbFillBrush(Control element)
         {
             return element.GetValue(ThumbFillBrushProperty);
         }
@@ -29,7 +29,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         /// <param name="element"></param>
         /// <param name="value"></param>
-        public static void SetThumbFillBrush(IControl element, IBrush value)
+        public static void SetThumbFillBrush(Control element, IBrush value)
         {
             element.SetValue(ThumbFillBrushProperty, value);
         }
@@ -38,14 +38,14 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// ThumbFillHoverBrush AttachedProperty
         /// </summary>
         public static readonly AttachedProperty<IBrush> ThumbFillHoverBrushProperty =
-           AvaloniaProperty.RegisterAttached<IControl, IBrush>("ThumbFillHoverBrush", typeof(SliderHelper));
+           AvaloniaProperty.RegisterAttached<Control, IBrush>("ThumbFillHoverBrush", typeof(SliderHelper));
 
         /// <summary>
         /// get ThumbFillHoverBrush
         /// </summary>
         /// <param name="element"></param>
         /// <returns></returns>
-        public static IBrush GetThumbFillHoverBrush(IControl element)
+        public static IBrush GetThumbFillHoverBrush(Control element)
         {
             return element.GetValue(ThumbFillHoverBrushProperty);
         }
@@ -55,7 +55,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         /// <param name="element"></param>
         /// <param name="value"></param>
-        public static void SetThumbFillHoverBrush(IControl element, IBrush value)
+        public static void SetThumbFillHoverBrush(Control element, IBrush value)
         {
             element.SetValue(ThumbFillHoverBrushProperty, value);
         }
@@ -64,14 +64,14 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// ThumbFillPressedBrush AttachedProperty
         /// </summary>
         public static readonly AttachedProperty<IBrush> ThumbFillPressedBrushProperty =
-           AvaloniaProperty.RegisterAttached<IControl, IBrush>("ThumbFillPressedBrush", typeof(SliderHelper));
+           AvaloniaProperty.RegisterAttached<Control, IBrush>("ThumbFillPressedBrush", typeof(SliderHelper));
 
         /// <summary>
         /// get ThumbFillPressedBrush
         /// </summary>
         /// <param name="element"></param>
         /// <returns></returns>
-        public static IBrush GetThumbFillPressedBrush(IControl element)
+        public static IBrush GetThumbFillPressedBrush(Control element)
         {
             return element.GetValue(ThumbFillPressedBrushProperty);
         }
@@ -81,7 +81,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         /// <param name="element"></param>
         /// <param name="value"></param>
-        public static void SetThumbFillPressedBrush(IControl element, IBrush value)
+        public static void SetThumbFillPressedBrush(Control element, IBrush value)
         {
             element.SetValue(ThumbFillPressedBrushProperty, value);
         }
@@ -90,14 +90,14 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// ThumbFillDisabledBrush AttachedProperty
         /// </summary>
         public static readonly AttachedProperty<IBrush> ThumbFillDisabledBrushProperty =
-           AvaloniaProperty.RegisterAttached<IControl, IBrush>("ThumbFillDisabledBrush", typeof(SliderHelper));
+           AvaloniaProperty.RegisterAttached<Control, IBrush>("ThumbFillDisabledBrush", typeof(SliderHelper));
 
         /// <summary>
         /// get ThumbFillDisabledBrush
         /// </summary>
         /// <param name="element"></param>
         /// <returns></returns>
-        public static IBrush GetThumbFillDisabledBrush(IControl element)
+        public static IBrush GetThumbFillDisabledBrush(Control element)
         {
             return element.GetValue(ThumbFillDisabledBrushProperty);
         }
@@ -107,7 +107,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         /// <param name="element"></param>
         /// <param name="value"></param>
-        public static void SetThumbFillDisabledBrush(IControl element, IBrush value)
+        public static void SetThumbFillDisabledBrush(Control element, IBrush value)
         {
             element.SetValue(ThumbFillDisabledBrushProperty, value);
         }
@@ -116,14 +116,14 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// TrackFillBrush AttachedProperty
         /// </summary>
         public static readonly AttachedProperty<IBrush> TrackFillBrushProperty =
-           AvaloniaProperty.RegisterAttached<IControl, IBrush>("TrackFillBrush", typeof(SliderHelper));
+           AvaloniaProperty.RegisterAttached<Control, IBrush>("TrackFillBrush", typeof(SliderHelper));
 
         /// <summary>
         /// get TrackFillBrush
         /// </summary>
         /// <param name="element"></param>
         /// <returns></returns>
-        public static IBrush GetTrackFillBrush(IControl element)
+        public static IBrush GetTrackFillBrush(Control element)
         {
             return element.GetValue(TrackFillBrushProperty);
         }
@@ -133,7 +133,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         /// <param name="element"></param>
         /// <param name="value"></param>
-        public static void SetTrackFillBrush(IControl element, IBrush value)
+        public static void SetTrackFillBrush(Control element, IBrush value)
         {
             element.SetValue(TrackFillBrushProperty, value);
         }
@@ -142,14 +142,14 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// TrackFillHoverBrush AttachedProperty
         /// </summary>
         public static readonly AttachedProperty<IBrush> TrackFillHoverBrushProperty =
-           AvaloniaProperty.RegisterAttached<IControl, IBrush>("TrackFillHoverBrush", typeof(SliderHelper));
+           AvaloniaProperty.RegisterAttached<Control, IBrush>("TrackFillHoverBrush", typeof(SliderHelper));
 
         /// <summary>
         /// get TrackFillHoverBrush
         /// </summary>
         /// <param name="element"></param>
         /// <returns></returns>
-        public static IBrush GetTrackFillHoverBrush(IControl element)
+        public static IBrush GetTrackFillHoverBrush(Control element)
         {
             return element.GetValue(TrackFillHoverBrushProperty);
         }
@@ -159,7 +159,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         /// <param name="element"></param>
         /// <param name="value"></param>
-        public static void SetTrackFillHoverBrush(IControl element, IBrush value)
+        public static void SetTrackFillHoverBrush(Control element, IBrush value)
         {
             element.SetValue(TrackFillHoverBrushProperty, value);
         }
@@ -168,14 +168,14 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// TrackFillPressedBrush AttachedProperty
         /// </summary>
         public static readonly AttachedProperty<IBrush> TrackFillPressedBrushProperty =
-           AvaloniaProperty.RegisterAttached<IControl, IBrush>("TrackFillPressedBrush", typeof(SliderHelper));
+           AvaloniaProperty.RegisterAttached<Control, IBrush>("TrackFillPressedBrush", typeof(SliderHelper));
 
         /// <summary>
         /// get TrackFillPressedBrush
         /// </summary>
         /// <param name="element"></param>
         /// <returns></returns>
-        public static IBrush GetTrackFillPressedBrush(IControl element)
+        public static IBrush GetTrackFillPressedBrush(Control element)
         {
             return element.GetValue(TrackFillPressedBrushProperty);
         }
@@ -185,7 +185,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         /// <param name="element"></param>
         /// <param name="value"></param>
-        public static void SetTrackFillPressedBrush(IControl element, IBrush value)
+        public static void SetTrackFillPressedBrush(Control element, IBrush value)
         {
             element.SetValue(TrackFillPressedBrushProperty, value);
         }
@@ -194,14 +194,14 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// TrackFillDisabledBrush AttachedProperty
         /// </summary>
         public static readonly AttachedProperty<IBrush> TrackFillDisabledBrushProperty =
-           AvaloniaProperty.RegisterAttached<IControl, IBrush>("TrackFillDisabledBrush", typeof(SliderHelper));
+           AvaloniaProperty.RegisterAttached<Control, IBrush>("TrackFillDisabledBrush", typeof(SliderHelper));
 
         /// <summary>
         /// get TrackFillDisabledBrush
         /// </summary>
         /// <param name="element"></param>
         /// <returns></returns>
-        public static IBrush GetTrackFillDisabledBrush(IControl element)
+        public static IBrush GetTrackFillDisabledBrush(Control element)
         {
             return element.GetValue(TrackFillDisabledBrushProperty);
         }
@@ -211,7 +211,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         /// <param name="element"></param>
         /// <param name="value"></param>
-        public static void SetTrackFillDisabledBrush(IControl element, IBrush value)
+        public static void SetTrackFillDisabledBrush(Control element, IBrush value)
         {
             element.SetValue(TrackFillDisabledBrushProperty, value);
         }
@@ -220,14 +220,14 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// TrackValueFillBrush AttachedProperty
         /// </summary>
         public static readonly AttachedProperty<IBrush> TrackValueFillBrushProperty =
-           AvaloniaProperty.RegisterAttached<IControl, IBrush>("TrackValueFillBrush", typeof(SliderHelper));
+           AvaloniaProperty.RegisterAttached<Control, IBrush>("TrackValueFillBrush", typeof(SliderHelper));
 
         /// <summary>
         /// get TrackValueFillBrush
         /// </summary>
         /// <param name="element"></param>
         /// <returns></returns>
-        public static IBrush GetTrackValueFillBrush(IControl element)
+        public static IBrush GetTrackValueFillBrush(Control element)
         {
             return element.GetValue(TrackValueFillBrushProperty);
         }
@@ -237,7 +237,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         /// <param name="element"></param>
         /// <param name="value"></param>
-        public static void SetTrackValueFillBrush(IControl element, IBrush value)
+        public static void SetTrackValueFillBrush(Control element, IBrush value)
         {
             element.SetValue(TrackValueFillBrushProperty, value);
         }
@@ -246,14 +246,14 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// TrackValueFillHoverBrush AttachedProperty
         /// </summary>
         public static readonly AttachedProperty<IBrush> TrackValueFillHoverBrushProperty =
-           AvaloniaProperty.RegisterAttached<IControl, IBrush>("TrackValueFillHoverBrush", typeof(SliderHelper));
+           AvaloniaProperty.RegisterAttached<Control, IBrush>("TrackValueFillHoverBrush", typeof(SliderHelper));
 
         /// <summary>
         /// get TrackValueFillHoverBrush
         /// </summary>
         /// <param name="element"></param>
         /// <returns></returns>
-        public static IBrush GetTrackValueFillHoverBrush(IControl element)
+        public static IBrush GetTrackValueFillHoverBrush(Control element)
         {
             return element.GetValue(TrackValueFillHoverBrushProperty);
         }
@@ -263,7 +263,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         /// <param name="element"></param>
         /// <param name="value"></param>
-        public static void SetTrackValueFillHoverBrush(IControl element, IBrush value)
+        public static void SetTrackValueFillHoverBrush(Control element, IBrush value)
         {
             element.SetValue(TrackValueFillHoverBrushProperty, value);
         }
@@ -272,14 +272,14 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// TrackValueFillPressedBrush AttachedProperty
         /// </summary>
         public static readonly AttachedProperty<IBrush> TrackValueFillPressedBrushProperty =
-           AvaloniaProperty.RegisterAttached<IControl, IBrush>("TrackValueFillPressedBrush", typeof(SliderHelper));
+           AvaloniaProperty.RegisterAttached<Control, IBrush>("TrackValueFillPressedBrush", typeof(SliderHelper));
 
         /// <summary>
         /// get TrackValueFillPressedBrush
         /// </summary>
         /// <param name="element"></param>
         /// <returns></returns>
-        public static IBrush GetTrackValueFillPressedBrush(IControl element)
+        public static IBrush GetTrackValueFillPressedBrush(Control element)
         {
             return element.GetValue(TrackValueFillPressedBrushProperty);
         }
@@ -289,7 +289,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         /// <param name="element"></param>
         /// <param name="value"></param>
-        public static void SetTrackValueFillPressedBrush(IControl element, IBrush value)
+        public static void SetTrackValueFillPressedBrush(Control element, IBrush value)
         {
             element.SetValue(TrackValueFillPressedBrushProperty, value);
         }
@@ -298,14 +298,14 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// TrackValueFillDisabledBrush AttachedProperty
         /// </summary>
         public static readonly AttachedProperty<IBrush> TrackValueFillDisabledBrushProperty =
-           AvaloniaProperty.RegisterAttached<IControl, IBrush>("TrackValueFillDisabledBrush", typeof(SliderHelper));
+           AvaloniaProperty.RegisterAttached<Control, IBrush>("TrackValueFillDisabledBrush", typeof(SliderHelper));
 
         /// <summary>
         /// get TrackValueFillDisabledBrush
         /// </summary>
         /// <param name="element"></param>
         /// <returns></returns>
-        public static IBrush GetTrackValueFillDisabledBrush(IControl element)
+        public static IBrush GetTrackValueFillDisabledBrush(Control element)
         {
             return element.GetValue(TrackValueFillDisabledBrushProperty);
         }
@@ -315,7 +315,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         /// <param name="element"></param>
         /// <param name="value"></param>
-        public static void SetTrackValueFillDisabledBrush(IControl element, IBrush value)
+        public static void SetTrackValueFillDisabledBrush(Control element, IBrush value)
         {
             element.SetValue(TrackValueFillDisabledBrushProperty, value);
         }
@@ -324,14 +324,14 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// ChangeValueBy AttachedProperty
         /// </summary>
         public static readonly AttachedProperty<MouseWheelChange> ChangeValueByProperty =
-           AvaloniaProperty.RegisterAttached<IControl, MouseWheelChange>("ChangeValueBy", typeof(SliderHelper), defaultValue: MouseWheelChange.SmallChange);
+           AvaloniaProperty.RegisterAttached<Control, MouseWheelChange>("ChangeValueBy", typeof(SliderHelper), defaultValue: MouseWheelChange.SmallChange);
 
         /// <summary>
         /// get ChangeValueBy
         /// </summary>
         /// <param name="element"></param>
         /// <returns></returns>
-        public static MouseWheelChange GetChangeValueBy(IControl element)
+        public static MouseWheelChange GetChangeValueBy(Control element)
         {
             return element.GetValue(ChangeValueByProperty);
         }
@@ -341,7 +341,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         /// <param name="element"></param>
         /// <param name="value"></param>
-        public static void SetChangeValueBy(IControl element, MouseWheelChange value)
+        public static void SetChangeValueBy(Control element, MouseWheelChange value)
         {
             element.SetValue(ChangeValueByProperty, value);
         }

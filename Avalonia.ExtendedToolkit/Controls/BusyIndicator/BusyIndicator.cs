@@ -102,47 +102,47 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <summary>
         /// Gets or sets a Control that should get the focus when the busy indicator disapears.
         /// </summary>
-        public IControl FocusAfterBusy
+        public Control FocusAfterBusy
         {
-            get { return (IControl)GetValue(FocusAfterBusyProperty); }
+            get { return (Control)GetValue(FocusAfterBusyProperty); }
             set { SetValue(FocusAfterBusyProperty, value); }
         }
 
         /// <summary>
         /// <see cref="FocusAfterBusy"/>
         /// </summary>
-        public static readonly StyledProperty<IControl> FocusAfterBusyProperty =
-            AvaloniaProperty.Register<BusyIndicator, IControl>(nameof(FocusAfterBusy));
+        public static readonly StyledProperty<Control> FocusAfterBusyProperty =
+            AvaloniaProperty.Register<BusyIndicator, Control>(nameof(FocusAfterBusy));
 
         /// <summary>
         /// Gets or sets a value indicating the style to use for the overlay.
         /// </summary>
-        public IStyle OverlayStyle
+        public Style OverlayStyle
         {
-            get { return (IStyle)GetValue(OverlayStyleProperty); }
+            get { return (Style)GetValue(OverlayStyleProperty); }
             set { SetValue(OverlayStyleProperty, value); }
         }
 
         /// <summary>
         /// <see cref="OverlayStyle"/>
         /// </summary>
-        public static readonly StyledProperty<IStyle> OverlayStyleProperty =
-            AvaloniaProperty.Register<BusyIndicator, IStyle>(nameof(OverlayStyle));
+        public static readonly StyledProperty<Style> OverlayStyleProperty =
+            AvaloniaProperty.Register<BusyIndicator, Style>(nameof(OverlayStyle));
 
         /// <summary>
         /// Gets or sets a value indicating the style to use for the progress bar.
         /// </summary>
-        public IStyle ProgressBarStyle
+        public Style ProgressBarStyle
         {
-            get { return (IStyle)GetValue(ProgressBarStyleProperty); }
+            get { return (Style)GetValue(ProgressBarStyleProperty); }
             set { SetValue(ProgressBarStyleProperty, value); }
         }
 
         /// <summary>
         /// <see cref="ProgressBarStyle"/>
         /// </summary>
-        public static readonly StyledProperty<IStyle> ProgressBarStyleProperty =
-            AvaloniaProperty.Register<BusyIndicator, IStyle>(nameof(ProgressBarStyle));
+        public static readonly StyledProperty<Style> ProgressBarStyleProperty =
+            AvaloniaProperty.Register<BusyIndicator, Style>(nameof(ProgressBarStyle));
 
         /// <summary>
         /// init _displayAfterTimer.Tick

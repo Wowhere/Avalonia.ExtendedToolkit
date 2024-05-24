@@ -116,14 +116,14 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Design
         /// CanClose AttachedProperty
         /// </summary>
         public static readonly AttachedProperty<bool> CanCloseProperty =
-            AvaloniaProperty.RegisterAttached<TabbedLayout, IControl, bool>("CanClose");
+            AvaloniaProperty.RegisterAttached<TabbedLayout, Control, bool>("CanClose");
 
         /// <summary>
         /// get CanClose
         /// </summary>
         /// <param name="element"></param>
         /// <returns></returns>
-        public static bool GetCanClose(IControl element)
+        public static bool GetCanClose(Control element)
         {
             if (element == null)
                 throw new ArgumentNullException("obj");
@@ -135,7 +135,7 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Design
         /// </summary>
         /// <param name="element"></param>
         /// <param name="value"></param>
-        public static void SetCanClose(IControl element, bool value)
+        public static void SetCanClose(Control element, bool value)
         {
             if (element == null)
                 throw new ArgumentNullException("obj");
@@ -147,7 +147,7 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Design
         /// Header AttachedProperty
         /// </summary>
         public static readonly AttachedProperty<string> HeaderProperty =
-            AvaloniaProperty.RegisterAttached<TabbedLayout, IControl, string>
+            AvaloniaProperty.RegisterAttached<TabbedLayout, Control, string>
             ("Header", defaultValue: "Unknown");
 
         /// <summary>
@@ -155,7 +155,7 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Design
         /// </summary>
         /// <param name="element"></param>
         /// <returns></returns>
-        public static string GetHeader(IControl element)
+        public static string GetHeader(Control element)
         {
             if (element == null)
                 throw new ArgumentNullException("obj");

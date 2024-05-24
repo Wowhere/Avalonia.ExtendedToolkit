@@ -16,7 +16,7 @@ namespace Avalonia.ExtendedToolkit.Controls
 
         public new TabControlExt Owner { get; }
 
-        protected override IControl CreateContainer(object item)
+        protected override Control CreateContainer(object item)
         {
             var tabItem = (TabItemExt)base.CreateContainer(item);
 
@@ -34,20 +34,20 @@ namespace Avalonia.ExtendedToolkit.Controls
 
             if (tabItem.Header == null)
             {
-                if (item is IHeadered headered)
+                if (item is Headered headered)
                 {
                     tabItem.Header = headered.Header;
                 }
                 else
                 {
-                    if (!(tabItem.DataContext is IControl))
+                    if (!(tabItem.DataContext is Control))
                     {
                         tabItem.Header = tabItem.DataContext;
                     }
                 }
             }
 
-            if (!(tabItem.Content is IControl))
+            if (!(tabItem.Content is Control))
             {
                 tabItem[~ContentControl.ContentTemplateProperty] = Owner[~TabControl.ContentTemplateProperty];
             }

@@ -29,7 +29,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         /// <param name="item"></param>
         /// <returns></returns>
-        protected override IControl CreateContainer(object item)
+        protected override Control CreateContainer(object item)
         {
             var flyout = (Flyout)item;
 

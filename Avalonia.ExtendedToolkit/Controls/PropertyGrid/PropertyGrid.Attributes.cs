@@ -138,17 +138,17 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid
         /// </summary>
         /// <value>The layout to be used to display properties.</value>
         //[Content]
-        public IControl Layout
+        public Control Layout
         {
-            get { return (IControl)GetValue(LayoutProperty); }
+            get { return (Control)GetValue(LayoutProperty); }
             set { SetValue(LayoutProperty, value); }
         }
 
         /// <summary>
         /// <see cref="Layout"/>
         /// </summary>
-        public static readonly StyledProperty<IControl> LayoutProperty =
-            AvaloniaProperty.Register<PropertyGrid, IControl>(nameof(Layout), defaultValue: default(AlphabeticalLayout));
+        public static readonly StyledProperty<Control> LayoutProperty =
+            AvaloniaProperty.Register<PropertyGrid, Control>(nameof(Layout), defaultValue: default(AlphabeticalLayout));
 
         /// <summary>
         /// <see cref="SelectedObject"/>

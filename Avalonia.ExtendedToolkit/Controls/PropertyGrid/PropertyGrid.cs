@@ -290,7 +290,7 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid
         {
             if (e.Key == Key.Tab && e.Source is AvaloniaObject)//tabbing over the property editors
             {
-                var source = e.Source as IControl;
+                var source = e.Source as Control;
                 var element = e.KeyModifiers == KeyModifiers.Shift ? GetTabElement(source, -1) : GetTabElement(source, 1);
                 if (element != null)
                 {
@@ -311,7 +311,7 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid
         /// </remarks>
         /// <param name="source">The source.</param>
         /// <param name="delta">The delta.</param>
-        private IControl GetTabElement(IControl source, int delta)
+        private Control GetTabElement(Control source, int delta)
         {
             if (source == null)
                 return null;
@@ -371,7 +371,7 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid
                     if ((final as Control).IsEnabled && (final as Control).Focusable && !(next.DataContext as PropertyItem).IsReadOnly)
                         return final as Control;
                     else
-                        return GetTabElement(final as IControl, delta);
+                        return GetTabElement(final as Control, delta);
                 }
             }
             return null;
@@ -454,8 +454,8 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid
             this.InvalidateMeasure();
             this.InvalidateArrange();
             this.InvalidateVisual();
-            RaisePropertyChanged(LayoutProperty, new Data.Optional<IControl>()
-                        , new Data.BindingValue<IControl>(Layout));
+            RaisePropertyChanged(LayoutProperty, new Data.Optional<Control>()
+                        , new Data.BindingValue<Control>(Layout));
             DoReload();
         }
 

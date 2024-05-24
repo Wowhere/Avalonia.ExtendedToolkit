@@ -2,10 +2,11 @@
 	<Import Project="..\Directory.build.props" />
 
 	<PropertyGroup>
-		<TargetFrameworks>netcoreapp3.1</TargetFrameworks>
+		<TargetFrameworks>net8.0</TargetFrameworks>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
 		<IsPackable>true</IsPackable>
+    <EnableUnsafeBinaryFormatterSerialization>false</EnableUnsafeBinaryFormatterSerialization>
 	</PropertyGroup>
 
 
@@ -26,18 +27,20 @@
 
 
 	<ItemGroup>
-		<PackageReference Include="Avalonia" Version="0.10.13" />
-		<PackageReference Include="Avalonia.Controls.DataGrid" Version="0.10.13" />
-		<PackageReference Include="Avalonia.Desktop" Version="0.10.13" />
-		<PackageReference Include="Avalonia.ReactiveUI" Version="0.10.13" />
-		<PackageReference Include="Avalonia.Xaml.Behaviors" Version="0.10.13.3" />
-		<PackageReference Include="Avalonia.Xaml.Interactions" Version="0.10.13.3" />
-		<PackageReference Include="Avalonia.Xaml.Interactivity" Version="0.10.13.3" />
-		<PackageReference Include="DynamicData" Version="7.6.5" />
+		<PackageReference Include="Avalonia" Version="11.0.10" />
+		<PackageReference Include="Avalonia.Controls.DataGrid" Version="11.0.10" />
+		<PackageReference Include="Avalonia.Desktop" Version="11.0.10" />
+		<PackageReference Include="Avalonia.ReactiveUI" Version="11.0.10" />
+		<PackageReference Include="Avalonia.Xaml.Behaviors" Version="11.0.10.9" />
+		<PackageReference Include="Avalonia.Xaml.Interactions" Version="11.0.10.9" />
+		<PackageReference Include="Avalonia.Xaml.Interactivity" Version="11.0.10.9" />
+		<PackageReference Include="DynamicData" Version="8.4.1" />
 		<PackageReference Include="DynamicData.ReactiveUI" Version="6.11.0.2613" />
 		<PackageReference Include="GridExtra.Avalonia" Version="0.9.1" />
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="MessagePack" Version="2.5.140" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 		<PackageReference Include="ReactiveHistory" Version="0.10.7" />
+		<PackageReference Include="System.Drawing.Common" Version="8.0.5" />
 		<PackageReference Include="XamlColorSchemeGenerator" Version="3.0.0.31">
 			<NoWarn>NU1701</NoWarn>
 		</PackageReference>

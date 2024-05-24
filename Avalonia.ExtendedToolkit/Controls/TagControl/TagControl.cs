@@ -126,7 +126,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// updates the selection from container
         /// </summary>
         protected bool UpdateSelectionFromEventSource(
-            IInteractive eventSource,
+            Interactive eventSource,
             bool select = true
             )
         {
@@ -144,9 +144,9 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <summary>
         /// tries to find the TagItem from eventsource
         /// </summary>
-        protected TagItem GetContainerFromEventSource(IInteractive eventSource)
+        protected TagItem GetContainerFromEventSource(Interactive eventSource)
         {
-            var item = ((IVisual)eventSource).GetSelfAndVisualAncestors()
+            var item = ((Visual)eventSource).GetSelfAndVisualAncestors()
                 .OfType<TagItem>()
                 .FirstOrDefault();
             return item;
@@ -159,7 +159,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <param name="container"></param>
         /// <param name="isSelect"></param>
         protected void UpdateSelectionFromContainer(
-            IControl container,
+            Control container,
             bool isSelect = true
             )
         {

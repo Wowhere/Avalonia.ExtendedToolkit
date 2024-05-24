@@ -609,28 +609,28 @@ namespace Avalonia.Controlz.Controls
             return;
         }
 
-        private void BindToTemplatedParent(AvaloniaProperty target, AvaloniaProperty source)
-        {
-            //if (!HasNonDefaultValue(target))
-            {
-                //Binding binding = new Binding();
-                //binding.RelativeSource = new RelativeSource(RelativeSourceMode.TemplatedParent);
-                //binding.Path = source.p//new PropertyPath(source);
-                //SetBinding(target, binding);
-                try
-                {
-                    var sourceBinding = this.GetSubject(source);
+        //private void BindToTemplatedParent(AvaloniaProperty target, AvaloniaProperty source)
+        //{
+        //    //if (!HasNonDefaultValue(target))
+        //    {
+        //        //Binding binding = new Binding();
+        //        //binding.RelativeSource = new RelativeSource(RelativeSourceMode.TemplatedParent);
+        //        //binding.Path = source.p//new PropertyPath(source);
+        //        //SetBinding(target, binding);
+        //        try
+        //        {
+        //            var sourceBinding = this.GetSubject(source);
 
-                    InstancedBinding instancedBinding = new InstancedBinding(sourceBinding, BindingMode.TwoWay, BindingPriority.TemplatedParent);
-                    BindingOperations.Apply(this, target, instancedBinding, TemplatedParent);
-                }
-                catch (Exception ex)
-                {
-                    Debug.WriteLine(ex.Message);
-                }
-                //Bind(target, ObservableEx.SingleValue(source));
-            }
-        }
+        //            InstancedBinding instancedBinding = new InstancedBinding(sourceBinding, BindingMode.TwoWay, BindingPriority.TemplatedParent);
+        //            BindingOperations.Apply(this, target, instancedBinding, TemplatedParent);
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            Debug.WriteLine(ex.Message);
+        //        }
+        //        //Bind(target, ObservableEx.SingleValue(source));
+        //    }
+        //}
 
         /// <summary>
         /// gets the parent <see cref="SliderEx"/>

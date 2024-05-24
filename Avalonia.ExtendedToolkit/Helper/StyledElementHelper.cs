@@ -12,14 +12,14 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// Style AttachedProperty
         /// </summary>
         public static readonly AttachedProperty<IStyle> StyleProperty =
-            AvaloniaProperty.RegisterAttached<IStyledElement, IStyle>(nameof(Style), typeof(StyledElementHelper));
+            AvaloniaProperty.RegisterAttached<StyledElement, IStyle>(nameof(Style), typeof(StyledElementHelper));
 
         /// <summary>
         /// Style
         /// </summary>
         /// <param name="element"></param>
         /// <returns></returns>
-        public static IStyle GetStyle(IStyledElement element)
+        public static IStyle GetStyle(StyledElement element)
         {
             return element.GetValue(StyleProperty);
         }
@@ -29,13 +29,13 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         /// <param name="element"></param>
         /// <param name="value"></param>
-        public static void SetStyle(IStyledElement element, IStyle value)
+        public static void SetStyle(StyledElement element, IStyle value)
         {
             element.SetValue(StyleProperty, value);
             OnStyleChanged(element, value);
         }
 
-        private static void OnStyleChanged(IStyledElement styledElement, IStyle style)
+        private static void OnStyleChanged(StyledElement styledElement, IStyle style)
         {
             if (style != null)
             {
@@ -47,14 +47,14 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// Classes AttachedProperty
         /// </summary>
         public static readonly AttachedProperty<Classes> ClassesProperty =
-            AvaloniaProperty.RegisterAttached<IStyledElement, Classes>(nameof(Classes), typeof(StyledElementHelper));
+            AvaloniaProperty.RegisterAttached<StyledElement, Classes>(nameof(Classes), typeof(StyledElementHelper));
 
         /// <summary>
         /// get Classes
         /// </summary>
         /// <param name="element"></param>
         /// <returns></returns>
-        public static Classes GetClasses(IStyledElement element)
+        public static Classes GetClasses(StyledElement element)
         {
             return element.GetValue(ClassesProperty);
         }
@@ -64,18 +64,18 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         /// <param name="element"></param>
         /// <param name="value"></param>
-        public static void SetClasses(IStyledElement element, Classes value)
-        {
-            element.SetValue(ClassesProperty, value);
-            OnClassesChanged(element, value);
-        }
+        //public static void SetClasses(StyledElement element, Classes value)
+        //{
+        //    element.SetValue(ClassesProperty, value);
+        //    OnClassesChanged(element, value);
+        //}
 
-        private static void OnClassesChanged(IStyledElement element, Classes value)
-        {
-            if(value!=null)
-            {
-                element.Classes = value;
-            }
-        }
+        //private static void OnClassesChanged(StyledElement element, Classes value)
+        //{
+        //    if(value!=null)
+        //    {
+        //        element.Classes = value;
+        //    }
+        //}
     }
 }

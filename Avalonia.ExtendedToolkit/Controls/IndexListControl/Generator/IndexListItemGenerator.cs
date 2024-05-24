@@ -24,7 +24,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <param name="contentProperty"></param>
         /// <param name="contentTemplateProperty"></param>
         /// <param name="itemsProperty"></param>
-        public IndexListItemGenerator(IControl owner,
+        public IndexListItemGenerator(Control owner,
             AvaloniaProperty contentProperty,
             AvaloniaProperty contentTemplateProperty,
             AvaloniaProperty itemsProperty)
@@ -38,7 +38,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         /// <param name="item"></param>
         /// <returns></returns>
-        protected override IControl CreateContainer(object item)
+        protected override Control CreateContainer(object item)
         {
             var container = item as IndexListHeaderItem;
             if (item == null)
@@ -69,7 +69,7 @@ namespace Avalonia.ExtendedToolkit.Controls
                     BindingOperations.Apply(result, ItemsProperty, itemsSelector, null);
                 }
 
-                if ((item is IControl) == false)
+                if ((item is Control) == false)
                 {
                     result.DataContext = item;
                 }
@@ -84,7 +84,7 @@ namespace Avalonia.ExtendedToolkit.Controls
 
             public WrapperTreeDataTemplate(IDataTemplate inner) => _inner = inner;
 
-            public IControl Build(object param) => _inner.Build(param);
+            public Control Build(object param) => _inner.Build(param);
 
             //public bool SupportsRecycling => _inner.SupportsRecycling;
 
