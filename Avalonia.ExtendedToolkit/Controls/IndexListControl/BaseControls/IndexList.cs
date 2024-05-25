@@ -130,11 +130,12 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// Scrolls the specified item into view.
         /// </summary>
         /// <param name="item">The item.</param>
-        public void ScrollIntoView(object item)
-        {
-            int index = Items.OfType<object>().ToList().IndexOf(item);
-            Presenter?.ScrollIntoView(index);
-        }
+        //.orig
+        //public void ScrollIntoView(object item)
+        //{
+        //    int index = Items.OfType<object>().ToList().IndexOf(item);
+        //    Presenter?.ScrollIntoView(index);
+        //}
 
         /// <inheritdoc/>
         protected override void OnPointerPressed(PointerPressedEventArgs e)

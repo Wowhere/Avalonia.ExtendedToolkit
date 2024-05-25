@@ -42,12 +42,13 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// generates <see cref="IndexListItem"/> subitems
         /// </summary>
         /// <returns></returns>
-        protected override IItemContainerGenerator CreateItemContainerGenerator()
-        {
-            return new ItemContainerGenerator<IndexListItem>(
-                this,
-                IndexListItem.ContentProperty,
-                IndexListItem.ContentTemplateProperty);
-        }
+        //.orig
+        //protected override IItemContainerGenerator CreateItemContainerGenerator()
+        //{
+        //    return new ItemContainerGenerator<IndexListItem>(
+        //        this,
+        //        IndexListItem.ContentProperty,
+        //        IndexListItem.ContentTemplateProperty);
+        //}
     }
 }

@@ -1,4 +1,4 @@
-﻿using Avalonia.Controls;
+﻿
 using Avalonia.ExtendedToolkit.Controls;
 using Splat;
 

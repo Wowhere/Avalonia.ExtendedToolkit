@@ -69,7 +69,7 @@ namespace Avalonia.ExtendedToolkit.Controls
                     BindingOperations.Apply(result, ItemsProperty, itemsSelector, null);
                 }
 
-                if ((item is IControl) == false)
+                if ((item is Control) == false)
                 {
                     result.DataContext = item;
                 }

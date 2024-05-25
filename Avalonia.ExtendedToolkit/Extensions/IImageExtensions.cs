@@ -1,5 +1,5 @@
 using System;
-using System.Drawing;
+using System.Drawing.Common;
 using System.IO;
 using Avalonia.Media;
 using Avalonia.Media.Imaging;

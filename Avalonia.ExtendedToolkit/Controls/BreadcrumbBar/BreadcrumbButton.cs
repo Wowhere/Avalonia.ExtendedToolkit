@@ -30,7 +30,8 @@ namespace Avalonia.ExtendedToolkit.Controls
         public BreadcrumbButton()
         {
             ImageProperty.Changed.AddClassHandler<BreadcrumbButton>((o, e) => OnImageChanged(o, e));
-            ItemsProperty.Changed.AddClassHandler<BreadcrumbButton>((o, e) => OnItemsCollectionChanged(o, e));
+            //.orig
+            //ItemsProperty.Changed.AddClassHandler<BreadcrumbButton>((o, e) => OnItemsCollectionChanged(o, e));
 
             SelectedItemProperty.Changed.AddClassHandler<BreadcrumbButton>(((o, e) => OnSelectedItemChanged(o, e)));
             IsDropDownPressedProperty.Changed.AddClassHandler<BreadcrumbButton>(((o, e) => OverflowPressedChanged(o, e)));
@@ -63,77 +64,78 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// sets the context menu
         /// </summary>
         /// <param name="e"></param>
-        protected override void ItemsChanged(AvaloniaPropertyChangedEventArgs e)
-        {
-            base.ItemsChanged(e);
+        //.orig
+        //protected override void ItemsChanged(AvaloniaPropertyChangedEventArgs e)
+        //{
+        //    base.ItemsChanged(e);
 
-            if (contextMenu != null && e.NewValue != null)
-            {
-                var currentItems = Items.OfType<object>().Where(x => x != null).ToList();
+        //    if (contextMenu != null && e.NewValue != null)
+        //    {
+        //        var currentItems = Items.OfType<object>().Where(x => x != null).ToList();
 
-                //dropPanel.ContextMenu.IsVisible = true;
+        //        //dropPanel.ContextMenu.IsVisible = true;
 
-                if (currentItems.Count == 0)
-                {
-                    //    dropPanel.ContextMenu.IsVisible = false;
-                    return;
-                }
+        //        if (currentItems.Count == 0)
+        //        {
+        //            //    dropPanel.ContextMenu.IsVisible = false;
+        //            return;
+        //        }
 
-                contextMenu.ItemTemplate = ItemTemplate;
+        //        contextMenu.ItemTemplate = ItemTemplate;
 
-                //if (contextMenu.IsOpen)
-                //    contextMenu.Close();
+        //        //if (contextMenu.IsOpen)
+        //        //    contextMenu.Close();
 
-                var items = new AvaloniaList<object>();
-                contextMenu.ItemsSource = new AvaloniaList<object>();
+        //        var items = new AvaloniaList<object>();
+        //        contextMenu.ItemsSource = new AvaloniaList<object>();
 
-                foreach (object item in Items)
-                {
-                    if (item == null)
-                        continue;
+        //        foreach (object item in Items)
+        //        {
+        //            if (item == null)
+        //                continue;
 
-                    if (!(item is MenuItem) && !(item is Separator))
-                    {
-                        items.Add(CreateMenuItem(item));
-                    }
-                    else
-                    {
-                        if (item is Separator)
-                        {
-                            items.Add(new Separator());
-                        }
-                        else if (item is MenuItem)
-                        {
-                            MenuItem originalMenuItem = item as MenuItem;
-                            originalMenuItem.Click -= item_Click;
-                            Image image = originalMenuItem.Icon as Image;
-                            MenuItem menuItem = new MenuItem();
-                            menuItem.DataContext = originalMenuItem.DataContext;
-                            menuItem.Header = originalMenuItem.Header;
-                            menuItem.Icon = image;
-                            menuItem.Click += item_Click;
-                            if (menuItem.DataContext != null && menuItem.DataContext.Equals(SelectedItem))
-                            {
-                                menuItem.FontWeight = FontWeight.Bold;
-                            }
-                            menuItem.ItemTemplate = ItemTemplate;
-                            items.Add(menuItem);
-                        }
-                        else
-                        {
-                            Debug.WriteLine("Error [contextMenu_Opened]: item is not a MenuItem or Seperator");
-                        }
-                    }
-                }
+        //            if (!(item is MenuItem) && !(item is Separator))
+        //            {
+        //                items.Add(CreateMenuItem(item));
+        //            }
+        //            else
+        //            {
+        //                if (item is Separator)
+        //                {
+        //                    items.Add(new Separator());
+        //                }
+        //                else if (item is MenuItem)
+        //                {
+        //                    MenuItem originalMenuItem = item as MenuItem;
+        //                    originalMenuItem.Click -= item_Click;
+        //                    Image image = originalMenuItem.Icon as Image;
+        //                    MenuItem menuItem = new MenuItem();
+        //                    menuItem.DataContext = originalMenuItem.DataContext;
+        //                    menuItem.Header = originalMenuItem.Header;
+        //                    menuItem.Icon = image;
+        //                    menuItem.Click += item_Click;
+        //                    if (menuItem.DataContext != null && menuItem.DataContext.Equals(SelectedItem))
+        //                    {
+        //                        menuItem.FontWeight = FontWeight.Bold;
+        //                    }
+        //                    menuItem.ItemTemplate = ItemTemplate;
+        //                    items.Add(menuItem);
+        //                }
+        //                else
+        //                {
+        //                    Debug.WriteLine("Error [contextMenu_Opened]: item is not a MenuItem or Seperator");
+        //                }
+        //            }
+        //        }
 
-                contextMenu.Items = items;
+        //        contextMenu.Items = items;
 
-                //if(contextMenuWasOpen)
-                //{
-                //    contextMenu.Open(dropPanel);
-                //}
-            }
-        }
+        //        //if(contextMenuWasOpen)
+        //        //{
+        //        //    contextMenu.Open(dropPanel);
+        //        //}
+        //    }
+        //}
 
         private void OverflowPressedChanged(BreadcrumbButton o, AvaloniaPropertyChangedEventArgs e)
         {
@@ -298,8 +300,8 @@ namespace Avalonia.ExtendedToolkit.Controls
             }
 
             base.OnApplyTemplate(e);
-
-            RaisePropertyChanged(ItemsProperty, new Data.Optional<IEnumerable>(), new Data.Optional<IEnumerable>(Items));
+            //.orig
+            //RaisePropertyChanged(ItemsProperty, new Data.Optional<IEnumerable>(), new Data.Optional<IEnumerable>(Items));
         }
 
         private void dropDownBtn_MouseDown(object sender, EventArgs e)

@@ -64,18 +64,19 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         /// <param name="element"></param>
         /// <param name="value"></param>
-        public static void SetClasses(StyledElement element, Classes value)
-        {
-            element.SetValue(ClassesProperty, value);
-            OnClassesChanged(element, value);
-        }
+        //.orig
+        //public static void SetClasses(StyledElement element, Classes value)
+        //{
+        //    element.SetValue(ClassesProperty, value);
+        //    OnClassesChanged(element, value);
+        //}
 
-        private static void OnClassesChanged(StyledElement element, Classes value)
-        {
-            if(value!=null)
-            {
-                element.Classes = value;
-            }
-        }
+        //private static void OnClassesChanged(StyledElement element, Classes value)
+        //{
+        //    if(value!=null)
+        //    {
+        //        element.Classes = value;
+        //    }
+        //}
     }
 }

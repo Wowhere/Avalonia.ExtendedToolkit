@@ -77,7 +77,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
         {
             base.OnApplyTemplate(e);
-            _header = e.NameScope.Find<IControl>("PART_Header");
+            _header = e.NameScope.Find<Control>("PART_Header");
         }
     }
 }
