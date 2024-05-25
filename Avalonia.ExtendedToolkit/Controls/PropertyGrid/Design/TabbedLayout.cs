@@ -433,10 +433,11 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Design
         /// uses TabItemContainerGenerator as generator
         /// </summary>
         /// <returns></returns>
-        protected override ItemContainerGenerator CreateItemContainerGenerator()
-        {
-            return new TabItemContainerGenerator(this);
-        }
+        //.orig
+        //protected override ItemContainerGenerator CreateItemContainerGenerator()
+        //{
+        //    return new TabItemContainerGenerator(this);
+        //}
 
         /// <summary>
         /// updates selected content

@@ -57,7 +57,8 @@ namespace Avalonia.ExtendedToolkit.Controls
         public FlyoutsControl()
         {
             //ItemsPanelProperty.OverrideDefaultValue<FlyoutsControl>(DefaultPanel);
-            ItemsProperty.Changed.AddClassHandler<FlyoutsControl>((o, e) => OnItemsChaned(o, e));
+            //.orig
+            //ItemsProperty.Changed.AddClassHandler<FlyoutsControl>((o, e) => OnItemsChaned(o, e));
         }
 
         private void OnItemsChaned(FlyoutsControl o, AvaloniaPropertyChangedEventArgs e)

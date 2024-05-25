@@ -101,30 +101,31 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ContainerMaterialized(object sender, ItemContainerEventArgs e)
-        {
-            var selectedItem = SelectedItem;
+        //.orig
+        //private void ContainerMaterialized(object sender, ItemContainerEventArgs e)
+        //{
+        //    var selectedItem = SelectedItem;
 
-            if (selectedItem == null)
-            {
-                return;
-            }
+        //    if (selectedItem == null)
+        //    {
+        //        return;
+        //    }
 
-            foreach (var container in e.Containers)
-            {
-                if (container.Item == selectedItem)
-                {
-                    ((IndexListItem)container.ContainerControl).IsSelected = true;
+        //    foreach (var container in e.Containers)
+        //    {
+        //        if (container.Item == selectedItem)
+        //        {
+        //            ((IndexListItem)container.ContainerControl).IsSelected = true;
 
-                    if (AutoScrollToSelectedItem)
-                    {
-                        Dispatcher.UIThread.Post(container.ContainerControl.BringIntoView);
-                    }
+        //            if (AutoScrollToSelectedItem)
+        //            {
+        //                Dispatcher.UIThread.Post(container.ContainerControl.BringIntoView);
+        //            }
 
-                    break;
-                }
-            }
-        }
+        //            break;
+        //        }
+        //    }
+        //}
 
         /// <summary>
         /// Scrolls the specified item into view.
@@ -147,7 +148,8 @@ namespace Avalonia.ExtendedToolkit.Controls
             if (prop.IsLeftButtonPressed || prop.IsRightButtonPressed)
             {
                 e.Handled = UpdateSelectionFromEventSource(
-                    e.Source,
+                    //.edited
+                    (Interactive)e.Source,
                     true);
             }
         }
