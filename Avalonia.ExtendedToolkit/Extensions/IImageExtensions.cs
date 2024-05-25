@@ -191,17 +191,16 @@ namespace Avalonia.ExtendedToolkit.Extensions
 
                 var scaleWidth = (int)Math.Max(Math.Round(sourceBitmap.Size.Width * zoomFactor, MidpointRounding.ToEven), 1);
                 var scaleHeight = (int)Math.Max(Math.Round(sourceBitmap.Size.Height * zoomFactor, MidpointRounding.ToEven), 1);
-                using (var scaledBitmap = new RenderTargetBitmap(new PixelSize(scaleWidth, scaleHeight))
+                using (var scaledBitmap = new RenderTargetBitmap(new PixelSize(scaleWidth, scaleHeight)))
                 {
-                    using (Avalonia.Media.Gr graphics = System.Drawing.Graphics.FromImage(scaledBitmap))
-                    {
-                        graphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.High;
-                        graphics.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-                        graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-                        graphics.FillRectangle(System.Drawing.Brushes.Transparent, new System.Drawing.RectangleF(0, 0, width, height));
-                        graphics.DrawImage(sourceBitmap, new System.Drawing.Rectangle(0, 0, scaleWidth, scaleHeight));
-                    }
-
+                    //var graphics = new DrawingImage { };
+                    //graphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.High;
+                    //graphics.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+                    //graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+                    //graphics.FillRectangle(System.Drawing.Brushes.Transparent, new System.Drawing.RectangleF(0, 0, width, height));
+                    //graphics.Drawing { }
+                    //(sourceBitmap, new System.Drawing.Rectangle(0, 0, scaleWidth, scaleHeight));
+                    //}
                     return image.FromDrawingBitmap(scaledBitmap);
                 }
             }
@@ -210,15 +209,16 @@ namespace Avalonia.ExtendedToolkit.Extensions
         /// <summary>
         /// creates a cropped <see cref="IImage"/>
         /// </summary>
-        public static IImage CreateCroppedBitmap(this IImage image, float x, float y, float width, float height, CroppingType croppingType)
-        {
-            return image.FromDrawingBitmap(CreateCroppedDrawingBitmap(image, x, y, width, height, croppingType));
-        }
+        //.orig
+        //public static IImage CreateCroppedBitmap(this IImage image, float x, float y, float width, float height, CroppingType croppingType)
+        //{
+        //    return image.FromDrawingBitmap(CreateCroppedDrawingBitmap(image, x, y, width, height, croppingType));
+        //}
 
 
 
         /// <summary>
-        /// creates a cropped <see cref="System.Drawing.Bitmap"/> by <see cref="CroppingType"/>
+        /// creates a cropped <see cref="RenderTargetBitmap"/> by <see cref="CroppingType"/>
         /// </summary>
         private static RenderTargetBitmap CreateCroppedDrawingBitmap(IImage image, float x, float y, float width, float height, CroppingType croppingType)
         {
@@ -261,8 +261,8 @@ namespace Avalonia.ExtendedToolkit.Extensions
 
             if (croppingType == CroppingType.Rectangle)
             {
-                using (var graphics = System.Drawing.Graphics.FromImage(target))
-                {
+                //using (var graphics = System.Drawing.Graphics.FromImage(target))
+                //{
                 //    graphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.High;
                 //    graphics.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
                 //    graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
@@ -272,7 +272,7 @@ namespace Avalonia.ExtendedToolkit.Extensions
                 //        cropRect,
                 //        System.Drawing.GraphicsUnit.Pixel);
                 //    graphics.Flush();
-                }
+                //}
             }
             else
             {
@@ -280,8 +280,8 @@ namespace Avalonia.ExtendedToolkit.Extensions
 
                 try
                 {
-                    using (var graphics = System.Drawing.Graphics.FromImage(target))
-                    {
+                    //using (var graphics = System.Drawing.Graphics.FromImage(target))
+                    //{
                     //    graphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.High;
                     //    graphics.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
                     //    graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
@@ -292,7 +292,7 @@ namespace Avalonia.ExtendedToolkit.Extensions
                     //        cropRect.Y = 0;
                     //        graphics.FillEllipse(brush, cropRect);
                     //    }
-                    }
+                    //}
                 }
                 catch(Exception ex)
                 {

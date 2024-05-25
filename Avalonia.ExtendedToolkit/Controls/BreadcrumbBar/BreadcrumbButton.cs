@@ -330,8 +330,8 @@ namespace Avalonia.ExtendedToolkit.Controls
             if (e.Property.Name == nameof(ContextMenu.IsOpen))
             {
                 ContextMenu contextMenu = sender as ContextMenu;
-
-                var parent = VisualTree.VisualExtensions.GetVisualParent<BreadcrumbBar>(this.Parent);
+                //.edited
+                var parent = VisualTree.VisualExtensions.GetVisualParent<BreadcrumbBar>((Visual)this.Parent);
 
                 if (contextMenu.IsOpen)
                 {

@@ -294,9 +294,9 @@ namespace Avalonia.ExtendedToolkit.Controls
                 var croppingBounds = new Rect((int)croppingLeft, (int)croppingTop, (int)croppingWidth, (int)croppingHeight);
 
                 Debug.WriteLine($"Cropping Area: X: {croppingLeft} Y: {croppingTop} Width: {croppingWidth} Height: {croppingHeight}");
-
-                CroppedImage = _image.Source.CreateCroppedBitmap((float)croppingLeft, (float)croppingTop,
-                                     (float)croppingWidth, (float)croppingHeight, croppingType);
+                //.orig
+                //CroppedImage = _image.Source.CreateCroppedBitmap((float)croppingLeft, (float)croppingTop,
+                //                     (float)croppingWidth, (float)croppingHeight, croppingType);
             }
         }
 

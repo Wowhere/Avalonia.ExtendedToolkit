@@ -183,7 +183,7 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Controls
 
         private void IconBorderMouseLeftButtonUp(object sender, Input.PointerReleasedEventArgs e)
         {
-            var prop = e.GetCurrentPoint(sender as IVisual).Properties;
+            var prop = e.GetCurrentPoint(sender as Visual).Properties;
             if (IsMouseLeftButtonDown==false)
             {
                 return;
@@ -207,7 +207,7 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Controls
 
         private void IconBorderMouseLeftButtonDown(object sender, Input.PointerPressedEventArgs e)
         {
-            var prop = e.GetCurrentPoint(sender as IVisual).Properties;
+            var prop = e.GetCurrentPoint(sender as Visual).Properties;
             if (prop.IsLeftButtonPressed)
             {
                 IsMouseLeftButtonDown = true;

@@ -47,8 +47,9 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Design
         /// <summary>
         /// <see cref="SelectedContent"/>
         /// </summary>
-        public new static readonly StyledProperty<object> SelectedContentProperty =
-            TabControl.SelectedContentProperty.AddOwner<TabbedLayout>();
+        //.orig
+        //public new static readonly StyledProperty<object> SelectedContentProperty =
+        //    TabControl.SelectedContentProperty.AddOwner<TabbedLayout>();
 
         /// <summary>
         /// Gets or sets the content template for the selected tab.
@@ -65,8 +66,9 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Design
         /// <summary>
         /// <see cref="SelectedContentTemplate"/>
         /// </summary>
-        public new static readonly StyledProperty<IDataTemplate> SelectedContentTemplateProperty =
-            TabControl.SelectedContentTemplateProperty.AddOwner<TabbedLayout>();
+        //.orig
+        //public new static readonly StyledProperty<IDataTemplate> SelectedContentTemplateProperty =
+        //    TabControl.SelectedContentTemplateProperty.AddOwner<TabbedLayout>();
 
         /// <summary>
         /// Initializes the <see cref="TabbedLayout"/> class.
@@ -192,8 +194,8 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Design
             , outputScheduler: RxApp.MainThreadScheduler);
 
             SelectedContentProperty.Changed.AddClassHandler<TabbedLayout>((o, e) => OnSelectedContentChanged(o, e));
-
-            this.ItemContainerGenerator.Materialized += ItemContainerGenerator_Materialized;
+            //.orig
+            //this.ItemContainerGenerator.Materialized += ItemContainerGenerator_Materialized;
         }
 
         internal bool CanCloseExecute()
@@ -248,58 +250,58 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Design
             }
             return tabItem;
         }
+        //.orig
+        //private void ItemContainerGenerator_Materialized(object sender, ItemContainerEventArgs e)
+        //{
+        //    var tab = e.Containers.FirstOrDefault().Item as TabbedLayoutItem;
 
-        private void ItemContainerGenerator_Materialized(object sender, ItemContainerEventArgs e)
-        {
-            var tab = e.Containers.FirstOrDefault().Item as TabbedLayoutItem;
+        //    if (tab != null)
+        //    {
+        //        if (tab.ClosePropertyTabCommand == null)
+        //        {
+        //            tab.ClosePropertyTabCommand = ClosePropertyTabCommand;
+        //            tab.CanClose = true;
+        //        }
 
-            if (tab != null)
-            {
-                if (tab.ClosePropertyTabCommand == null)
-                {
-                    tab.ClosePropertyTabCommand = ClosePropertyTabCommand;
-                    tab.CanClose = true;
-                }
+        //        var item = tab.Content;
 
-                var item = tab.Content;
+        //        //TODO: Assign PG as DataContext here?
+        //        //tab.DataContext = item;
 
-                //TODO: Assign PG as DataContext here?
-                //tab.DataContext = item;
+        //        var layout = item as Control;
+        //        if (!string.IsNullOrEmpty(ItemHeaderProperty))
+        //        {
+        //            var bHeader = new Binding(ItemHeaderProperty)
+        //            {
+        //                Source = item,
+        //                Mode = BindingMode.OneWay,
+        //            };
 
-                var layout = item as Control;
-                if (!string.IsNullOrEmpty(ItemHeaderProperty))
-                {
-                    var bHeader = new Binding(ItemHeaderProperty)
-                    {
-                        Source = item,
-                        Mode = BindingMode.OneWay,
-                    };
+        //            tab.Bind(HeaderedContentControl.HeaderProperty, bHeader);
+        //        }
+        //        else
+        //        {
+        //            if (layout != null)
+        //            {
+        //                //tab.Header = GetHeader(layout);
+        //                //tab.CanClose = GetCanClose(layout);
+        //            }
+        //        }
 
-                    tab.Bind(HeaderedContentControl.HeaderProperty, bHeader);
-                }
-                else
-                {
-                    if (layout != null)
-                    {
-                        //tab.Header = GetHeader(layout);
-                        //tab.CanClose = GetCanClose(layout);
-                    }
-                }
+        //        if (item is GridEntry)
+        //        {
+        //            //var binding = new Binding("IsVisible")
+        //            //{
+        //            //    Source = item,
+        //            //    Mode = BindingMode.OneWay,
+        //            //};
+        //            //tab.Bind(Visual.IsVisibleProperty, binding);
+        //        }
 
-                if (item is GridEntry)
-                {
-                    //var binding = new Binding("IsVisible")
-                    //{
-                    //    Source = item,
-                    //    Mode = BindingMode.OneWay,
-                    //};
-                    //tab.Bind(Visual.IsVisibleProperty, binding);
-                }
-
-                tab.PropertyChanged -= TabItem_PropertyChanged;
-                tab.PropertyChanged += TabItem_PropertyChanged;
-            }
-        }
+        //        tab.PropertyChanged -= TabItem_PropertyChanged;
+        //        tab.PropertyChanged += TabItem_PropertyChanged;
+        //    }
+        //}
 
         private void TabItem_PropertyChanged(object sender, AvaloniaPropertyChangedEventArgs e)
         {
@@ -443,22 +445,23 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Design
         /// updates selected content
         /// </summary>
         /// <param name="e"></param>
-        protected override void OnContainersMaterialized(ItemContainerEventArgs e)
-        {
-            if (SelectedContent != null || SelectedIndex == -1)
-            {
-                return;
-            }
+        //.orig
+        //protected override void OnContainersMaterialized(ItemContainerEventArgs e)
+        //{
+        //    if (SelectedContent != null || SelectedIndex == -1)
+        //    {
+        //        return;
+        //    }
 
-            var container = ItemContainerGenerator.ContainerFromIndex(SelectedIndex) as TabItem;
+        //    var container = ItemContainerGenerator.ContainerFromIndex(SelectedIndex) as TabItem;
 
-            if (container == null)
-            {
-                return;
-            }
+        //    if (container == null)
+        //    {
+        //        return;
+        //    }
 
-            UpdateSelectedContent(container);
-        }
+        //    UpdateSelectedContent(container);
+        //}
 
         private void UpdateSelectedContent(ContentControl item)
         {

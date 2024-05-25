@@ -21,7 +21,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         public Wizard()
         {
-            Items = new AvaloniaList<WizardPage>();
+            ItemsSource = new AvaloniaList<WizardPage>();
 
             CurrentPageProperty.Changed.AddClassHandler<Wizard>((Action<Wizard, AvaloniaPropertyChangedEventArgs>)((o, e) => OnCurrentPageChanged(o, e)));
             ItemsPanelProperty.Changed.AddClassHandler<Wizard>((Action<Wizard, AvaloniaPropertyChangedEventArgs>)((o,  e) => OnItemChanged(o, e)));
@@ -50,8 +50,8 @@ namespace Avalonia.ExtendedToolkit.Controls
 
         private void OnItemSourceChanged(Wizard wizard, AvaloniaPropertyChangedEventArgs e)
         {
-            if (Items == null)
-                Items = new AvaloniaList<WizardPage>();
+            if (ItemsSource == null)
+                ItemsSource = new AvaloniaList<WizardPage>();
 
             if (e.NewValue == null)
                 return;
