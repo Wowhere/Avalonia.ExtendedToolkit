@@ -117,7 +117,8 @@ namespace Avalonia.ExtendedToolkit.Controls
             if (prop.IsLeftButtonPressed || prop.IsRightButtonPressed)
             {
                 e.Handled = UpdateSelectionFromEventSource(
-                    e.Source,
+                    //.edited
+                    (Interactive)e.Source,
                     true);
             }
         }

@@ -30,7 +30,8 @@ namespace Avalonia.ExtendedToolkit.Extensions
               {
                   element?.InvalidateArrange();
                   element?.InvalidateMeasure();
-                  element?.InvalidateStyles();
+                  //.orig
+                  //element?.InvalidateStyles();
                   element?.InvalidateVisual();
               };
 

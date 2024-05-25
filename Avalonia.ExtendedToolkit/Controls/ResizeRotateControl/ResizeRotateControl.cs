@@ -184,11 +184,11 @@ namespace Avalonia.ExtendedToolkit.Controls
 
         private void MoveThumb_MovedFinished(object sender, VectorEventArgs e)
         {
-            var dragFinished = new VectorEventArgs();
+            var dragFinished = new VectorEventArgs() { Vector = e.Vector };
             dragFinished.RoutedEvent = MovedEvent;
             dragFinished.Route = e.Route;
             dragFinished.Source = e.Source;
-            dragFinished.Vector = e.Vector;
+            //dragFinished.Vector = e.Vector;
             UpdateOuterRectPositions();
 
             RaiseEvent(dragFinished);
@@ -254,11 +254,11 @@ namespace Avalonia.ExtendedToolkit.Controls
 
         private void OnDragCompleted(object sender, VectorEventArgs e)
         {
-            var dragFinished = new VectorEventArgs();
+            var dragFinished = new VectorEventArgs() { Vector = e.Vector };
             dragFinished.RoutedEvent = ResizedEvent;
             dragFinished.Route = e.Route;
             dragFinished.Source = e.Source;
-            dragFinished.Vector = e.Vector;
+            //dragFinished.Vector = e.Vector;
             RaiseEvent(dragFinished);
             RaisePositionEvent(e);
         }

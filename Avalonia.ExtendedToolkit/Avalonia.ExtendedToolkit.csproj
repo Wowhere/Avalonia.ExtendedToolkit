@@ -38,6 +38,7 @@
 		<PackageReference Include="DynamicData" Version="8.4.1" />
 		<PackageReference Include="DynamicData.ReactiveUI" Version="6.11.0.2613" />
 		<PackageReference Include="GridExtra.Avalonia" Version="0.9.1" />
+		<PackageReference Include="MessagePack" Version="2.5.140" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 		<PackageReference Include="ReactiveHistory" Version="0.10.7" />
 		<PackageReference Include="XamlColorSchemeGenerator" Version="3.0.0.31">

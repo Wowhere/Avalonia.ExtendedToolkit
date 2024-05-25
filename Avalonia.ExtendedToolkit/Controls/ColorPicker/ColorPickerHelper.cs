@@ -20,22 +20,21 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         internal static Color GetColorFromImage(Image image,int i, int j)
         {
-            System.Drawing.Color color;
-            using (var mem = new MemoryStream())
-            {
+            //System.Drawing.Color color;
+            //using (var mem = new MemoryStream())
+            //{
 
-                (image.Source as Bitmap).Save(mem);
-                System.Drawing.Bitmap bitmap = new System.Drawing.Bitmap(mem);
-                color = bitmap.GetPixel(i, j);
-            }
-
-#warning change if croppedbitmap is available
-            //CroppedBitmap cb = new CroppedBitmap(image.Source as BitmapSource,
-            //    new Int32Rect(i,
-            //        j, 1, 1));
-            //byte[] color = new byte[4];
-            //cb.CopyPixels(color, 4, 0);
-            Color Colorfromimagepoint = Color.FromArgb(color.A, color.R, color.G, color.B);
+            //    (image.Source as Bitmap).Save(mem);
+            //    Bitmap bitmap = new Bitmap(mem);
+            //    color = bitmap.GetPixel(i, j);
+            //}
+            //.edited
+            CroppedBitmap cb = new CroppedBitmap(image.Source as Bitmap,
+                new PixelRect(i,
+                    j, 1, 1));
+            byte[] color = new byte[4];
+            cb. CopyPixels(color, 4, 0);
+            Color Colorfromimagepoint = Color.FromArgb(color[0], color[1], color[2], color[3]);
             return Colorfromimagepoint;
         }
 

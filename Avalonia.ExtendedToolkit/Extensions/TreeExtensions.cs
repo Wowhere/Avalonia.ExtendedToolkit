@@ -4,6 +4,7 @@ using System.Linq;
 using Avalonia.Controls;
 using Avalonia.LogicalTree;
 using Avalonia.VisualTree;
+using Avalonia.Visuals;
 
 namespace Avalonia.ExtendedToolkit.Extensions
 {
@@ -40,8 +41,8 @@ namespace Avalonia.ExtendedToolkit.Extensions
                 {
                     result *= Matrix.CreateTranslation(topLeft);
                 }
-
-                visual = visual.VisualParent;
+                //.edited
+                visual = (Visual)visual.Parent;
 
                 if (visual == null)
                 {
@@ -108,8 +109,8 @@ namespace Avalonia.ExtendedToolkit.Extensions
                 {
                     return result;
                 }
-
-                parent = parent.Parent;
+                //.edited
+                parent = (Control)parent.Parent;
             }
             return default(T);
         }

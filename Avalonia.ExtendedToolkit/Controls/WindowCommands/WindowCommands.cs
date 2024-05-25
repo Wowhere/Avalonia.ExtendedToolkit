@@ -173,8 +173,8 @@ namespace Avalonia.ExtendedToolkit.Controls
             ShowSeparatorsProperty.Changed.AddClassHandler<WindowCommands>((o, e) => OnShowSeparatorsChanged(o, e));
             ShowLastSeparatorProperty.Changed.AddClassHandler<WindowCommands>((o, e) => OnShowLastSeparatorChanged(o, e));
             ParentWindowProperty.Changed.AddClassHandler<WindowCommands>((o, e) => OnParentWindowChanged(o, e));
-
-            (Items as AvaloniaList<object>).CollectionChanged += OnItemsChanged;
+            //.edited
+            (ItemsSource as AvaloniaList<object>).CollectionChanged += OnItemsChanged;
 
             this.Initialized += WindowCommands_Initialized;
 
