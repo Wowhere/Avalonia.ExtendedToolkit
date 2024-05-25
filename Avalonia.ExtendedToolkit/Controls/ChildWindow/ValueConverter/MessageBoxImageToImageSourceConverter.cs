@@ -3,6 +3,7 @@ using System.Globalization;
 using Avalonia.Controls;
 using Avalonia.Data.Converters;
 using Avalonia.Markup.Xaml.Styling;
+using Avalonia.Styling;
 using Avalonia.VisualTree;
 
 namespace Avalonia.ExtendedToolkit.Controls.ChildWindowConverter
@@ -29,7 +30,7 @@ namespace Avalonia.ExtendedToolkit.Controls.ChildWindowConverter
             };
 
             object icon = null;
-            if (icons.TryGetResource("appbar_noentry", out icon))
+            if (icons.TryGetResource("appbar_noentry", ThemeVariant.Default, out icon))
             {
                 hand_stop_error = icon as Visual;
             }

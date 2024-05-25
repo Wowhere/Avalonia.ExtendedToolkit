@@ -84,8 +84,8 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Utils
                 {
                     result.Add(child);
                 }
-
-                if(child?.VisualChildren.Any()==true)
+                //.edited
+                if(child?.GetVisualChildren().Any()==true)
                 {
                     result.AddRange(FindVisualChildren<T>(child));
                 }

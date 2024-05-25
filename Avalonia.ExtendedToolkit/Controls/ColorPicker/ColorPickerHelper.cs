@@ -1,4 +1,5 @@
 ﻿using Avalonia.Controls;
+using Avalonia.ExtendedToolkit.Extensions;
 using Avalonia.Media;
 using Avalonia.Media.Imaging;
 using System;
@@ -33,7 +34,9 @@ namespace Avalonia.ExtendedToolkit.Controls
                 new PixelRect(i,
                     j, 1, 1));
             byte[] color = new byte[4];
-            cb. CopyPixels(color, 4, 0);
+            //.edited, seems stupid fix
+            color = cb.GetImageSourceAsByte();
+            //cb.CopyPixels(color, 4, 0);
             Color Colorfromimagepoint = Color.FromArgb(color[0], color[1], color[2], color[3]);
             return Colorfromimagepoint;
         }

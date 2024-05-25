@@ -20,14 +20,15 @@ namespace Avalonia.ExtendedToolkit.Extensions
         {
             get
             {
-                if(_fontFamilies.Count==0)
-                {
-                    foreach (var item in FontManager.Current.GetInstalledFontFamilyNames())
-                    {
-                        _fontFamilies.Add(new FontFamily(item));
-                    }
-                }
-                return _fontFamilies;
+                //.orig
+                //if(_fontFamilies.Count==0)
+                //{
+                //    foreach (var item in FontManager.Current.GetInstalledFontFamilyNames())
+                //    {
+                //        _fontFamilies.Add(new FontFamily(item));
+                //    }
+                //}
+                return FontManager.Current.SystemFonts;
             }
         }
 
