@@ -454,8 +454,9 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid
             this.InvalidateMeasure();
             this.InvalidateArrange();
             this.InvalidateVisual();
-            RaisePropertyChanged(LayoutProperty, new Data.Optional<Control>()
-                        , new Data.BindingValue<Control>(Layout));
+            //.orig, think many
+            //RaisePropertyChanged(LayoutProperty, new Data.Optional<Control>()
+            //            , new Data.BindingValue<Control>(Layout));
             DoReload();
         }
 

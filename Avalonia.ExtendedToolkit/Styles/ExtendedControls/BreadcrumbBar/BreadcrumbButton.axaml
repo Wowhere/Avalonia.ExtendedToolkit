@@ -79,8 +79,9 @@
                                       VerticalScrollBarVisibility="Auto" Focusable="False">
                                 <ItemsControl Margin="{TemplateBinding Padding}"
                                           KeyboardNavigation.TabNavigation="Cycle"
-                                              Items="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}, Path=Items}"
+                                              
                                      />
+                                  <!--bad viewItems="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}, Path=Items}"-->
                               </ScrollViewer>
                             </Grid>
                           </Border>

@@ -11,7 +11,7 @@ using Avalonia.Markup.Xaml.Styling;
 using Avalonia.Styling;
 using Newtonsoft.Json;
 using ReactiveUI;
-using XamlColorSchemeGenerator;
+//.origusing XamlColorSchemeGenerator;
 
 namespace Avalonia.ExtendedToolkit
 {
@@ -315,48 +315,48 @@ namespace Avalonia.ExtendedToolkit
 
             try
             {
-                var assembly = typeof(ThemeManager).Assembly;
-                string resourceName = assembly.GetManifestResourceNames().FirstOrDefault(x => x.Contains(GeneratedParameterFile));
-                GeneratorParameters generatorParameters = null;
-                using (Stream stream = assembly.GetManifestResourceStream(resourceName))
-                {
-                    using (StreamReader sr = new StreamReader(stream))
-                    {
-                        generatorParameters = JsonConvert.DeserializeObject<GeneratorParameters>(sr.ReadToEnd());
-                    }
-                }
+                //var assembly = typeof(ThemeManager).Assembly;
+                //string resourceName = assembly.GetManifestResourceNames().FirstOrDefault(x => x.Contains(GeneratedParameterFile));
+                //GeneratorParameters generatorParameters = null;
+                //using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+                //{
+                //    using (StreamReader sr = new StreamReader(stream))
+                //    {
+                //        generatorParameters = JsonConvert.DeserializeObject<GeneratorParameters>(sr.ReadToEnd());
+                //    }
+                //}
 
-                string nameSpace = typeof(ThemeManager).Namespace;
-                string basePath = resourceName.Replace(GeneratedParameterFile, string.Empty)
-                                    .Replace(nameSpace, string.Empty)
-                                    .Replace(".", "/");
-                basePath = nameSpace + basePath;
+                //string nameSpace = typeof(ThemeManager).Namespace;
+                //string basePath = resourceName.Replace(GeneratedParameterFile, string.Empty)
+                //                    .Replace(nameSpace, string.Empty)
+                //                    .Replace(".", "/");
+                //basePath = nameSpace + basePath;
 
-                List<string> availableXamlThemes = new List<string>();
-                foreach (var colorScheme in generatorParameters.ColorSchemes.Select(x => x.Name))
-                {
-                    foreach (var baseColorScheme in generatorParameters.BaseColorSchemes.Select(x => x.Name))
-                    {
-                        string themeName = $"{baseColorScheme}.{colorScheme}";
+                //List<string> availableXamlThemes = new List<string>();
+                //foreach (var colorScheme in generatorParameters.ColorSchemes.Select(x => x.Name))
+                //{
+                //    foreach (var baseColorScheme in generatorParameters.BaseColorSchemes.Select(x => x.Name))
+                //    {
+                //        string themeName = $"{baseColorScheme}.{colorScheme}";
 
-                        string xamlPathName = basePath + $"{themeName}.axaml";
-                        availableXamlThemes.Add(xamlPathName);
-                    }
-                }
-                availableXamlThemes = availableXamlThemes.OrderBy(x => x).ToList();
+                //        string xamlPathName = basePath + $"{themeName}.axaml";
+                //        availableXamlThemes.Add(xamlPathName);
+                //    }
+                //}
+                //availableXamlThemes = availableXamlThemes.OrderBy(x => x).ToList();
 
-                foreach (string xamlFile in availableXamlThemes)
-                {
-                    string tempXamlPath = xamlFile.Replace("/", ".");
+                //foreach (string xamlFile in availableXamlThemes)
+                //{
+                //    string tempXamlPath = xamlFile.Replace("/", ".");
 
-                    var theme = new StyleInclude(new Uri("resm:Styles?assembly=Avalonia.ExtendedToolkit"))
-                    {
-                        //resm:Avalonia.Controls.DataGrid.Themes.Default.axaml?assembly=Avalonia.Controls.DataGrid
-                        Source = new Uri($"avares://{xamlFile}")
-                        //Source = new Uri($"resm:{tempXamlPath}?assembly=Avalonia.ExtendedToolkit")
-                    };
-                    themesInternal.Add(new Theme(theme));
-                }
+                //    var theme = new StyleInclude(new Uri("resm:Styles?assembly=Avalonia.ExtendedToolkit"))
+                //    {
+                //        //resm:Avalonia.Controls.DataGrid.Themes.Default.axaml?assembly=Avalonia.Controls.DataGrid
+                //        Source = new Uri($"avares://{xamlFile}")
+                //        //Source = new Uri($"resm:{tempXamlPath}?assembly=Avalonia.ExtendedToolkit")
+                //    };
+                //    themesInternal.Add(new Theme(theme));
+                //}
             }
             catch (Exception e)
             {

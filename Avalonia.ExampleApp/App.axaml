@@ -5,7 +5,7 @@
     <Application.Styles>
         <!--<StyleInclude Source="avares://Avalonia.Themes.Fluent/FluentDark.xaml"/>
         <StyleInclude Source="avares://Avalonia.Themes.Fluent/Accents/BaseDark.xaml"/>-->
-        <SimpleTheme Mode="Dark"/>
+        <!--bad view<SimpleTheme Mode="Dark"/>-->
         <!--<StyleInclude Source="resm:Avalonia.Controls.DataGrid.Themes.Default.xaml?assembly=Avalonia.Controls.DataGrid" />-->
         <StyleInclude Source="avares://Avalonia.ExtendedToolkit/Styles/Themes/Light.Blue.axaml"/>
         <StyleInclude Source="avares://Avalonia.Controlz/Styles/Generic.axaml"/>

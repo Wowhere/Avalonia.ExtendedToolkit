@@ -78,8 +78,6 @@
             <ControlTemplate>
                 <Grid Name="LayoutRoot" Margin="{TemplateBinding Padding}" RowDefinitions="Auto,*">
                     <ContentPresenter Name="HeaderContentPresenter" Grid.Row="0"
-                                      Content="{TemplateBinding Header}"
-                                      ContentTemplate="{TemplateBinding HeaderTemplate}"
                                       Margin="{DynamicResource DatePickerTopHeaderMargin}"
                                       MaxWidth="{DynamicResource DatePickerThemeMaxWidth}"
                                       HorizontalAlignment="Stretch"

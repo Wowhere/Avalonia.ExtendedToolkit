@@ -27,9 +27,11 @@
                     VerticalAlignment="Top"
                     Margin="0,10,0,0" />
         <ItemsPresenter
-                Items="{Binding Items, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}"
+                
                 ItemsPanel="{Binding ItemsPanel, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}"
-                ItemTemplate="{Binding ItemTemplate, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}" />
+                 />
+          <!--bad viewItems="{Binding Items, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}"
+          ItemTemplate="{Binding ItemTemplate, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}"-->
       </Controls:SimplePanel>
     </ControlTemplate>
 
@@ -43,9 +45,11 @@
                      VerticalAlignment="Bottom"
                      Margin="0,0,0,10" />
         <ItemsPresenter VerticalAlignment="Bottom"
-                Items="{Binding Items, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}"
+                
                 ItemsPanel="{Binding ItemsPanel, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}"
-                ItemTemplate="{Binding ItemTemplate, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}" />
+                 />
+          <!--bad viewItems="{Binding Items, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}"
+          ItemTemplate="{Binding ItemTemplate, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}"-->
       </Controls:SimplePanel>
     </ControlTemplate>
 
@@ -62,9 +66,11 @@
                      Margin="10,0,0,0"
                      RenderTransformOrigin="0.5,0.5"/>
         <ItemsPresenter
-            Items="{Binding Items, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}"
+           
                 ItemsPanel="{Binding ItemsPanel, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}"
-                ItemTemplate="{Binding ItemTemplate, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}" />
+                 />
+          <!--bad viewItems="{Binding Items, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}"
+          ItemTemplate="{Binding ItemTemplate, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}"-->
       </Controls:SimplePanel>
     </ControlTemplate>
 
@@ -83,9 +89,11 @@
                      RenderTransformOrigin="0.5,0.5"
                      />
         <ItemsPresenter
-            Items="{Binding Items, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}"
+            
                 ItemsPanel="{Binding ItemsPanel, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}"
-                ItemTemplate="{Binding ItemTemplate, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}" />
+                />
+          <!--bad viewItems="{Binding Items, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}"
+          ItemTemplate="{Binding ItemTemplate, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}"-->
       </Controls:SimplePanel>
     </ControlTemplate>
   </Styles.Resources>
