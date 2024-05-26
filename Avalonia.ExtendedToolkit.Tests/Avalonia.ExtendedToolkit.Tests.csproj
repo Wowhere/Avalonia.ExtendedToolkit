@@ -7,6 +7,7 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <Platforms>AnyCPU;x64;x86</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,9 +21,6 @@
     <PackageReference Include="GridExtra.Avalonia" Version="0.9.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="ReactiveHistory" Version="0.10.7" />
-    <PackageReference Include="XamlColorSchemeGenerator" Version="3.0.0.31">
-      <NoWarn>NU1701</NoWarn>
-    </PackageReference>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.10.0" />
     <PackageReference Include="Microsoft.Reactive.Testing" Version="6.0.1" />
     <PackageReference Include="Moq" Version="4.20.70" />

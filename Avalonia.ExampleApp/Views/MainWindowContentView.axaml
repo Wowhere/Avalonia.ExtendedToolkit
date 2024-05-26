@@ -68,9 +68,9 @@
                     <Views:ButtonView/>
                 </ScrollViewer>
             </TabItem>
-            <TabItem Header="TabControl">
+            <!--<TabItem Header="TabControl">
                 <Views:TabControlExample/>
-            </TabItem>
+            </TabItem>-->
 
             <TabItem Header="Group Box">
                 <ScrollViewer>

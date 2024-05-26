@@ -575,22 +575,22 @@ namespace Avalonia.ExampleApp.ViewModels
         {
             IClassicDesktopStyleApplicationLifetime desktopLifetime =
                 Application.Current.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime;
+            //.orig
+            //if (desktopLifetime != null
+            //    && desktopLifetime.MainWindow != null
+            //    )
+            //{
+            //    var theme = ThemeManager.Instance.DetectTheme(desktopLifetime.MainWindow);
+            //    //Style style = Theme. ((theme.ThemeStyle as StyleInclude).Loaded as Style);
 
-            if (desktopLifetime != null
-                && desktopLifetime.MainWindow != null
-                )
-            {
-                var theme = ThemeManager.Instance.DetectTheme(desktopLifetime.MainWindow);
-                Style style = ((theme.ThemeStyle as StyleInclude).Loaded as Style);
+            //    var resources = style.Resources.Keys.Cast<object>()
+            //                         .Where(key => style.Resources[key] is SolidColorBrush)
+            //                         .Select(key => new BrushResource { Key = key.ToString(), Brush = style.Resources[key] as SolidColorBrush })
+            //                         .OrderBy(s => s.Key)
+            //                         .ToList();
 
-                var resources = style.Resources.Keys.Cast<object>()
-                                     .Where(key => style.Resources[key] is SolidColorBrush)
-                                     .Select(key => new BrushResource { Key = key.ToString(), Brush = style.Resources[key] as SolidColorBrush })
-                                     .OrderBy(s => s.Key)
-                                     .ToList();
-
-                return new AvaloniaList<BrushResource>(resources);
-            }
+            //    return new AvaloniaList<BrushResource>(resources);
+            //}
 
             return new AvaloniaList<BrushResource>();
         }

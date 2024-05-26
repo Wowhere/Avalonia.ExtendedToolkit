@@ -16,7 +16,7 @@
 
     </DockPanel.Styles>-->
 
-        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Height="35">
+        <!--<StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Height="35">
             <TextBlock Text="Themes" Foreground="{DynamicResource MahApps.Brushes.Black}"/>
             <ComboBox Name="cmbThemes" Margin="10,1,0,1" ItemsSource="{Binding BaseColors}"
                SelectedIndex="0" SelectedItem="{Binding SelectedBaseColor}" Width="100">
@@ -38,7 +38,7 @@
                     </DataTemplate>
 
                 </ComboBox.ItemTemplate>
-            </ComboBox>
+            </ComboBox>-->
 
             <!-- <TextBlock Margin="10,0,0,0" Text="Skins" Foreground="{DynamicResource MahApps.Brushes.Black}"/>
       <ComboBox Margin="10,1,0,1" Items="{Binding Skins}"
@@ -53,8 +53,8 @@
         </ComboBox.ItemTemplate>
       </ComboBox> -->
 
-        </StackPanel>
-        <Grid DockPanel.Dock="Bottom" HorizontalAlignment="Stretch">
+        <!--</StackPanel>-->
+        <!--<Grid DockPanel.Dock="Bottom" HorizontalAlignment="Stretch">-->
 
 
 
@@ -69,9 +69,9 @@
 
             <!--<Views:TagControlExample/>-->
 
-            <Views:MainWindowContentView DockPanel.Dock="Bottom"/>
+            <!--<Views:MainWindowContentView DockPanel.Dock="Bottom"/>-->
 
-        </Grid>
+        <!--</Grid>-->
 
     </DockPanel>
 </Controls:MetroWindow>
