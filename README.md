@@ -5,7 +5,11 @@
 
 ![alt text](github/Images/Avalonia.ExampleApp-Overview.gif "Main application")   
 
+Fork of original ExtendedToolkit from mameolan, porting to Avalonia 11 and Dotnet 8. 
+Original blocks of code, commented during rewriting are labeled by ".orig"
+Dangerous changes are labeled by ".editing"
 
+Original code taken from @maeolan and some blocks from @Nekohim3, but heavily rewritten
 
 Avalonia.ExtendedTool wants to port some controls from the WPF to Avalonia.
 
