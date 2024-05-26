@@ -6,7 +6,7 @@
     xmlns:tk="clr-namespace:Avalonia.ExtendedToolkit;assembly=Avalonia.ExtendedToolkit"
   >
 
-  <Style Selector="Controls|SplitView">
+  <!--<Style Selector="Controls|SplitView">
     <Setter Property="CompactPaneLength" Value="48" />
     <Setter Property="HorizontalContentAlignment" Value="Stretch" />
     <Setter Property="OpenPaneLength" Value="320" />
@@ -26,12 +26,12 @@
             </Grid.Resources>
 
             <Grid.ColumnDefinitions>
-              <!--x:Name="ColumnDefinition1"-->
+              --><!--x:Name="ColumnDefinition1"--><!--
               <tk:ColumnDefinitionExt Name="ColumnDefinition1"  Width="{Binding ElementName=ProxyElement, 
                                  Path=DataContext.OpenPaneGridLength, FallbackValue=0}" />
               
 
-              <!--x:Name="ColumnDefinition2"-->
+              --><!--x:Name="ColumnDefinition2"--><!--
               <tk:ColumnDefinitionExt Name="ColumnDefinition2" Width="*" />
             </Grid.ColumnDefinitions>
 
@@ -42,7 +42,7 @@
                               Focusable="False"
                               IsVisible="False" />
 
-            <!--  Content Area  -->
+            --><!--  Content Area  --><!--
             <Grid x:Name="ContentRoot"
                   Grid.Column="0"
                   Grid.ColumnSpan="2">
@@ -56,7 +56,7 @@
                          IsVisible="False" />
             </Grid>
 
-            <!--  Pane Content Area  -->
+            --><!--  Pane Content Area  --><!--
             <Grid x:Name="PaneRoot"
                   Grid.Column="0"
                   Grid.ColumnSpan="2"
@@ -65,17 +65,17 @@
                   Background="{TemplateBinding PaneBackground}"
                   IsVisible="True">
               <Grid.RenderTransform>
-                <!--x:Name="PaneTransform"-->
-                <tk:TranslateTransformExt Name="PaneTransform"  />
+                --><!--x:Name="PaneTransform"--><!--
+                --><!--bad view<tk:TranslateTransformExt Name="PaneTransform"  />--><!--
               </Grid.RenderTransform>
               <Grid.Clip>
-                <!--x:Name="PaneClipRectangle"-->
-                <tk:RectangleGeometryExt Name="PaneClipRectangle">
+                --><!--x:Name="PaneClipRectangle"--><!--
+                --><!--bad view<tk:RectangleGeometryExt Name="PaneClipRectangle">
                   <tk:RectangleGeometryExt.Transform>
-                    <!--x:Name="PaneClipRectangleTransform"-->
+                    --><!--x:Name="PaneClipRectangleTransform"--><!--
                     <tk:TranslateTransformExt Name="PaneClipRectangleTransform"  />
                   </tk:RectangleGeometryExt.Transform>
-                </tk:RectangleGeometryExt>
+                </tk:RectangleGeometryExt>--><!--
               </Grid.Clip>
               <ContentControl HorizontalAlignment="Stretch"
                               VerticalAlignment="Stretch"
@@ -90,7 +90,7 @@
                          IsVisible="False" />
             </Grid>
 
-            <!--<VisualStateManager.VisualStateGroups>
+            --><!--<VisualStateManager.VisualStateGroups>
               <VisualStateGroup x:Name="DisplayModeStates">
                 <VisualStateGroup.Transitions>
                   <VisualTransition Storyboard="{StaticResource ClosedToOpenOverlayLeftStoryboard}"
@@ -129,7 +129,7 @@
                 <VisualState x:Name="OpenCompactOverlayLeft" Storyboard="{StaticResource OpenCompactOverlayLeftStoryboard}" />
                 <VisualState x:Name="OpenCompactOverlayRight" Storyboard="{StaticResource OpenCompactOverlayRightStoryboard}" />
               </VisualStateGroup>
-            </VisualStateManager.VisualStateGroups>-->
+            </VisualStateManager.VisualStateGroups>--><!--
           </Grid>
         </ControlTemplate>
       </Setter.Value>
@@ -287,7 +287,7 @@
     <Setter Property="IsVisible" Value="true"/>
   </Style>
 
-  <!---->
+  --><!----><!--
   <Style Selector="Controls|SplitView[State=OpenOverlayLeftToClosedStoryboard] /template/ Grid#PaneRoot">
     <Setter Property="IsVisible" Value="true"/>
   </Style>
@@ -304,7 +304,7 @@
     <Setter Property="X" Value="{Binding ElementName=ProxyElement, Path=DataContext.OpenPaneLength}"/>
   </Style>
 
-  <!---->
+  --><!----><!--
   <Style Selector="Controls|SplitView[State=OpenOverlayRightToClosedStoryboard] /template/ Grid#PaneRoot">
     <Setter Property="IsVisible" Value="true"/>
     <Setter Property="HorizontalAlignment" Value="Right"/>
@@ -323,7 +323,7 @@
     <Setter Property="X" Value="{Binding ElementName=ProxyElement, Path=DataContext.NegativeOpenPaneLength}"/>
   </Style>
 
-  <!---->
+  --><!----><!--
   <Style Selector="Controls|SplitView[State=OpenCompactOverlayLeftToClosedCompactLeftStoryboard] /template/ Grid#PaneRoot">
     <Setter Property="IsVisible" Value="true"/>
     <Setter Property="HorizontalAlignment" Value="Right"/>
@@ -342,7 +342,7 @@
     <Setter Property="X" Value="{Binding ElementName=ProxyElement, Path=DataContext.NegativeOpenPaneLength}"/>
   </Style>
 
-  <!---->
+  --><!----><!--
   <Style Selector="Controls|SplitView[State=ClosedCompactLeftToOpenCompactOverlayLeftStoryboard] /template/ tk|ColumnDefinitionExt#ColumnDefinition1">
     <Setter Property="Width" Value="{Binding ElementName=ProxyElement, Path=DataContext.CompactPaneGridLength}"/>
   </Style>
@@ -360,7 +360,8 @@
     <Setter Property="IsVisible" Value="True"/>
   </Style>
 
-  <Style Selector="Controls|SplitView[State=ClosedCompactLeftToOpenCompactOverlayLeftStoryboard] /template/ tk|TranslateTransformExt#PaneClipRectangleTransform">
+  --><!--bad view<Style Selector="Controls|SplitView[State=ClosedCompactLeftToOpenCompactOverlayLeftStoryboard] /template/ tk|TranslateTransformExt#PaneClipRectangleTransform">--><!--
+  --><!--<Style Selector="Controls|SplitView[State=ClosedCompactLeftToOpenCompactOverlayLeftStoryboard] /template/">
     <Style.Animations>
       <Animation Duration="0:0:0.12">
         <KeyFrame Cue="0%">
@@ -371,9 +372,9 @@
         </KeyFrame>
       </Animation>
     </Style.Animations>
-  </Style>
+  </Style>--><!--
 
-  <!---->
+  --><!----><!--
   <Style Selector="Controls|SplitView[State=OpenCompactOverlayRightToClosedCompactRightStoryboard] /template/ tk|ColumnDefinitionExt#ColumnDefinition1">
     <Setter Property="Width" Value="*"/>
   </Style>
@@ -396,7 +397,8 @@
     <Setter Property="HorizontalAlignment" Value="Left"/>
   </Style>
 
-  <Style Selector="Controls|SplitView[State=ClosedCompactLeftToOpenCompactOverlayLeftStoryboard] /template/ tk|TranslateTransformExt#PaneClipRectangleTransform">
+  --><!--bad view<Style Selector="Controls|SplitView[State=ClosedCompactLeftToOpenCompactOverlayLeftStoryboard] /template/ tk|TranslateTransformExt#PaneClipRectangleTransform">--><!--
+  --><!--<Style Selector="Controls|SplitView[State=ClosedCompactLeftToOpenCompactOverlayLeftStoryboard] /template/">
     <Style.Animations>
       <Animation Duration="0:0:0.12">
         <KeyFrame Cue="0%">
@@ -407,9 +409,9 @@
         </KeyFrame>
       </Animation>
     </Style.Animations>
-  </Style>
+  </Style>--><!--
 
-  <!---->
+  --><!----><!--
   <Style Selector="Controls|SplitView[State=ClosedCompactLeftStoryboard] /template/ tk|ColumnDefinitionExt#ColumnDefinition1">
     <Setter Property="Width" Value="{Binding ElementName=ProxyElement, Path=DataContext.CompactPaneGridLength}"/>
   </Style>
@@ -423,11 +425,12 @@
     <Setter Property="IsVisible" Value="True"/>
   </Style>
 
-  <Style Selector="Controls|SplitView[State=ClosedCompactLeftToOpenCompactOverlayLeftStoryboard] /template/ tk|TranslateTransformExt#PaneClipRectangleTransform">
-    <Setter Property="X" Value="{Binding ElementName=ProxyElement, Path=DataContext.NegativeOpenPaneLengthMinusCompactLength}"/>
+  --><!--bad view<Style Selector="Controls|SplitView[State=ClosedCompactLeftToOpenCompactOverlayLeftStoryboard] /template/ tk|TranslateTransformExt#PaneClipRectangleTransform">--><!--
+  <Style Selector="Controls|SplitView[State=ClosedCompactLeftToOpenCompactOverlayLeftStoryboard] /template/">
+    --><!--bad view<Setter Property="X" Value="{Binding ElementName=ProxyElement, Path=DataContext.NegativeOpenPaneLengthMinusCompactLength}"/>--><!--
   </Style>
 
-  <!---->
+  --><!----><!--
   <Style Selector="Controls|SplitView[State=ClosedCompactRightStoryboard] /template/ tk|ColumnDefinitionExt#ColumnDefinition1">
     <Setter Property="Width" Value="*"/>
   </Style>
@@ -446,11 +449,12 @@
     <Setter Property="HorizontalAlignment" Value="Right"/>
   </Style>
 
-  <Style Selector="Controls|SplitView[State=ClosedCompactRightStoryboard] /template/ tk|TranslateTransformExt#PaneClipRectangleTransform">
-    <Setter Property="X" Value="{Binding ElementName=ProxyElement, Path=DataContext.OpenPaneLengthMinusCompactLength}"/>
+  --><!--bad view<Style Selector="Controls|SplitView[State=ClosedCompactRightStoryboard] /template/ tk|TranslateTransformExt#PaneClipRectangleTransform">--><!--
+  <Style Selector="Controls|SplitView[State=ClosedCompactRightStoryboard] /template/">
+    --><!--bad view<Setter Property="X" Value="{Binding ElementName=ProxyElement, Path=DataContext.OpenPaneLengthMinusCompactLength}"/>--><!--
   </Style>
 
-  <!---->
+  --><!----><!--
   <Style Selector="Controls|SplitView[State=OpenOverlayLeftStoryboard] /template/ Grid#PaneRoot">
     <Setter Property="IsVisible" Value="True"/>
   </Style>
@@ -463,7 +467,7 @@
     <Setter Property="IsVisible" Value="True"/>
   </Style>
 
-  <!---->
+  --><!----><!--
   <Style Selector="Controls|SplitView[State=OpenOverlayRightStoryboard] /template/ Grid#PaneRoot">
     <Setter Property="IsVisible" Value="True"/>
     <Setter Property="HorizontalAlignment" Value="Right"/>
@@ -478,7 +482,7 @@
     <Setter Property="IsVisible" Value="True"/>
   </Style>
 
-  <!---->
+  --><!----><!--
   <Style Selector="Controls|SplitView[State=OpenInlineLeftStoryboard] /template/ Grid#ContentRoot">
     <Setter Property="Grid.Column" Value="1"/>
     <Setter Property="Grid.ColumnSpan" Value="1"/>
@@ -493,7 +497,7 @@
     <Setter Property="IsVisible" Value="True"/>
   </Style>
 
-  <!---->
+  --><!----><!--
   <Style Selector="Controls|SplitView[State=OpenInlineRightStoryboard] /template/ tk|ColumnDefinitionExt#ColumnDefinition1">
     <Setter Property="Width" Value="*"/>
   </Style>
@@ -517,7 +521,7 @@
     <Setter Property="HorizontalAlignment" Value="Left"/>
   </Style>
 
-  <!---->
+  --><!----><!--
   <Style Selector="Controls|SplitView[State=OpenCompactOverlayLeftStoryboard] /template/ tk|ColumnDefinitionExt#ColumnDefinition1">
     <Setter Property="Width" Value="{Binding ElementName=ProxyElement, Path=DataContext.CompactPaneGridLength}"/>
   </Style>
@@ -539,7 +543,7 @@
     <Setter Property="IsVisible" Value="True"/>
   </Style>
 
-  <!---->
+  --><!----><!--
   <Style Selector="Controls|SplitView[State=OpenCompactOverlayRightStoryboard] /template/ tk|ColumnDefinitionExt#ColumnDefinition1">
     <Setter Property="Width" Value="*"/>
   </Style>
@@ -564,6 +568,6 @@
 
   <Style Selector="Controls|SplitView[State=OpenCompactOverlayRightStoryboard] /template/ Rectangle#LightDismissLayer">
     <Setter Property="IsVisible" Value="True"/>
-  </Style>
+  </Style>-->
 
 </Styles>

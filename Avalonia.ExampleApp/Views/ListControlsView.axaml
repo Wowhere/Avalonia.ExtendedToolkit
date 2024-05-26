@@ -16,14 +16,14 @@
             <RowDefinition/>
             <RowDefinition/>
           </Grid.RowDefinitions>
-
-          <ListBox Margin="2"
+            <!--bad viewVirtualizationMode="Simple"-->
+            <ListBox Margin="2"
                   Grid.Row="0"
                   Height="300"
                   BorderThickness="1"
-                  Items="{Binding Artists}"
+                  ItemsSource="{Binding Artists}"
                   SelectedIndex="0"
-                   VirtualizationMode="Simple"
+                  
                    
                               >
             <ListBox.ItemTemplate>
@@ -38,11 +38,12 @@
                    Height="300"
                    BorderThickness="1"
                    IsEnabled="False"
-                   Items="{Binding Albums}"
+                   ItemsSource="{Binding Albums}"
                    SelectedIndex="0"
-                   VirtualizationMode="Simple"
+                   
                    >
-            <ListBox.ItemTemplate>
+              <!--bad viewVirtualizationMode="Simple"-->
+              <ListBox.ItemTemplate>
               <DataTemplate>
                 <TextBlock Text="{Binding Title}" Foreground="{DynamicResource MahApps.Brushes.Black}"/>
               </DataTemplate>

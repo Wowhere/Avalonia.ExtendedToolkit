@@ -271,8 +271,9 @@
                                     <DockPanel x:Name="optionButtons" IsVisible="False" Focusable="False"
                                                Height="{Binding ElementName=contentGrid, Path=Height}">
                                         <ItemsControl DockPanel.Dock="Bottom"
-                                                      Items="{TemplateBinding OptionButtons}"
+                                                      
                                                Focusable="False" />
+                                        <!--bad view Items="{TemplateBinding OptionButtons}"-->
                                         <ToggleButton Content="{TemplateBinding NavigationPaneText}" ClickMode="Press"
                                                 x:Name="PART_ToggleButton"
                                                 IsChecked="{Binding IsPopupVisible,RelativeSource={RelativeSource TemplatedParent},Mode=TwoWay}"
@@ -342,9 +343,10 @@
                                         </Button.Content>
                                     </Button>
                                     <ItemsControl
-                                      Items="{Binding RelativeSource={RelativeSource AncestorType={x:Type Controls:OutlookBar}}, Path=MaximizedSections, Mode=TwoWay}"
+                                      
                                       Focusable="False"
                       />
+                                    <!--bad viewItems="{Binding RelativeSource={RelativeSource AncestorType={x:Type Controls:OutlookBar}}, Path=MaximizedSections, Mode=TwoWay}"-->
                                     <Border Height="{TemplateBinding ButtonHeight}" x:Name="PART_MinimizedContainer"
                                             Background="{DynamicResource Odc.Brushes.SectionButtonGradient}"
                                             BorderBrush="Transparent"
@@ -356,9 +358,10 @@
                                                 <ColumnDefinition Width="20*" MinWidth="20" />
                                             </Grid.ColumnDefinitions>
                                             <ItemsControl Grid.Column="0" x:Name="minimizedButtons"
-                                                  Items="{Binding RelativeSource={RelativeSource AncestorType={x:Type Controls:OutlookBar}}, Path=MinimizedSections, Mode=TwoWay}"
+                                                  
                                                   ClipToBounds="True" Focusable="False" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                                   Margin="1" >
+                                                <!--bad viewItems="{Binding RelativeSource={RelativeSource AncestorType={x:Type Controls:OutlookBar}}, Path=MinimizedSections, Mode=TwoWay}"-->
                                                 <ItemsControl.ItemsPanel>
                                                     <ItemsPanelTemplate>
                                                         <StackPanel  Orientation="Horizontal" VerticalAlignment="Stretch"  />
@@ -376,10 +379,10 @@
                                                 </ToggleButton.Content>
                                                 <ToggleButton.ContextMenu>
                                                     <ContextMenu
-                                                            Items="{TemplateBinding OverflowMenuItems}"
                                                             ItemTemplate="{TemplateBinding ItemTemplate}"
                                                             ItemsPanel="{TemplateBinding ItemsPanel}"
                                                             UseLayoutRounding="False">
+                                                        <!--bad viewItems="{TemplateBinding OverflowMenuItems}"-->
                                                     </ContextMenu>
                                                 </ToggleButton.ContextMenu>
                                             </ToggleButton>

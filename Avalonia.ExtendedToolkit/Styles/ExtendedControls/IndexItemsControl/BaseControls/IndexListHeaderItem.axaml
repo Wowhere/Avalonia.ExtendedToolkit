@@ -39,8 +39,9 @@
             </Grid>
           </Border>
           <ItemsPresenter Name="PART_ItemsPresenter"
-                          Items="{TemplateBinding Items}"
+                          
                           ItemsPanel="{TemplateBinding ItemsPanel}" />
+            <!--bad viewItems="{TemplateBinding Items}"-->
         </StackPanel>
       </ControlTemplate>
     </Setter>

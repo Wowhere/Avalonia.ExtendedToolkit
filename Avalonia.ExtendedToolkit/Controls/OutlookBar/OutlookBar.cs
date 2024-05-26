@@ -300,8 +300,8 @@ namespace Avalonia.ExtendedToolkit.Controls
                 MaxWidth = MinimizedWidth + (CanResize ? 4 : 0);
                 RaiseEvent(new RoutedEventArgs(CollapsedEvent));
             }
-
-            RaisePropertyChanged(IsOverflowVisibleProperty, !IsOverflowVisible, IsOverflowVisible);
+            //.orig, think many
+            //RaisePropertyChanged(IsOverflowVisibleProperty, !IsOverflowVisible, IsOverflowVisible);
         }
 
         /// <summary>

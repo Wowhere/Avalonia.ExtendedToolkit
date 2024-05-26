@@ -162,7 +162,8 @@ namespace Avalonia.ExtendedToolkit.Controls
 
             AddOrRemoveEvents(false);
             //.edited, think many
-            RaisePropertyChanged<bool>(IsRotationEnabledProperty, new bool(), IsRotationEnabled);
+            //.orig, think many
+            //RaisePropertyChanged<bool>(IsRotationEnabledProperty, new bool(), IsRotationEnabled);
 
             UpdateOuterRectPositions();
         }

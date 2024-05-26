@@ -73,8 +73,8 @@ namespace Avalonia.ExampleApp.Model
             }
 
             _isUpdating = false;
-
-            RaisePropertyChanged(EditValueProperty, new Point(), EditValue);
+            //.orig
+            //RaisePropertyChanged(EditValueProperty, new Point(), EditValue);
         }
 
         private void OnSliderValueChanged(PointEditor o, AvaloniaPropertyChangedEventArgs e)

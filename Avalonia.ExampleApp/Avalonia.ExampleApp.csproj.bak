@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿﻿<Project Sdk="Microsoft.NET.Sdk">
 	<Import Project="..\Directory.build.props" />
 
 	<PropertyGroup>
@@ -29,6 +29,7 @@
 	<ItemGroup>
 		<PackageReference Include="Avalonia" Version="11.0.10" />
 		<PackageReference Include="Avalonia.Controls.DataGrid" Version="11.0.10" />
+		<PackageReference Include="Avalonia.Controls.ItemsRepeater" Version="11.0.10" />
 		<PackageReference Include="Avalonia.Desktop" Version="11.0.10" />
 		<PackageReference Include="Avalonia.ReactiveUI" Version="11.0.10" />
 		<PackageReference Include="Avalonia.Xaml.Behaviors" Version="11.0.10.9" />
@@ -78,7 +79,6 @@
 	<ItemGroup>
 		<EmbeddedResource Include="Styles\Themes\GeneratorParameters.json" />
 		<None Remove=".gitignore" />
-		<None Remove="Styles\ExtendedControls\SplitView.txt" />
 	</ItemGroup>
 
 	<ItemGroup>

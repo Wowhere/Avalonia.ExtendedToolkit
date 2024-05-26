@@ -54,7 +54,7 @@
             </Style>
           </StackPanel.Styles>
 
-          <ListBox Items="{Binding Path=[ObjectBrushes].PropertyValue.Value}">
+          <ListBox ItemsSource="{Binding Path=[ObjectBrushes].PropertyValue.Value}">
             <ListBox.ItemTemplate>
               <DataTemplate>
                 <Grid>
@@ -75,7 +75,7 @@
                   
                   <TextBlock Grid.Column="0" Text="{Binding Path=Name}" />
                   
-                  <ComboBox Margin="0,3,0,3" Grid.Column="1" Items="{Binding Source={StaticResource BrushList}}"
+                  <ComboBox Margin="0,3,0,3" Grid.Column="1" ItemsSource="{Binding Source={StaticResource BrushList}}"
                             MinWidth="80" x:Name="cmb">
                     <i:Interaction.Behaviors>
                       <behaviours:SelectedItemBehaviour />

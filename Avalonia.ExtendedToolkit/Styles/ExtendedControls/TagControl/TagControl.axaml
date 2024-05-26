@@ -45,9 +45,10 @@
                 </Button>
               <ItemsPresenter Grid.Column="1"
                           Name="PART_ItemsPresenter"
-                          Items="{TemplateBinding ItemsSource}"
+                          
                           ItemsPanel="{TemplateBinding ItemsPanel}"
                           MaxWidth="500" />
+                <!--bad viewItems="{TemplateBinding ItemsSource}"-->
             </Grid>
           </Border>
         </ControlTemplate>

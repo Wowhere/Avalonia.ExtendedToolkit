@@ -41,7 +41,8 @@ namespace Avalonia.ExtendedToolkit.Controls
                     WindowState = WindowState.Maximized;
                     break;
             }
-            RaisePropertyChanged(WindowStateProperty, oldValue, WindowState);//.orig, Data.BindingPriority.TemplatedParent);
+            //.orig, think many
+            //RaisePropertyChanged(WindowStateProperty, oldValue, WindowState);//.orig, Data.BindingPriority.TemplatedParent);
         }
 
         internal void HandleFlyoutStatusChange(Flyout flyout, List<Flyout> visibleFlyouts)
