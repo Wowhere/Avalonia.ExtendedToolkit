@@ -161,8 +161,8 @@ namespace Avalonia.ExtendedToolkit.Controls
             _rotateThumb = e.NameScope.Find<RotateThumb>(PART_RotateThumb);
 
             AddOrRemoveEvents(false);
-
-            RaisePropertyChanged<bool>(IsRotationEnabledProperty, new Data.Optional<bool>(), new Data.BindingValue<bool>(IsRotationEnabled));
+            //.edited, think many
+            RaisePropertyChanged<bool>(IsRotationEnabledProperty, new bool(), IsRotationEnabled);
 
             UpdateOuterRectPositions();
         }

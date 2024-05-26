@@ -301,13 +301,13 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid
                         HookPropertyChanged(item);
                 }
 
-                //OnPropertyChanged("Properties");
+                OnPropertyChanged("Properties");
 
                 RaisePropertyChanged(HasPropertiesProperty, !HasProperties, HasProperties);
-                //OnPropertyChanged("HasProperties");
+                OnPropertyChanged("HasProperties");
 
                 RaisePropertyChanged(BrowsablePropertiesProperty, new Data.Optional<IEnumerable<PropertyItem>>(), new Data.BindingValue<IEnumerable<PropertyItem>>(BrowsableProperties));
-                //OnPropertyChanged("BrowsableProperties");
+                OnPropertyChanged("BrowsableProperties");
             }
         }
 

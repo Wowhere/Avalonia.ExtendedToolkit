@@ -161,8 +161,8 @@ namespace Avalonia.ExtendedToolkit.Controls
                 if (AllowDragOutOfView == false)
                 {
                     var bouncedControl = BouncedControl != null ? BouncedControl : _designerItem.Parent;
-
-                    var controlBounds = bouncedControl.Bounds;
+                    //.edited, think many
+                    var controlBounds = ((Control)bouncedControl).Bounds;
 
                     var rect = new Rect(new Point(left, top), _designerItem.DesiredSize);
 

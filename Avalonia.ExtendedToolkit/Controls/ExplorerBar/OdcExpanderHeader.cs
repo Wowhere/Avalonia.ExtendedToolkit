@@ -167,10 +167,11 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// raises ExpandGeometry property changed
         /// </summary>
         /// <param name="e"></param>
-        protected override void OnAttachedToVisualTree(VisualTreeAttachmentEventArgs e)
-        {
-            base.OnAttachedToVisualTree(e);
-            RaisePropertyChanged(ExpandGeometryProperty, null, ExpandGeometry);
-        }
+        //.orig
+        //protected override void OnAttachedToVisualTree(VisualTreeAttachmentEventArgs e)
+        //{
+        //    base.OnAttachedToVisualTree(e);
+        //    RaisePropertyChanged(ExpandGeometryProperty, null, ExpandGeometry);
+        //}
     }
 }
