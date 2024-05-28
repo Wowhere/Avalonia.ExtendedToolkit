@@ -27,14 +27,16 @@
                                     VerticalScrollBarVisibility="{TemplateBinding (ScrollViewer.VerticalScrollBarVisibility)}"
                                     Background="{TemplateBinding Background}"
                                     DockPanel.Dock="Left">
-                                    <ItemsPresenter
+                                    <ItemsControl
                                         Name="PART_ItemsPresenter"
-                                        
                                         ItemsPanel="{TemplateBinding ItemsPanel}"
                                         >
+                                        <ItemsControl.Template>
+                                            
+                                        </ItemsControl.Template>
                                         <!--bad viewItems="{TemplateBinding Items}"
                                         ItemTemplate="{TemplateBinding ItemTemplate}"-->
-                                    </ItemsPresenter>
+                                    </ItemsControl>
                                 </ScrollViewer>
                                 <ContentControl Content="{TemplateBinding Tag}" HorizontalContentAlignment="Right"
                                                 DockPanel.Dock="Bottom"/>
@@ -68,9 +70,9 @@
                     <Views:ButtonView/>
                 </ScrollViewer>
             </TabItem>
-            <!--<TabItem Header="TabControl">
+            <TabItem Header="TabControl">
                 <Views:TabControlExample/>
-            </TabItem>-->
+            </TabItem>
 
             <TabItem Header="Group Box">
                 <ScrollViewer>

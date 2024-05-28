@@ -9,14 +9,14 @@
         x:Class="Avalonia.ExampleApp.Views.MainWindow"
         Title="MainWindow">
     <DockPanel>
-        <!--<DockPanel.Styles>
+        <DockPanel.Styles>
       <Style Selector="TextBlock">
         <Setter Property="VerticalAlignment" Value="Center"/>
       </Style>
 
-    </DockPanel.Styles>-->
+    </DockPanel.Styles>
 
-        <!--<StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Height="35">
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Height="35">
             <TextBlock Text="Themes" Foreground="{DynamicResource MahApps.Brushes.Black}"/>
             <ComboBox Name="cmbThemes" Margin="10,1,0,1" ItemsSource="{Binding BaseColors}"
                SelectedIndex="0" SelectedItem="{Binding SelectedBaseColor}" Width="100">
@@ -38,10 +38,10 @@
                     </DataTemplate>
 
                 </ComboBox.ItemTemplate>
-            </ComboBox>-->
+            </ComboBox>
 
-            <!-- <TextBlock Margin="10,0,0,0" Text="Skins" Foreground="{DynamicResource MahApps.Brushes.Black}"/>
-      <ComboBox Margin="10,1,0,1" Items="{Binding Skins}"
+             <TextBlock Margin="10,0,0,0" Text="Skins" Foreground="{DynamicResource MahApps.Brushes.Black}"/>
+      <ComboBox Margin="10,1,0,1" ItemsSource="{Binding Skins}"
          SelectedIndex="0" SelectedItem="{Binding SelectedSkin, Mode=TwoWay}" Width="100"
                 >
         <ComboBox.ItemTemplate>
@@ -51,10 +51,10 @@
           </DataTemplate>
 
         </ComboBox.ItemTemplate>
-      </ComboBox> -->
+      </ComboBox>
 
-        <!--</StackPanel>-->
-        <!--<Grid DockPanel.Dock="Bottom" HorizontalAlignment="Stretch">-->
+        </StackPanel>
+        <Grid DockPanel.Dock="Bottom" HorizontalAlignment="Stretch">-->
 
 
 
@@ -62,16 +62,16 @@
                          TickPlacement="TopLeft" TickFrequency="2"
                          /> -->
 
-            <!-- <Controls:TabControlExt Underlined="TabItems" UnderlinePlacement="Bottom">
+            <!--<Controls:TabControl Underlined="TabItems" UnderlinePlacement="Bottom">
         <Controls:TabItemExt Header="Test1" Foreground="{DynamicResource MahApps.Brushes.Black}"/>
         <Controls:TabItemExt Header="Test2" Foreground="{DynamicResource MahApps.Brushes.Black}"/>
-      </Controls:TabControlExt> -->
+      </Controls:TabControl>-->
 
             <!--<Views:TagControlExample/>-->
 
             <!--<Views:MainWindowContentView DockPanel.Dock="Bottom"/>-->
 
-        <!--</Grid>-->
+        </Grid>
 
     </DockPanel>
 </Controls:MetroWindow>
