@@ -45,14 +45,15 @@
       </ComboBox>
         </StackPanel>
         <Grid DockPanel.Dock="Bottom" HorizontalAlignment="Stretch">
-            <!--<Controlz:SliderEx VerticalAlignment="Center" Width="300" Orientation="Horizontal" TickPlacement="TopLeft" TickFrequency="2" />--> 
+            <Controlz:SliderEx VerticalAlignment="Center" Width="300" Orientation="Horizontal" TickPlacement="TopLeft" TickFrequency="2" />
 
-      <!--<TabControl Underlined="TabItems" UnderlinePlacement="Bottom">
-        --><!--<Controls:TabItemExt Header="Test1" Foreground="{DynamicResource MahApps.Brushes.Black}"/>
-        <Controls:TabItemExt Header="Test2" Foreground="{DynamicResource MahApps.Brushes.Black}"/>--><!--
-      </TabControl>-->
+      <TabControl>
+          <!--bad viewUnderlined="TabItems" UnderlinePlacement="Bottom"-->
+          <!--bad view<Controls:TabItemExt Header="Test1" Foreground="{DynamicResource MahApps.Brushes.Black}"/>
+        <Controls:TabItemExt Header="Test2" Foreground="{DynamicResource MahApps.Brushes.Black}"/>-->
+      </TabControl>
 
-            <Views:TagControlExample/>
+            
 
             <Views:MainWindowContentView DockPanel.Dock="Bottom"/>
         </Grid>
