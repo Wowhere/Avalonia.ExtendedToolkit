@@ -43,9 +43,9 @@
                     </MultiBinding> 
                 </Button.IsVisible>
                 </Button>
-              <ItemsPresenter Grid.Column="1"
+              <ItemsControl Grid.Column="1"
                           Name="PART_ItemsPresenter"
-                          
+                          ItemsSource="{TemplateBinding ItemsSource}"
                           ItemsPanel="{TemplateBinding ItemsPanel}"
                           MaxWidth="500" />
                 <!--bad viewItems="{TemplateBinding ItemsSource}"-->
