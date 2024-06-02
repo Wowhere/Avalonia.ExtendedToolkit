@@ -78,11 +78,13 @@
             <ControlTemplate>
                 <Grid Name="LayoutRoot" Margin="{TemplateBinding Padding}" RowDefinitions="Auto,*">
                     <ContentPresenter Name="HeaderContentPresenter" Grid.Row="0"
+                                      
                                       Margin="{DynamicResource DatePickerTopHeaderMargin}"
                                       MaxWidth="{DynamicResource DatePickerThemeMaxWidth}"
                                       HorizontalAlignment="Stretch"
                                       VerticalAlignment="Top" />
-
+                    <!--bad viewContent="{TemplateBinding Header}"
+                    ContentTemplate="{TemplateBinding HeaderTemplate}"-->
                     <Button Name="FlyoutButton" Grid.Row="1"
                             Foreground="{TemplateBinding Foreground}"
                             Background="{TemplateBinding Background}"

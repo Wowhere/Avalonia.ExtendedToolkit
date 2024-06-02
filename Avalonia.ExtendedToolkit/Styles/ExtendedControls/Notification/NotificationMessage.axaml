@@ -223,6 +223,7 @@
                   Grid.Column="2"
                   HorizontalAlignment="Stretch"
                   VerticalAlignment="Stretch"
+                  ItemsSource="{TemplateBinding Buttons}"
                   >
                   <!--bad viewItems="{TemplateBinding Buttons}"-->
                   <ItemsControl.ItemsPanel>

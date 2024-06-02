@@ -20,6 +20,13 @@
                     HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
                     VerticalAlignment="{TemplateBinding VerticalAlignment}">
                     <DockPanel>
+                        <ItemsPresenter
+                            Name="PART_ItemsPresenter"
+                            ItemsPanel="{TemplateBinding ItemsPanel}"
+                            >
+                            <!--bad viewItems="{TemplateBinding Items}"
+                            ItemTemplate="{TemplateBinding ItemTemplate}"-->
+                        </ItemsPresenter>
                         <ContentPresenter
                             Name="PART_SelectedContentHost"
                             Margin="{TemplateBinding Padding}"
