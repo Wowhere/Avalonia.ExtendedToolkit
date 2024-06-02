@@ -21,16 +21,16 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         public Wizard()
         {
-            ItemsSource = new AvaloniaList<WizardPage>();
+            //ItemsSource = new AvaloniaList<WizardPage>();
 
             CurrentPageProperty.Changed.AddClassHandler<Wizard>((Action<Wizard, AvaloniaPropertyChangedEventArgs>)((o, e) => OnCurrentPageChanged(o, e)));
             ItemsPanelProperty.Changed.AddClassHandler<Wizard>((Action<Wizard, AvaloniaPropertyChangedEventArgs>)((o,  e) => OnItemChanged(o, e)));
             //.edited
-            //ItemsSourceProperty.Changed.AddClassHandler<Wizard>((Action<Wizard, AvaloniaPropertyChangedEventArgs>)((o,       e) => OnItemSourceChanged(o, e)));
+            ItemsSourceProperty.Changed.AddClassHandler<Wizard>((Action<Wizard, AvaloniaPropertyChangedEventArgs>)((o,       e) => OnItemSourceChanged(o, e)));
 
             Initialized += (o, e) =>
             {
-                if (Items.OfType<object>().Any() && CurrentPage == null)
+               if (Items.OfType<object>().Any() && CurrentPage == null)
                     CurrentPage = Items.OfType<WizardPage>().FirstOrDefault();
             };
         }
@@ -51,7 +51,7 @@ namespace Avalonia.ExtendedToolkit.Controls
 
         private void OnItemSourceChanged(Wizard wizard, AvaloniaPropertyChangedEventArgs e)
         {
-            if (ItemsSource == null)
+            if (Items == null)
                 ItemsSource = new AvaloniaList<WizardPage>();
 
             if (e.NewValue == null)
@@ -68,7 +68,7 @@ namespace Avalonia.ExtendedToolkit.Controls
                     wizardPage.DataContext = vm;
                     wizardPage.CanCancel = CanCancel;
                     //.edited
-                    (ItemsSource as AvaloniaList<WizardPage>).Add(wizardPage);
+                    //(ItemsSource as AvaloniaList<WizardPage>).Add(wizardPage);
                 }
             }
         }
@@ -76,7 +76,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         private void OnItemChanged(Wizard o, AvaloniaPropertyChangedEventArgs e)
         {
             //.edited
-            if (ItemsSource == null)
+            if (Items == null)
             {
                 ItemsSource = new AvaloniaList<WizardPage>();
             }

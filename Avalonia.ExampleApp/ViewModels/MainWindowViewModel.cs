@@ -20,7 +20,6 @@ using System.Linq;
 using System.Reactive.Linq;
 using System.Text;
 using System.Windows.Input;
-using Avalonia.Themes.Fluent;
 
 namespace Avalonia.ExampleApp.ViewModels
 {

@@ -1,0 +1,313 @@
+2024-06-02 17:06:01.541 +03:00 [INF] Starting previewer process for 'D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\bin\Debug\Avalonia.ExampleApp.dll'
+2024-06-02 17:06:01.566 +03:00 [INF] Started previewer process for 'D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\bin\Debug\Avalonia.ExampleApp.dll'. Waiting for connection to be initialized.
+2024-06-02 17:06:01.645 +03:00 [INF] Connection initialized
+2024-06-02 17:12:32.908 +03:00 [INF] Starting previewer process for 'D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\bin\Debug\Avalonia.ExampleApp.dll'
+2024-06-02 17:12:32.910 +03:00 [INF] Started previewer process for 'D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\bin\Debug\Avalonia.ExampleApp.dll'. Waiting for connection to be initialized.
+2024-06-02 17:12:33.014 +03:00 [INF] Connection initialized
+2024-06-02 17:12:36.666 +03:00 [ERR] UpdateXamlResult error
+System.Xaml.XamlException: "The 'Grid' start tag on line 11 position 4 does not match the end tag of 'UserControl'. Line 77, position 3.": номер строки "77" и позиция в строке "3".
+2024-06-02 17:12:38.636 +03:00 [ERR] UpdateXamlResult error
+System.Xaml.XamlException: "Unexpected end of file while parsing Comment has occurred. Line 78, position 1.": номер строки "78" и позиция в строке "1".
+2024-06-02 17:12:46.537 +03:00 [ERR] UpdateXamlResult error
+System.Xaml.XamlException: "Unexpected end of file while parsing Comment has occurred. Line 78, position 1.": номер строки "78" и позиция в строке "1".
+2024-06-02 17:12:48.336 +03:00 [ERR] UpdateXamlResult error
+System.Xaml.XamlException: "Unexpected end of file while parsing Comment has occurred. Line 78, position 1.": номер строки "78" и позиция в строке "1".
+2024-06-02 17:12:50.177 +03:00 [ERR] UpdateXamlResult error
+System.Xaml.XamlException: "Unexpected end of file while parsing Comment has occurred. Line 78, position 1.": номер строки "78" и позиция в строке "1".
+2024-06-02 17:12:51.778 +03:00 [ERR] UpdateXamlResult error
+System.Xaml.XamlException: "'<' is an unexpected token. The expected token is '>'. Line 42, position 5.": номер строки "42" и позиция в строке "5".
+2024-06-02 17:13:23.407 +03:00 [ERR] UpdateXamlResult error
+System.Xaml.XamlException: "'<' is an unexpected token. The expected token is '>'. Line 42, position 5.": номер строки "42" и позиция в строке "5".
+2024-06-02 17:13:27.082 +03:00 [ERR] UpdateXamlResult error
+System.Xaml.XamlException: "'<' is an unexpected token. The expected token is '>'. Line 42, position 5.": номер строки "42" и позиция в строке "5".
+2024-06-02 17:13:29.360 +03:00 [ERR] UpdateXamlResult error
+System.Xaml.XamlException: "'<' is an unexpected token. The expected token is '>'. Line 42, position 5.": номер строки "42" и позиция в строке "5".
+2024-06-02 17:13:33.389 +03:00 [ERR] UpdateXamlResult error
+System.Xaml.XamlException: "'<' is an unexpected token. The expected token is '>'. Line 42, position 5.": номер строки "42" и позиция в строке "5".
+2024-06-02 17:13:33.901 +03:00 [ERR] UpdateXamlResult error
+System.Xaml.XamlException: "'<' is an unexpected token. The expected token is '>'. Line 42, position 5.": номер строки "42" и позиция в строке "5".
+2024-06-02 17:13:34.453 +03:00 [ERR] UpdateXamlResult error
+System.Xaml.XamlException: "'<' is an unexpected token. The expected token is '>'. Line 42, position 5.": номер строки "42" и позиция в строке "5".
+2024-06-02 17:13:36.334 +03:00 [ERR] UpdateXamlResult error
+System.Xaml.XamlException: "'<' is an unexpected token. The expected token is '>'. Line 40, position 5.": номер строки "40" и позиция в строке "5".
+2024-06-02 17:13:37.108 +03:00 [ERR] UpdateXamlResult error
+System.Xaml.XamlException: "'<' is an unexpected token. The expected token is '>'. Line 39, position 5.": номер строки "39" и позиция в строке "5".
+2024-06-02 17:13:40.574 +03:00 [ERR] UpdateXamlResult error
+System.Xaml.XamlException: "'<' is an unexpected token. The expected token is '>'. Line 36, position 5.": номер строки "36" и позиция в строке "5".
+2024-06-02 17:14:13.225 +03:00 [INF] Stopping previewer process
+2024-06-02 17:14:13.225 +03:00 [INF] Process exited
+2024-06-02 17:14:13.225 +03:00 [INF] Stopping previewer process
+2024-06-02 17:14:13.229 +03:00 [INF] Stopping previewer process
+2024-06-02 17:14:13.229 +03:00 [INF] Process exited
+2024-06-02 17:14:13.229 +03:00 [INF] Stopping previewer process
+2024-06-02 17:14:20.538 +03:00 [INF] Starting previewer process for 'D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\bin\Debug\Avalonia.ExampleApp.dll'
+2024-06-02 17:14:20.541 +03:00 [INF] Started previewer process for 'D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\bin\Debug\Avalonia.ExampleApp.dll'. Waiting for connection to be initialized.
+2024-06-02 17:14:20.620 +03:00 [INF] Connection initialized
+2024-06-02 17:14:22.693 +03:00 [ERR] UpdateXamlResult error
+System.Xaml.XamlException: "'<' is an unexpected token. The expected token is '>'. Line 36, position 5.": номер строки "36" и позиция в строке "5".
+2024-06-02 17:14:29.161 +03:00 [ERR] UpdateXamlResult error
+System.Xaml.XamlException: Operation is not valid while ItemsSource is in use.Access and modify elements with ItemsControl.ItemsSource instead.
+2024-06-02 17:14:33.645 +03:00 [INF] Stopping previewer process
+2024-06-02 17:14:33.646 +03:00 [INF] Stopping previewer process
+2024-06-02 17:14:33.646 +03:00 [INF] Process exited
+2024-06-02 17:14:33.646 +03:00 [INF] Stopping previewer process
+2024-06-02 17:14:33.669 +03:00 [INF] Stopping previewer process
+2024-06-02 17:14:37.449 +03:00 [INF] Starting previewer process for 'D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\bin\Debug\Avalonia.ExampleApp.dll'
+2024-06-02 17:14:37.453 +03:00 [INF] Started previewer process for 'D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\bin\Debug\Avalonia.ExampleApp.dll'. Waiting for connection to be initialized.
+2024-06-02 17:14:37.543 +03:00 [INF] Connection initialized
+2024-06-02 17:14:39.110 +03:00 [ERR] <= Unhandled exception. System.InvalidOperationException: Operation is not valid while ItemsSource is in use.Access and modify elements with ItemsControl.ItemsSource instead.
+2024-06-02 17:14:39.110 +03:00 [ERR] <=    at Avalonia.Controls.ItemCollection.ThrowIsItemsSource()
+2024-06-02 17:14:39.110 +03:00 [ERR] <=    at Avalonia.Controls.ItemCollection.get_WritableSource()
+2024-06-02 17:14:39.110 +03:00 [ERR] <=    at Avalonia.Controls.ItemCollection.Add(Object value)
+2024-06-02 17:14:39.110 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.WizardView.!XamlIlPopulate(IServiceProvider, WizardView) in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views/WizardView.axaml:line 24
+2024-06-02 17:14:39.110 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.WizardView.!XamlIlPopulateTrampoline(WizardView)
+2024-06-02 17:14:39.110 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.WizardView.InitializeComponent() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views\WizardView.axaml.cs:line 16
+2024-06-02 17:14:39.110 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.WizardView..ctor() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views\WizardView.axaml.cs:line 11
+2024-06-02 17:14:39.110 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindowContentView.!XamlIlPopulate(IServiceProvider, MainWindowContentView) in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views/MainWindowContentView.axaml:line 99
+2024-06-02 17:14:39.110 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindowContentView.!XamlIlPopulateTrampoline(MainWindowContentView)
+2024-06-02 17:14:39.110 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindowContentView.InitializeComponent() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views\MainWindowContentView.axaml.cs:line 16
+2024-06-02 17:14:39.110 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindowContentView..ctor() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views\MainWindowContentView.axaml.cs:line 11
+2024-06-02 17:14:39.110 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindow.!XamlIlPopulate(IServiceProvider, MainWindow) in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Window/MainWindow.axaml:line 57
+2024-06-02 17:14:39.110 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindow.!XamlIlPopulateTrampoline(MainWindow)
+2024-06-02 17:14:39.110 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindow.InitializeComponent() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Window\MainWindow.axaml.cs:line 20
+2024-06-02 17:14:39.110 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindow..ctor() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Window\MainWindow.axaml.cs:line 12
+2024-06-02 17:14:39.110 +03:00 [ERR] <=    at Avalonia.ExampleApp.App.OnFrameworkInitializationCompleted() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\App.axaml.cs:line 28
+2024-06-02 17:14:39.110 +03:00 [ERR] <=    at Avalonia.AppBuilder.SetupUnsafe()
+2024-06-02 17:14:39.110 +03:00 [ERR] <=    at Avalonia.AppBuilder.Setup()
+2024-06-02 17:14:39.110 +03:00 [ERR] <=    at Avalonia.AppBuilder.SetupWithoutStarting()
+2024-06-02 17:14:39.110 +03:00 [ERR] <=    at Avalonia.DesignerSupport.Remote.RemoteDesignerEntryPoint.AppInitializer.ConfigureApp(IAvaloniaRemoteTransportConnection transport, CommandLineArgs args, Object obj)
+2024-06-02 17:14:39.110 +03:00 [ERR] <=    at Avalonia.DesignerSupport.Remote.RemoteDesignerEntryPoint.Main(String[] cmdline)
+2024-06-02 17:14:39.110 +03:00 [ERR] <=    at Avalonia.Designer.HostApp.Program.Main(String[] args)
+2024-06-02 17:14:41.057 +03:00 [INF] Process exited
+2024-06-02 17:14:41.057 +03:00 [INF] Stopping previewer process
+2024-06-02 17:14:41.057 +03:00 [ERR] Connection error
+System.IO.IOException: Не удается прочитать данные из транспортного соединения: Удаленный хост принудительно разорвал существующее подключение. ---> System.Net.Sockets.SocketException: Удаленный хост принудительно разорвал существующее подключение
+   в System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   в System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncTrimPromise`1.Complete(TInstance thisRef, Func`3 endMethod, IAsyncResult asyncResult, Boolean requiresSynchronization)
+--- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
+   в System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   в Avalonia.Remote.Protocol.BsonStreamTransportConnection.<ReadExact>d__15.MoveNext()
+--- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
+   в System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   в Avalonia.Remote.Protocol.BsonStreamTransportConnection.<Reader>d__16.MoveNext()
+2024-06-02 17:14:47.310 +03:00 [INF] Starting previewer process for 'D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\bin\Debug\Avalonia.ExampleApp.dll'
+2024-06-02 17:14:47.313 +03:00 [INF] Started previewer process for 'D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\bin\Debug\Avalonia.ExampleApp.dll'. Waiting for connection to be initialized.
+2024-06-02 17:14:47.393 +03:00 [INF] Connection initialized
+2024-06-02 17:14:48.309 +03:00 [ERR] <= Unhandled exception. System.InvalidOperationException: Operation is not valid while ItemsSource is in use.Access and modify elements with ItemsControl.ItemsSource instead.
+2024-06-02 17:14:48.309 +03:00 [ERR] <=    at Avalonia.Controls.ItemCollection.ThrowIsItemsSource()
+2024-06-02 17:14:48.309 +03:00 [ERR] <=    at Avalonia.Controls.ItemCollection.get_WritableSource()
+2024-06-02 17:14:48.309 +03:00 [ERR] <=    at Avalonia.Controls.ItemCollection.Add(Object value)
+2024-06-02 17:14:48.309 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.WizardView.!XamlIlPopulate(IServiceProvider, WizardView) in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views/WizardView.axaml:line 24
+2024-06-02 17:14:48.309 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.WizardView.!XamlIlPopulateTrampoline(WizardView)
+2024-06-02 17:14:48.309 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.WizardView.InitializeComponent() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views\WizardView.axaml.cs:line 16
+2024-06-02 17:14:48.309 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.WizardView..ctor() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views\WizardView.axaml.cs:line 11
+2024-06-02 17:14:48.309 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindowContentView.!XamlIlPopulate(IServiceProvider, MainWindowContentView) in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views/MainWindowContentView.axaml:line 99
+2024-06-02 17:14:48.309 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindowContentView.!XamlIlPopulateTrampoline(MainWindowContentView)
+2024-06-02 17:14:48.309 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindowContentView.InitializeComponent() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views\MainWindowContentView.axaml.cs:line 16
+2024-06-02 17:14:48.309 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindowContentView..ctor() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views\MainWindowContentView.axaml.cs:line 11
+2024-06-02 17:14:48.309 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindow.!XamlIlPopulate(IServiceProvider, MainWindow) in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Window/MainWindow.axaml:line 57
+2024-06-02 17:14:48.309 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindow.!XamlIlPopulateTrampoline(MainWindow)
+2024-06-02 17:14:48.309 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindow.InitializeComponent() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Window\MainWindow.axaml.cs:line 20
+2024-06-02 17:14:48.309 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindow..ctor() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Window\MainWindow.axaml.cs:line 12
+2024-06-02 17:14:48.309 +03:00 [ERR] <=    at Avalonia.ExampleApp.App.OnFrameworkInitializationCompleted() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\App.axaml.cs:line 28
+2024-06-02 17:14:48.309 +03:00 [ERR] <=    at Avalonia.AppBuilder.SetupUnsafe()
+2024-06-02 17:14:48.309 +03:00 [ERR] <=    at Avalonia.AppBuilder.Setup()
+2024-06-02 17:14:48.309 +03:00 [ERR] <=    at Avalonia.AppBuilder.SetupWithoutStarting()
+2024-06-02 17:14:48.309 +03:00 [ERR] <=    at Avalonia.DesignerSupport.Remote.RemoteDesignerEntryPoint.AppInitializer.ConfigureApp(IAvaloniaRemoteTransportConnection transport, CommandLineArgs args, Object obj)
+2024-06-02 17:14:48.309 +03:00 [ERR] <=    at Avalonia.DesignerSupport.Remote.RemoteDesignerEntryPoint.Main(String[] cmdline)
+2024-06-02 17:14:48.309 +03:00 [ERR] <=    at Avalonia.Designer.HostApp.Program.Main(String[] args)
+2024-06-02 17:14:51.465 +03:00 [INF] Process exited
+2024-06-02 17:14:51.465 +03:00 [INF] Stopping previewer process
+2024-06-02 17:14:51.465 +03:00 [ERR] Connection error
+System.IO.IOException: Не удается прочитать данные из транспортного соединения: Удаленный хост принудительно разорвал существующее подключение. ---> System.Net.Sockets.SocketException: Удаленный хост принудительно разорвал существующее подключение
+   в System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   в System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncTrimPromise`1.Complete(TInstance thisRef, Func`3 endMethod, IAsyncResult asyncResult, Boolean requiresSynchronization)
+--- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
+   в System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   в Avalonia.Remote.Protocol.BsonStreamTransportConnection.<ReadExact>d__15.MoveNext()
+--- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
+   в System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   в Avalonia.Remote.Protocol.BsonStreamTransportConnection.<Reader>d__16.MoveNext()
+2024-06-02 17:15:19.497 +03:00 [INF] Starting previewer process for 'D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\bin\Debug\Avalonia.ExampleApp.dll'
+2024-06-02 17:15:19.500 +03:00 [INF] Started previewer process for 'D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\bin\Debug\Avalonia.ExampleApp.dll'. Waiting for connection to be initialized.
+2024-06-02 17:15:19.587 +03:00 [INF] Connection initialized
+2024-06-02 17:15:20.511 +03:00 [ERR] <= Unhandled exception. System.InvalidOperationException: Operation is not valid while ItemsSource is in use.Access and modify elements with ItemsControl.ItemsSource instead.
+2024-06-02 17:15:20.511 +03:00 [ERR] <=    at Avalonia.Controls.ItemCollection.ThrowIsItemsSource()
+2024-06-02 17:15:20.511 +03:00 [ERR] <=    at Avalonia.Controls.ItemCollection.get_WritableSource()
+2024-06-02 17:15:20.511 +03:00 [ERR] <=    at Avalonia.Controls.ItemCollection.Add(Object value)
+2024-06-02 17:15:20.511 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.WizardView.!XamlIlPopulate(IServiceProvider, WizardView) in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views/WizardView.axaml:line 24
+2024-06-02 17:15:20.511 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.WizardView.!XamlIlPopulateTrampoline(WizardView)
+2024-06-02 17:15:20.511 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.WizardView.InitializeComponent() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views\WizardView.axaml.cs:line 16
+2024-06-02 17:15:20.511 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.WizardView..ctor() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views\WizardView.axaml.cs:line 11
+2024-06-02 17:15:20.511 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindowContentView.!XamlIlPopulate(IServiceProvider, MainWindowContentView) in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views/MainWindowContentView.axaml:line 99
+2024-06-02 17:15:20.511 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindowContentView.!XamlIlPopulateTrampoline(MainWindowContentView)
+2024-06-02 17:15:20.511 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindowContentView.InitializeComponent() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views\MainWindowContentView.axaml.cs:line 16
+2024-06-02 17:15:20.511 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindowContentView..ctor() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views\MainWindowContentView.axaml.cs:line 11
+2024-06-02 17:15:20.511 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindow.!XamlIlPopulate(IServiceProvider, MainWindow) in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Window/MainWindow.axaml:line 57
+2024-06-02 17:15:20.511 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindow.!XamlIlPopulateTrampoline(MainWindow)
+2024-06-02 17:15:20.511 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindow.InitializeComponent() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Window\MainWindow.axaml.cs:line 20
+2024-06-02 17:15:20.511 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindow..ctor() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Window\MainWindow.axaml.cs:line 12
+2024-06-02 17:15:20.511 +03:00 [ERR] <=    at Avalonia.ExampleApp.App.OnFrameworkInitializationCompleted() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\App.axaml.cs:line 28
+2024-06-02 17:15:20.511 +03:00 [ERR] <=    at Avalonia.AppBuilder.SetupUnsafe()
+2024-06-02 17:15:20.511 +03:00 [ERR] <=    at Avalonia.AppBuilder.Setup()
+2024-06-02 17:15:20.511 +03:00 [ERR] <=    at Avalonia.AppBuilder.SetupWithoutStarting()
+2024-06-02 17:15:20.511 +03:00 [ERR] <=    at Avalonia.DesignerSupport.Remote.RemoteDesignerEntryPoint.AppInitializer.ConfigureApp(IAvaloniaRemoteTransportConnection transport, CommandLineArgs args, Object obj)
+2024-06-02 17:15:20.511 +03:00 [ERR] <=    at Avalonia.DesignerSupport.Remote.RemoteDesignerEntryPoint.Main(String[] cmdline)
+2024-06-02 17:15:20.511 +03:00 [ERR] <=    at Avalonia.Designer.HostApp.Program.Main(String[] args)
+2024-06-02 17:15:22.382 +03:00 [INF] Process exited
+2024-06-02 17:15:22.382 +03:00 [INF] Stopping previewer process
+2024-06-02 17:15:22.382 +03:00 [ERR] Connection error
+System.IO.IOException: Не удается прочитать данные из транспортного соединения: Удаленный хост принудительно разорвал существующее подключение. ---> System.Net.Sockets.SocketException: Удаленный хост принудительно разорвал существующее подключение
+   в System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   в System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncTrimPromise`1.Complete(TInstance thisRef, Func`3 endMethod, IAsyncResult asyncResult, Boolean requiresSynchronization)
+--- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
+   в System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   в Avalonia.Remote.Protocol.BsonStreamTransportConnection.<ReadExact>d__15.MoveNext()
+--- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
+   в System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   в Avalonia.Remote.Protocol.BsonStreamTransportConnection.<Reader>d__16.MoveNext()
+2024-06-02 17:17:19.675 +03:00 [INF] Stopping previewer process
+2024-06-02 17:17:19.675 +03:00 [INF] Stopping previewer process
+2024-06-02 17:17:19.675 +03:00 [INF] Stopping previewer process
+2024-06-02 17:18:49.483 +03:00 [INF] Stopping previewer process
+2024-06-02 17:18:49.483 +03:00 [INF] Stopping previewer process
+2024-06-02 17:18:49.483 +03:00 [INF] Stopping previewer process
+2024-06-02 17:20:24.691 +03:00 [INF] Stopping previewer process
+2024-06-02 17:20:24.691 +03:00 [INF] Stopping previewer process
+2024-06-02 17:20:24.691 +03:00 [INF] Stopping previewer process
+2024-06-02 17:21:40.338 +03:00 [INF] Stopping previewer process
+2024-06-02 17:21:40.338 +03:00 [INF] Stopping previewer process
+2024-06-02 17:21:40.342 +03:00 [INF] Stopping previewer process
+2024-06-02 17:21:54.085 +03:00 [INF] Stopping previewer process
+2024-06-02 17:21:54.085 +03:00 [INF] Stopping previewer process
+2024-06-02 17:21:54.085 +03:00 [INF] Stopping previewer process
+2024-06-02 17:22:10.445 +03:00 [INF] Stopping previewer process
+2024-06-02 17:22:11.768 +03:00 [INF] Stopping previewer process
+2024-06-02 17:22:11.868 +03:00 [INF] Stopping previewer process
+2024-06-02 17:23:14.567 +03:00 [INF] Stopping previewer process
+2024-06-02 17:23:14.567 +03:00 [INF] Stopping previewer process
+2024-06-02 17:23:14.575 +03:00 [INF] Stopping previewer process
+2024-06-02 17:23:14.575 +03:00 [INF] Stopping previewer process
+2024-06-02 17:23:14.645 +03:00 [INF] Stopping previewer process
+2024-06-02 17:23:14.645 +03:00 [INF] Stopping previewer process
+2024-06-02 17:23:14.690 +03:00 [INF] Stopping previewer process
+2024-06-02 17:23:14.690 +03:00 [INF] Stopping previewer process
+2024-06-02 17:26:59.174 +03:00 [INF] Starting previewer process for 'D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\bin\Debug\Avalonia.ExampleApp.dll'
+2024-06-02 17:26:59.178 +03:00 [INF] Started previewer process for 'D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\bin\Debug\Avalonia.ExampleApp.dll'. Waiting for connection to be initialized.
+2024-06-02 17:26:59.261 +03:00 [INF] Connection initialized
+2024-06-02 17:27:00.226 +03:00 [ERR] <= Unhandled exception. System.InvalidOperationException: Operation is not valid while ItemsSource is in use.Access and modify elements with ItemsControl.ItemsSource instead.
+2024-06-02 17:27:00.226 +03:00 [ERR] <=    at Avalonia.Controls.ItemCollection.ThrowIsItemsSource()
+2024-06-02 17:27:00.226 +03:00 [ERR] <=    at Avalonia.Controls.ItemCollection.get_WritableSource()
+2024-06-02 17:27:00.226 +03:00 [ERR] <=    at Avalonia.Controls.ItemCollection.Add(Object value)
+2024-06-02 17:27:00.226 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.WizardView.!XamlIlPopulate(IServiceProvider, WizardView) in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views/WizardView.axaml:line 24
+2024-06-02 17:27:00.226 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.WizardView.!XamlIlPopulateTrampoline(WizardView)
+2024-06-02 17:27:00.226 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.WizardView.InitializeComponent() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views\WizardView.axaml.cs:line 16
+2024-06-02 17:27:00.226 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.WizardView..ctor() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views\WizardView.axaml.cs:line 11
+2024-06-02 17:27:00.226 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindowContentView.!XamlIlPopulate(IServiceProvider, MainWindowContentView) in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views/MainWindowContentView.axaml:line 99
+2024-06-02 17:27:00.226 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindowContentView.!XamlIlPopulateTrampoline(MainWindowContentView)
+2024-06-02 17:27:00.226 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindowContentView.InitializeComponent() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views\MainWindowContentView.axaml.cs:line 16
+2024-06-02 17:27:00.226 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindowContentView..ctor() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views\MainWindowContentView.axaml.cs:line 11
+2024-06-02 17:27:00.226 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindow.!XamlIlPopulate(IServiceProvider, MainWindow) in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Window/MainWindow.axaml:line 57
+2024-06-02 17:27:00.226 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindow.!XamlIlPopulateTrampoline(MainWindow)
+2024-06-02 17:27:00.226 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindow.InitializeComponent() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Window\MainWindow.axaml.cs:line 20
+2024-06-02 17:27:00.226 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindow..ctor() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Window\MainWindow.axaml.cs:line 12
+2024-06-02 17:27:00.226 +03:00 [ERR] <=    at Avalonia.ExampleApp.App.OnFrameworkInitializationCompleted() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\App.axaml.cs:line 28
+2024-06-02 17:27:00.226 +03:00 [ERR] <=    at Avalonia.AppBuilder.SetupUnsafe()
+2024-06-02 17:27:00.226 +03:00 [ERR] <=    at Avalonia.AppBuilder.Setup()
+2024-06-02 17:27:00.226 +03:00 [ERR] <=    at Avalonia.AppBuilder.SetupWithoutStarting()
+2024-06-02 17:27:00.226 +03:00 [ERR] <=    at Avalonia.DesignerSupport.Remote.RemoteDesignerEntryPoint.AppInitializer.ConfigureApp(IAvaloniaRemoteTransportConnection transport, CommandLineArgs args, Object obj)
+2024-06-02 17:27:00.226 +03:00 [ERR] <=    at Avalonia.DesignerSupport.Remote.RemoteDesignerEntryPoint.Main(String[] cmdline)
+2024-06-02 17:27:00.226 +03:00 [ERR] <=    at Avalonia.Designer.HostApp.Program.Main(String[] args)
+2024-06-02 17:27:02.070 +03:00 [INF] Process exited
+2024-06-02 17:27:02.070 +03:00 [INF] Stopping previewer process
+2024-06-02 17:27:02.070 +03:00 [ERR] Connection error
+System.IO.IOException: Не удается прочитать данные из транспортного соединения: Удаленный хост принудительно разорвал существующее подключение. ---> System.Net.Sockets.SocketException: Удаленный хост принудительно разорвал существующее подключение
+   в System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   в System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncTrimPromise`1.Complete(TInstance thisRef, Func`3 endMethod, IAsyncResult asyncResult, Boolean requiresSynchronization)
+--- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
+   в System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   в Avalonia.Remote.Protocol.BsonStreamTransportConnection.<ReadExact>d__15.MoveNext()
+--- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
+   в System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   в Avalonia.Remote.Protocol.BsonStreamTransportConnection.<Reader>d__16.MoveNext()
+2024-06-02 17:27:17.613 +03:00 [INF] Starting previewer process for 'D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\bin\Debug\Avalonia.ExampleApp.dll'
+2024-06-02 17:27:17.616 +03:00 [INF] Started previewer process for 'D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\bin\Debug\Avalonia.ExampleApp.dll'. Waiting for connection to be initialized.
+2024-06-02 17:27:17.636 +03:00 [INF] Stopping previewer process
+2024-06-02 17:27:17.637 +03:00 [INF] Process exited while waiting for connection to be initialized.
+2024-06-02 17:27:17.637 +03:00 [INF] Process exited
+2024-06-02 17:27:17.637 +03:00 [INF] Stopping previewer process
+2024-06-02 17:27:19.404 +03:00 [INF] Starting previewer process for 'D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\bin\Debug\Avalonia.ExampleApp.dll'
+2024-06-02 17:27:19.407 +03:00 [INF] Started previewer process for 'D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\bin\Debug\Avalonia.ExampleApp.dll'. Waiting for connection to be initialized.
+2024-06-02 17:27:19.508 +03:00 [INF] Connection initialized
+2024-06-02 17:27:20.770 +03:00 [ERR] <= Unhandled exception. System.InvalidOperationException: Operation is not valid while ItemsSource is in use.Access and modify elements with ItemsControl.ItemsSource instead.
+2024-06-02 17:27:20.770 +03:00 [ERR] <=    at Avalonia.Controls.ItemCollection.ThrowIsItemsSource()
+2024-06-02 17:27:20.770 +03:00 [ERR] <=    at Avalonia.Controls.ItemCollection.get_WritableSource()
+2024-06-02 17:27:20.770 +03:00 [ERR] <=    at Avalonia.Controls.ItemCollection.Add(Object value)
+2024-06-02 17:27:20.770 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.WizardView.!XamlIlPopulate(IServiceProvider, WizardView) in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views/WizardView.axaml:line 24
+2024-06-02 17:27:20.770 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.WizardView.!XamlIlPopulateTrampoline(WizardView)
+2024-06-02 17:27:20.770 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.WizardView.InitializeComponent() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views\WizardView.axaml.cs:line 16
+2024-06-02 17:27:20.770 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.WizardView..ctor() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views\WizardView.axaml.cs:line 11
+2024-06-02 17:27:20.770 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindowContentView.!XamlIlPopulate(IServiceProvider, MainWindowContentView) in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views/MainWindowContentView.axaml:line 99
+2024-06-02 17:27:20.770 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindowContentView.!XamlIlPopulateTrampoline(MainWindowContentView)
+2024-06-02 17:27:20.770 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindowContentView.InitializeComponent() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views\MainWindowContentView.axaml.cs:line 16
+2024-06-02 17:27:20.770 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindowContentView..ctor() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Views\MainWindowContentView.axaml.cs:line 11
+2024-06-02 17:27:20.770 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindow.!XamlIlPopulate(IServiceProvider, MainWindow) in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Window/MainWindow.axaml:line 57
+2024-06-02 17:27:20.770 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindow.!XamlIlPopulateTrampoline(MainWindow)
+2024-06-02 17:27:20.770 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindow.InitializeComponent() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Window\MainWindow.axaml.cs:line 20
+2024-06-02 17:27:20.770 +03:00 [ERR] <=    at Avalonia.ExampleApp.Views.MainWindow..ctor() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\Window\MainWindow.axaml.cs:line 12
+2024-06-02 17:27:20.770 +03:00 [ERR] <=    at Avalonia.ExampleApp.App.OnFrameworkInitializationCompleted() in D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\App.axaml.cs:line 28
+2024-06-02 17:27:20.770 +03:00 [ERR] <=    at Avalonia.AppBuilder.SetupUnsafe()
+2024-06-02 17:27:20.770 +03:00 [ERR] <=    at Avalonia.AppBuilder.Setup()
+2024-06-02 17:27:20.770 +03:00 [ERR] <=    at Avalonia.AppBuilder.SetupWithoutStarting()
+2024-06-02 17:27:20.770 +03:00 [ERR] <=    at Avalonia.DesignerSupport.Remote.RemoteDesignerEntryPoint.AppInitializer.ConfigureApp(IAvaloniaRemoteTransportConnection transport, CommandLineArgs args, Object obj)
+2024-06-02 17:27:20.770 +03:00 [ERR] <=    at Avalonia.DesignerSupport.Remote.RemoteDesignerEntryPoint.Main(String[] cmdline)
+2024-06-02 17:27:20.770 +03:00 [ERR] <=    at Avalonia.Designer.HostApp.Program.Main(String[] args)
+2024-06-02 17:27:22.661 +03:00 [INF] Process exited
+2024-06-02 17:27:22.661 +03:00 [INF] Stopping previewer process
+2024-06-02 17:27:22.661 +03:00 [ERR] Connection error
+System.IO.IOException: Не удается прочитать данные из транспортного соединения: Удаленный хост принудительно разорвал существующее подключение. ---> System.Net.Sockets.SocketException: Удаленный хост принудительно разорвал существующее подключение
+   в System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   в System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncTrimPromise`1.Complete(TInstance thisRef, Func`3 endMethod, IAsyncResult asyncResult, Boolean requiresSynchronization)
+--- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
+   в System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   в Avalonia.Remote.Protocol.BsonStreamTransportConnection.<ReadExact>d__15.MoveNext()
+--- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
+   в System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   в Avalonia.Remote.Protocol.BsonStreamTransportConnection.<Reader>d__16.MoveNext()
+2024-06-02 17:27:57.033 +03:00 [INF] Stopping previewer process
+2024-06-02 17:28:07.049 +03:00 [INF] Starting previewer process for 'D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\bin\Debug\Avalonia.ExampleApp.dll'
+2024-06-02 17:28:07.053 +03:00 [INF] Started previewer process for 'D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\bin\Debug\Avalonia.ExampleApp.dll'. Waiting for connection to be initialized.
+2024-06-02 17:28:07.183 +03:00 [INF] Connection initialized
+2024-06-02 17:28:42.210 +03:00 [INF] Stopping previewer process
+2024-06-02 17:28:42.210 +03:00 [INF] Process exited
+2024-06-02 17:28:42.210 +03:00 [INF] Stopping previewer process
+2024-06-02 17:28:43.837 +03:00 [INF] Starting previewer process for 'D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\bin\Debug\Avalonia.ExampleApp.dll'
+2024-06-02 17:28:43.848 +03:00 [INF] Started previewer process for 'D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\bin\Debug\Avalonia.ExampleApp.dll'. Waiting for connection to be initialized.
+2024-06-02 17:28:43.957 +03:00 [INF] Connection initialized
+2024-06-02 17:29:02.874 +03:00 [INF] Stopping previewer process
+2024-06-02 17:29:02.874 +03:00 [INF] Process exited
+2024-06-02 17:29:02.874 +03:00 [INF] Stopping previewer process
+2024-06-02 17:29:12.857 +03:00 [INF] Starting previewer process for 'D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\bin\Debug\Avalonia.ExampleApp.dll'
+2024-06-02 17:29:12.861 +03:00 [INF] Started previewer process for 'D:\!mess\Avalonia.ExtendedToolkit\Avalonia.ExampleApp\bin\Debug\Avalonia.ExampleApp.dll'. Waiting for connection to be initialized.
+2024-06-02 17:29:12.941 +03:00 [INF] Connection initialized
+2024-06-02 17:33:39.595 +03:00 [INF] Stopping previewer process
+2024-06-02 17:33:39.595 +03:00 [INF] Process exited
+2024-06-02 17:33:39.595 +03:00 [INF] Stopping previewer process
+2024-06-02 17:34:15.970 +03:00 [INF] Stopping previewer process
+2024-06-02 17:35:36.324 +03:00 [INF] Stopping previewer process
+2024-06-02 17:37:05.564 +03:00 [INF] Stopping previewer process
