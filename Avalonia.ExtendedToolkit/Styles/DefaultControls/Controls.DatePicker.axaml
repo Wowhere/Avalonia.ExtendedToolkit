@@ -56,7 +56,7 @@
     </Style>
     <Style Selector="ListBoxItem.DateTimePickerItem:pointerover /template/ ContentPresenter">
         <Setter Property="Background" Value="Transparent" />
-        <Setter Property="TextBlock.Background" Value="Transparent" />
+        <!--fix to get rid of duplicate Background setters<Setter Property="TextBlock.Background" Value="Transparent" />-->
         <Setter Property="TextBlock.Foreground" Value="{DynamicResource ThemeForegroundBrush}" />
     </Style>
 

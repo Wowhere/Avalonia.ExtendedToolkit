@@ -575,7 +575,7 @@ namespace Avalonia.ExampleApp.ViewModels
         {
             IClassicDesktopStyleApplicationLifetime desktopLifetime =
                 Application.Current.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime;
-            //.orig
+            
             if (desktopLifetime != null
                 && desktopLifetime.MainWindow != null
                 )
