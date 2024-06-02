@@ -8,7 +8,7 @@
   <UserControl.Resources>
     <Thickness x:Key="ControlMargin">0 5 0 0</Thickness>
   </UserControl.Resources>
-  <Grid VerticalAlignment="Stretch">
+  <!--<Grid VerticalAlignment="Stretch">
     <Grid.RowDefinitions>
       <RowDefinition/>
       <RowDefinition/>
@@ -20,11 +20,11 @@
 
     
     
-    <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="10">
+    --><!--<StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="10">
       <TextBlock Classes="DescriptionHeaderStyle" Text="Wizard Blank Page"  />
       <Controls:Wizard Margin="{StaticResource ControlMargin}"
         Width="500" Height="200" FinishButtonClosesWindow="False" CancelButtonClosesWindow="False">
-        <Controls:WizardPage PageType="Blank">
+        --><!--<Controls:WizardPage PageType="Blank">
           <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock Text="Hello"/>
           </Grid>
@@ -33,10 +33,10 @@
           <Grid>
             <TextBlock Text="World" VerticalAlignment="Center" HorizontalAlignment="Center"/>
           </Grid>
-        </Controls:WizardPage>
+        </Controls:WizardPage>--><!--
       </Controls:Wizard>
 
-    </StackPanel>
+    </StackPanel>--><!--
 
 
     <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Margin="10">
@@ -71,7 +71,7 @@
     
     
     
-  </Grid>
+  </Grid>-->
 
 
 </UserControl>

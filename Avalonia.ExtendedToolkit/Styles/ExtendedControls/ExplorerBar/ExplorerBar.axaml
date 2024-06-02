@@ -19,7 +19,7 @@
   <Style Selector="Controls|OdcExpanderHeader.ExplorerBar">
     <Setter Property="CircleButtonStroke" Value="#30000000"/>
     <Setter Property="CircleButtonFill" Value="{DynamicResource ControlBrush}"/>
-    <!--bad view code in converter?<Setter Property="CircleButtonForeground" Value="#F0000000"/>-->
+    <!--<Setter Property="CircleButtonForeground" Value="#F0000000"/>-->
   </Style>
 
 

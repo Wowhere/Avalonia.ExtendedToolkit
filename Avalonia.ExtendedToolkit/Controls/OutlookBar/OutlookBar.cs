@@ -329,8 +329,9 @@ namespace Avalonia.ExtendedToolkit.Controls
 
             _maximizedSections = new ObservableCollection<OutlookSection>();
             _minimizedSections = new ObservableCollection<OutlookSection>();
-            ItemsSource = new ObservableCollection<OutlookSection>();
-            (ItemsSource as ObservableCollection<OutlookSection>).CollectionChanged += new NotifyCollectionChangedEventHandler(SectionsCollectionChanged);
+            //.edited
+            //ItemsSource = new ObservableCollection<OutlookSection>();
+            //(ItemsSource as ObservableCollection<OutlookSection>).CollectionChanged += new NotifyCollectionChangedEventHandler(SectionsCollectionChanged);
 
             WidthProperty.Changed.AddClassHandler<OutlookBar>((o, e) => SizeChanged(o, e));
             HeightProperty.Changed.AddClassHandler<OutlookBar>((o, e) => SizeChanged(o, e));

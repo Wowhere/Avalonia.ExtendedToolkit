@@ -44,7 +44,7 @@ namespace Avalonia.ExtendedToolkit.TriggerExtensions
             }
         }
         //.orig
-        //AvaloniaObject IBehavior.AssociatedObject => throw new NotImplementedException();
+        AvaloniaObject IBehavior.AssociatedObject => throw new NotImplementedException();
 
         internal TriggerAction(Type associatedObjectTypeConstraint)
         {
@@ -128,10 +128,5 @@ namespace Avalonia.ExtendedToolkit.TriggerExtensions
 
             return true;
         }
-        //.orig
-        //public void Attach(AvaloniaObject associatedObject)
-        //{
-        //    _associatedObject = associatedObject;
-        //}
     }
 }

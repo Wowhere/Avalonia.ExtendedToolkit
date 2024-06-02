@@ -51,7 +51,7 @@
                                 <Border BorderBrush="{DynamicResource ThemeBorderMidBrush}" BorderThickness="1">
                                     <ListBox
                                         x:Name="PART_ListBox"
-                                        
+                                        ItemsSource="{TemplateBinding Items}"
                                         SelectedItem="{TemplateBinding SelectedItem}"
                                         ItemTemplate="{TemplateBinding ItemTemplate}">
                                     </ListBox>

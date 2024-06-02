@@ -50,8 +50,9 @@
                     MinWidth="300"
                     Classes="indexDetailsList"
                     VerticalAlignment="Stretch"
-                    x:Name="contentListBox">
-                  <!--bad view Items="{TemplateBinding IndexItems}"-->
+                    x:Name="contentListBox"
+                    ItemsSource="{TemplateBinding IndexItems}">
+                  
                   <Controls:IndexList.DataTemplates>
                   <TreeDataTemplate ItemsSource="{Binding SubItems}" DataType="{x:Type Controls:IndexItemModel}">
                     <TextBlock Text="{Binding Text}" />
@@ -65,6 +66,7 @@
                           ScrollViewer.VerticalScrollBarVisibility="Disabled"
                           VerticalAlignment="Center"
                           HorizontalAlignment="Left"
+                          ItemsSource="{TemplateBinding IndexItems}"
                           >
                 <!--bad viewItems="{TemplateBinding IndexItems}"-->
                 <ItemsControl.ItemTemplate>

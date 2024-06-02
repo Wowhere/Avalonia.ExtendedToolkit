@@ -67,11 +67,11 @@
                         
                         Mode="{TemplateBinding OverflowMode}"
                         SelectedItem="{Binding SelectedItem,RelativeSource={RelativeSource TemplatedParent},Mode=TwoWay}"
-                        
+                        ItemsSource="{TemplateBinding CollapsedTraces}"
                         IsImageVisible="True"
                         Image="{Binding SelectedBreadcrumb.Image, RelativeSource={RelativeSource TemplatedParent}}"
                         IsDropDownPressed="{Binding IsOverflowPressed,RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}">
-                    <!--bad viewItems="{TemplateBinding CollapsedTraces}"
+                        
                     ItemTemplate="{TemplateBinding OverflowItemTemplate}"
                     EnableVisualButtonStyle="False"-->
                     <!--ItemTemplateSelector="{TemplateBinding OverflowItemTemplateSelector}"-->
@@ -109,11 +109,11 @@
                         x:Name="buttons"
                         Grid.Column="3"
                         Margin="1,0,-1,0"
-                        
+                        ItemsSource="{Binding Buttons,RelativeSource={RelativeSource TemplatedParent}}"
                         Focusable="False">
-                  <ItemsControl.ItemsPanel>
-                      <!--bad viewItems="{Binding Buttons,RelativeSource={RelativeSource TemplatedParent}}"-->
-                      <ItemsPanelTemplate>
+                    <ItemsControl.ItemsPanel>
+
+                        <ItemsPanelTemplate>
                       <!--IsItemsHost="True"-->
                       <StackPanel Orientation="Horizontal"  />
                     </ItemsPanelTemplate>

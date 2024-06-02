@@ -5,7 +5,7 @@
 //    /// <summary>
 //    /// TranslateTransform with name
 //    /// </summary>
-//    public class TranslateTransformExt: TranslateTransform
+//    public class TranslateTransformExt : TranslateTransform
 //    {
 //        /// <summary>
 //        /// get/set name

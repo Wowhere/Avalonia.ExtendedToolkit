@@ -20,6 +20,7 @@ using System.Linq;
 using System.Reactive.Linq;
 using System.Text;
 using System.Windows.Input;
+using Avalonia.Themes.Fluent;
 
 namespace Avalonia.ExampleApp.ViewModels
 {
@@ -366,10 +367,10 @@ namespace Avalonia.ExampleApp.ViewModels
             ColorSchemes = ThemeManager.Instance.ColorSchemes;
             BaseColors = ThemeManager.Instance.BaseColors;
 
-            ThemeManager.Instance.IsThemeChanged += (o, e) =>
-                  {
-                      BrushResources = FindBrushResources();
-                  };
+            //ThemeManager.Instance.IsThemeChanged += (o, e) =>
+            //      {
+            //          BrushResources = FindBrushResources();
+            //      };
 
 
             if (ThemeManager.Instance.SelectedTheme == null)
@@ -576,21 +577,21 @@ namespace Avalonia.ExampleApp.ViewModels
             IClassicDesktopStyleApplicationLifetime desktopLifetime =
                 Application.Current.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime;
             //.orig
-            //if (desktopLifetime != null
-            //    && desktopLifetime.MainWindow != null
-            //    )
-            //{
-            //    var theme = ThemeManager.Instance.DetectTheme(desktopLifetime.MainWindow);
-            //    //Style style = Theme. ((theme.ThemeStyle as StyleInclude).Loaded as Style);
+            if (desktopLifetime != null
+                && desktopLifetime.MainWindow != null
+                )
+            {
+                var theme = ThemeManager.Instance.DetectTheme(desktopLifetime.MainWindow);
+                Style style = ((theme.ThemeStyle as StyleInclude).Loaded as Style);
 
-            //    var resources = style.Resources.Keys.Cast<object>()
-            //                         .Where(key => style.Resources[key] is SolidColorBrush)
-            //                         .Select(key => new BrushResource { Key = key.ToString(), Brush = style.Resources[key] as SolidColorBrush })
-            //                         .OrderBy(s => s.Key)
-            //                         .ToList();
+                var resources = style.Resources.Keys.Cast<object>()
+                                     .Where(key => style.Resources[key] is SolidColorBrush)
+                                     .Select(key => new BrushResource { Key = key.ToString(), Brush = style.Resources[key] as SolidColorBrush })
+                                     .OrderBy(s => s.Key)
+                                     .ToList();
 
-            //    return new AvaloniaList<BrushResource>(resources);
-            //}
+                return new AvaloniaList<BrushResource>(resources);
+            }
 
             return new AvaloniaList<BrushResource>();
         }

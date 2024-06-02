@@ -1,11 +1,17 @@
 ﻿//using Avalonia.Animation;
-//.orig
+//using System.Linq;
+//using System.Collections.Generic;
+//using Avalonia.Controls;
+//using Avalonia.Controls.Generators;
+//using Avalonia.Controls.Primitives;
+//using Avalonia.Media;
+
 //namespace Avalonia.ExtendedToolkit.Extensions
 //{
 //    /// <summary>
 //    /// keyframe with name
 //    /// </summary>
-//    public class KeyFrameExt: KeyFrame
+//    public class KeyFrameExt : KeyFrame
 //    {
 //        /// <summary>
 //        /// get/sets Name

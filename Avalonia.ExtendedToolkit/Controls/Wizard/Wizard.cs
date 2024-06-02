@@ -26,7 +26,7 @@ namespace Avalonia.ExtendedToolkit.Controls
             CurrentPageProperty.Changed.AddClassHandler<Wizard>((Action<Wizard, AvaloniaPropertyChangedEventArgs>)((o, e) => OnCurrentPageChanged(o, e)));
             ItemsPanelProperty.Changed.AddClassHandler<Wizard>((Action<Wizard, AvaloniaPropertyChangedEventArgs>)((o,  e) => OnItemChanged(o, e)));
             //.edited
-            ItemsSourceProperty.Changed.AddClassHandler<Wizard>((Action<Wizard, AvaloniaPropertyChangedEventArgs>)((o,       e) => OnItemSourceChanged(o, e)));
+            //ItemsSourceProperty.Changed.AddClassHandler<Wizard>((Action<Wizard, AvaloniaPropertyChangedEventArgs>)((o,       e) => OnItemSourceChanged(o, e)));
 
             Initialized += (o, e) =>
             {

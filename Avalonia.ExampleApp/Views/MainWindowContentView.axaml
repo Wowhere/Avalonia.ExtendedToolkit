@@ -29,9 +29,11 @@
                                     DockPanel.Dock="Left">
                                     <ItemsPresenter
                                         Name="PART_ItemsPresenter"
-                                        
                                         ItemsPanel="{TemplateBinding ItemsPanel}"
                                         >
+                                        <!--<ItemsControl.Template>
+                                            
+                                        </ItemsControl.Template>-->
                                         <!--bad viewItems="{TemplateBinding Items}"
                                         ItemTemplate="{TemplateBinding ItemTemplate}"-->
                                     </ItemsPresenter>
@@ -68,9 +70,9 @@
                     <Views:ButtonView/>
                 </ScrollViewer>
             </TabItem>
-            <!--<TabItem Header="TabControl">
+            <TabItem Header="TabControl">
                 <Views:TabControlExample/>
-            </TabItem>-->
+            </TabItem>
 
             <TabItem Header="Group Box">
                 <ScrollViewer>

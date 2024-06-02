@@ -21,8 +21,8 @@
                   Name="PART_ItemsPresenter"
                   
                   ItemsPanel="{TemplateBinding ItemsPanel}"
-                  
-                  Margin="{TemplateBinding Padding}" />
+                  Margin="{TemplateBinding Padding}"
+                  />
               <!--bad viewItems="{TemplateBinding Items}"
               ItemTemplate="{TemplateBinding ItemTemplate}"-->
           </ScrollViewer>
