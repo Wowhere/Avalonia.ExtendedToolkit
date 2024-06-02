@@ -97,11 +97,11 @@
                         IsVisible="False"
                         Margin="0"
                         Focusable="True"
-                       
+                        ItemTemplate="{TemplateBinding DropDownItemTemplate}"
                         Grid.Column="0"
                         SelectedIndex="{Binding SelectedDropDownIndex,RelativeSource={RelativeSource TemplatedParent},Mode=TwoWay}"
                         Grid.ColumnSpan="3" />
-                  <!--bad viewItemTemplate="{TemplateBinding DropDownItemTemplate}"
+                  <!--bad view
                   Items="{Binding DropDownItems,RelativeSource={RelativeSource TemplatedParent}}" BorderThickness="0"-->
                   <!--IsEditable="True"-->
 

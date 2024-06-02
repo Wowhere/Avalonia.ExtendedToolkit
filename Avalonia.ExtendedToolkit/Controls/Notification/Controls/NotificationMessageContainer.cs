@@ -86,7 +86,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         private void RemoveMessage(INotificationMessage message)
         {
             //.edited
-            (ItemsSource as AvaloniaList<object>).Remove(message);
+            Items.Remove(message);
         }
 
         /// <summary>
@@ -98,7 +98,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         private void ManagerOnOnMessageQueued(object sender, NotificationMessageManagerEventArgs args)
         {
             //.edited
-            (ItemsSource as AvaloniaList<object>).Add(args.Message);
+            Items.Add(args.Message);
 
             if (args.Message is INotificationAnimation animatableMessage
                 && animatableMessage.AnimatableElement != null)

@@ -76,7 +76,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         private void ExecuteCloseCommand()
         {
-            //this.IsSelected = true;
+            this.IsSelected = true;
 
             RaiseEvent(new RoutedEventArgs(ClosingEvent, this));
 

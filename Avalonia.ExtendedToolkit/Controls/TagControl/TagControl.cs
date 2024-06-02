@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
+using Avalonia.Data;
 using Avalonia.Input;
 using Avalonia.Interactivity;
 using Avalonia.VisualTree;
@@ -100,7 +101,7 @@ namespace Avalonia.ExtendedToolkit.Controls
             if (sender is TagItem tagItem)
             {
                 tagItem.IsSelected = true;
-                //SelectedItem=tagItem.Text;
+                SelectedItem=tagItem.Text;
 
                 RemoveTag(tagItem);
             }
@@ -283,7 +284,7 @@ namespace Avalonia.ExtendedToolkit.Controls
                                           TagMargin));
                 }
                 //.orig, think many
-                //RaisePropertyChanged(IsAnyItemInEditModeProperty, new Data.Optional<bool>(), ItemsSource.Any(x => x.IsInEditMode));
+                //RaisePropertyChanged(IsAnyItemInEditModeProperty, new Optional<bool>(), ItemsSource.Any(x => x.IsInEditMode));
             }
         }
 
