@@ -33,6 +33,8 @@
               <Button Grid.Column="0" Classes="AddTagButton"
                         HorizontalAlignment="Left" VerticalAlignment="Top"
                         Name="btnAddTagButton"
+                        MinHeight="32"
+                        MinWidth="32"
                         Margin="{TemplateBinding TagMargin}"
                         IsEnabled="{Binding RelativeSource={RelativeSource AncestorType={x:Type Controls:TagControl}} ,Path=IsAnyItemInEditMode, Converter={StaticResource InverseBooleanConverter}}" 
                         >
