@@ -449,10 +449,7 @@ namespace Avalonia.ExampleApp.ViewModels
             Categories = new ObservableCollection<string>();
             Categories.Add("TagItem");
 
-            SuggestedTags = new ObservableCollection<string>();
-            SuggestedTags.Add("c#");
-            SuggestedTags.Add("dotnet");
-            SuggestedTags.Add("c++");
+            SuggestedTags = ["c#", "dotnet", "c++"];
 
             PageChangedCommand = ReactiveCommand.Create<int>(x => UpdatePaginationItems(x), outputScheduler: RxApp.MainThreadScheduler);
 
