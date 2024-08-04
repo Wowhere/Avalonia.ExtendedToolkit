@@ -17,7 +17,7 @@ namespace Avalonia.ExtendedToolkit.Controls
     public partial class TagControl : TemplatedControl
     {
         /// <summary>
-        /// deselcts the other items
+        /// deselects the other items
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

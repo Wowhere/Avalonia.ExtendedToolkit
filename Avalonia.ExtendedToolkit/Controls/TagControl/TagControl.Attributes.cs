@@ -310,5 +310,22 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         public static readonly StyledProperty<Thickness> TagMarginProperty =
         AvaloniaProperty.Register<TagControl, Thickness>(nameof(TagMargin), defaultValue: new Thickness(5));
+
+        private bool _suggestedValuesOnly = false;
+
+        public static readonly DirectProperty<TagControl, bool> SuggestedValuesOnlyProperty =
+        AvaloniaProperty.RegisterDirect<TagControl, bool>(
+        nameof(_suggestedValuesOnly),
+        o => o._suggestedValuesOnly,
+        (o, v) => o._suggestedValuesOnly = v);
+
+        public bool SuggestedValuesOnly
+        {
+            get { return _suggestedValuesOnly; }
+            set
+            {
+                SetAndRaise(SuggestedValuesOnlyProperty, ref _suggestedValuesOnly, value);
+            }
+        }
     }
 }

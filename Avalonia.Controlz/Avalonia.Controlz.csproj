@@ -14,7 +14,7 @@
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
 	  <DocumentationFile>bin\Debug\Avalonia.Controlz.xml</DocumentationFile>
-	</PropertyGroup>
+   </PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
 	  <DocumentationFile>bin\Debug\Avalonia.Controlz.xml</DocumentationFile>
 	</PropertyGroup>
