@@ -26,7 +26,7 @@
                     Name="PART_ProgressBarBack"
                     VerticalAlignment="Top"
                     Margin="0,10,0,0" />
-        <ItemsPresenter
+        <ItemsControl
                 
                 ItemsPanel="{Binding ItemsPanel, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}"
                  />
@@ -44,7 +44,7 @@
                      Name="PART_ProgressBarBack"
                      VerticalAlignment="Bottom"
                      Margin="0,0,0,10" />
-        <ItemsPresenter VerticalAlignment="Bottom"
+          <ItemsControl VerticalAlignment="Bottom"
                 
                 ItemsPanel="{Binding ItemsPanel, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}"
                  />
@@ -65,9 +65,9 @@
                      VerticalAlignment="Center"
                      Margin="10,0,0,0"
                      RenderTransformOrigin="0.5,0.5"/>
-        <ItemsPresenter
+          <ItemsControl
            
-                ItemsPanel="{Binding ItemsPanel, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}"
+                  ItemsPanel="{Binding ItemsPanel, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}"
                  />
           <!--bad viewItems="{Binding Items, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}"
           ItemTemplate="{Binding ItemTemplate, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}"-->
@@ -88,9 +88,9 @@
                      Margin="0,0,10,0"
                      RenderTransformOrigin="0.5,0.5"
                      />
-        <ItemsPresenter
-            
-                ItemsPanel="{Binding ItemsPanel, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}"
+        <ItemsControl
+            ItemsSource="{Binding ItemsSource, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}"
+            ItemsPanel="{Binding ItemsPanel, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}"
                 />
           <!--bad viewItems="{Binding Items, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}"
           ItemTemplate="{Binding ItemTemplate, RelativeSource={RelativeSource AncestorType=Controls:StepBar}}"-->
