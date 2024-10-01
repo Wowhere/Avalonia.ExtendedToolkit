@@ -43,7 +43,7 @@ namespace Avalonia.ExtendedToolkit.TriggerExtensions
                 return associatedObjectTypeConstraint;
             }
         }
-        //.orig
+
         AvaloniaObject IBehavior.AssociatedObject => throw new NotImplementedException();
 
         internal TriggerAction(Type associatedObjectTypeConstraint)

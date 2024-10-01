@@ -70,8 +70,7 @@ namespace Avalonia.ExtendedToolkit.Controls
 
             RaiseEvent(new RoutedEventArgs
             {
-                //.orig
-                //RoutedEvent = MenuOpenedEvent,
+                RoutedEvent = OpenedEvent,
                 Source = this,
             });
         }
@@ -103,8 +102,7 @@ namespace Avalonia.ExtendedToolkit.Controls
 
             RaiseEvent(new RoutedEventArgs
             {
-                //.orig
-                //RoutedEvent = MenuClosedEvent,
+                RoutedEvent = ClosedEvent,
                 Source = this,
             });
         }
