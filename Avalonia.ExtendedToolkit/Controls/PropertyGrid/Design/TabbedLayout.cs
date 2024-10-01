@@ -363,7 +363,7 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Design
                 {
                     var items = Items.OfType<object>().ToList();
                     items.Remove(item);
-                    //.origItems = items;
+                    ItemsSource = items;
                 }
                 SelectedItem = Items.OfType<object>().FirstOrDefault(x=> (x as Control)?.IsVisible==true);
             }
