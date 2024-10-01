@@ -209,11 +209,10 @@ namespace Avalonia.ExtendedToolkit.Extensions
         /// <summary>
         /// creates a cropped <see cref="IImage"/>
         /// </summary>
-        //.orig
-        //public static IImage CreateCroppedBitmap(this IImage image, float x, float y, float width, float height, CroppingType croppingType)
-        //{
-        //    return image.FromDrawingBitmap(CreateCroppedDrawingBitmap(image, x, y, width, height, croppingType));
-        //}
+        public static IImage CreateCroppedBitmap(this IImage image, float x, float y, float width, float height, CroppingType croppingType)
+        {
+            return image.FromDrawingBitmap(CreateCroppedDrawingBitmap(image, x, y, width, height, croppingType));
+        }
 
 
 
