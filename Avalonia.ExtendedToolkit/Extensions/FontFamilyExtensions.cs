@@ -20,14 +20,15 @@ namespace Avalonia.ExtendedToolkit.Extensions
         {
             get
             {
-                //.orig
-                //if(_fontFamilies.Count==0)
-                //{
-                //    foreach (var item in FontManager.Current.GetInstalledFontFamilyNames())
-                //    {
-                //        _fontFamilies.Add(new FontFamily(item));
-                //    }
-                //}
+                if (_fontFamilies.Count == 0)
+                {
+                    //.orig
+                    //to think later, Implementing a custom IFontManagerImpl was previously suggested as a solution, but this approach may no longer work due to changes in accessibility levels.
+                    //foreach (var item in FontManager.Current.GetInstalledFontFamilyNames())
+                    //{
+                    //    _fontFamilies.Add(new FontFamily(item));
+                    //}
+                }
                 return FontManager.Current.SystemFonts;
             }
         }
