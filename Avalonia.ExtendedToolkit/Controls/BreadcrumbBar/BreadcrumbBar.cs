@@ -645,8 +645,9 @@ namespace Avalonia.ExtendedToolkit.Controls
             BreadcrumbItem breadcrumbItem = Content as BreadcrumbItem;
 
             _isInitial = true;
-            //.orig, think many
-            //SetAndRaise(RootProperty, new Optional<object>(), new Optional<object>(breadcrumbItem.Items));
+            //.orig, think many, f*ing Styled Properties
+            //var options = new Optional<object>();
+            //SetAndRaise(RootProperty, ref options, new Optional<object>(breadcrumbItem.Items));
             _isInitial = false;
 
             //RaisePropertyChanged(PathProperty, string.Empty, Path);

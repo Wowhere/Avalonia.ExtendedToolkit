@@ -41,7 +41,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         {
             //.edited, think many
             //.orig, think many
-            //o.RaisePropertyChanged<IBrush>(GeometryFillBrushProperty, null, o.GeometryFillBrush);
+            o.RaisePropertyChanged<IBrush>(GeometryFillBrushProperty, null, o.GeometryFillBrush);
         }
 
         /// <summary>
