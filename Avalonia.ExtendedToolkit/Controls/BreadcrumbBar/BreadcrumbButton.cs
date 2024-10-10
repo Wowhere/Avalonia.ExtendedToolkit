@@ -30,8 +30,8 @@ namespace Avalonia.ExtendedToolkit.Controls
         public BreadcrumbButton()
         {
             ImageProperty.Changed.AddClassHandler<BreadcrumbButton>((o, e) => OnImageChanged(o, e));
-            //.orig
-            //ItemsProperty.Changed.AddClassHandler<BreadcrumbButton>((o, e) => OnItemsCollectionChanged(o, e));
+            //.changed
+            ItemsSourceProperty.Changed.AddClassHandler<BreadcrumbButton>((o, e) => OnItemsCollectionChanged(o, e));
 
             SelectedItemProperty.Changed.AddClassHandler<BreadcrumbButton>(((o, e) => OnSelectedItemChanged(o, e)));
             IsDropDownPressedProperty.Changed.AddClassHandler<BreadcrumbButton>(((o, e) => OverflowPressedChanged(o, e)));
