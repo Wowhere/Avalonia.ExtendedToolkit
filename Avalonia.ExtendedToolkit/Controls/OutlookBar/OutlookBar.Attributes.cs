@@ -19,7 +19,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         private const string partPopup = "PART_Popup";
         private AvaloniaList<ILogical> _logicalChildren = new AvaloniaList<ILogical>();
         private Control _minimizedButtonContainer;
-
+        private Classes _classes;
         //Workaround remember size from ArrangeOverride
         private Size _finalSize = new Size(0, 0);
 
@@ -446,15 +446,15 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         public Classes OdcExpanderClasses
         {
-            get { return (Classes)GetValue(OdcExpanderClassesProperty); }
-            set { SetValue(OdcExpanderClassesProperty, value); }
+            get => _classes;
+            set => SetAndRaise(OdcExpanderClassesProperty, ref _classes, value);
         }
 
         /// <summary>
         /// <see cref="OdcExpanderClasses"/>
         /// </summary>
-        public static readonly StyledProperty<Classes> OdcExpanderClassesProperty =
-            AvaloniaProperty.Register<OutlookBar, Classes>(nameof(OdcExpanderClasses));
+        public static readonly DirectProperty<OutlookBar, Classes> OdcExpanderClassesProperty =
+            AvaloniaProperty.RegisterDirect<OutlookBar, Classes>(nameof(OdcExpanderClasses), o => o._classes, (o, v) => o._classes = v);
 
         /// <summary>
         /// for setting the OptionButton classes
