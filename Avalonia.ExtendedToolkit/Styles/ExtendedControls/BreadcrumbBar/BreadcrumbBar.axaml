@@ -17,8 +17,8 @@
     <Setter Property="BorderBrush" Value="Black"/>
     <Setter Property="Background" Value="{DynamicResource BreadcrumbBar_BackgroundBrush}"/>
     <Setter Property="MinHeight" Value="23" />
-    <!--bad view<Setter Property="Background" Value="#A0FFFFFF" />-->
-    <!--bad view<Setter Property="BorderBrush" Value="{DynamicResource  Odc.Brushes.Border}" />-->
+    <Setter Property="Background" Value="#A0FFFFFF" />
+    <Setter Property="BorderBrush" Value="{DynamicResource  Odc.Brushes.Border}" />
     <Setter Property="Template" >
       <Setter.Value>
         <ControlTemplate>
@@ -99,12 +99,10 @@
                         Focusable="True"
                         ItemTemplate="{TemplateBinding DropDownItemTemplate}"
                         Grid.Column="0"
+                        ItemsSource="{Binding DropDownItems,RelativeSource={RelativeSource TemplatedParent}} BorderThickness=0}"
                         SelectedIndex="{Binding SelectedDropDownIndex,RelativeSource={RelativeSource TemplatedParent},Mode=TwoWay}"
                         Grid.ColumnSpan="3" />
-                  <!--bad view
-                  Items="{Binding DropDownItems,RelativeSource={RelativeSource TemplatedParent}}" BorderThickness="0"-->
-                  <!--IsEditable="True"-->
-
+                  <!--bad viewIsEditable="True"-->
                 <ItemsControl
                         x:Name="buttons"
                         Grid.Column="3"

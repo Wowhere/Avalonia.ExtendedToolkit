@@ -55,7 +55,6 @@
                                         SelectedItem="{TemplateBinding SelectedItem}"
                                         ItemTemplate="{TemplateBinding ItemTemplate}">
                                     </ListBox>
-                                    <!--bad viewItems="{TemplateBinding Items}"-->
                                 </Border>
                             </Popup>
                         </StackPanel>

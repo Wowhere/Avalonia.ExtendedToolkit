@@ -81,7 +81,6 @@
                                           KeyboardNavigation.TabNavigation="Cycle"
                                               ItemsSource="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}, Path=Items}"
                                      />
-                                  <!--bad viewItems="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}, Path=Items}"-->
                               </ScrollViewer>
                             </Grid>
                           </Border>

@@ -68,7 +68,6 @@
                           HorizontalAlignment="Left"
                           ItemsSource="{TemplateBinding IndexItems}"
                           >
-                <!--bad viewItems="{TemplateBinding IndexItems}"-->
                 <ItemsControl.ItemTemplate>
                 <DataTemplate>
                   <Grid>

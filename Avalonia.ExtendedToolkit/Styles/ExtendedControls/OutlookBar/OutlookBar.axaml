@@ -273,7 +273,6 @@
                                         <ItemsControl DockPanel.Dock="Bottom"
                                                ItemsSource="{TemplateBinding OptionButtons}"       
                                                Focusable="False" />
-                                        <!--bad view Items="{TemplateBinding OptionButtons}"-->
                                         <ToggleButton Content="{TemplateBinding NavigationPaneText}" ClickMode="Press"
                                                 x:Name="PART_ToggleButton"
                                                 IsChecked="{Binding IsPopupVisible,RelativeSource={RelativeSource TemplatedParent},Mode=TwoWay}"

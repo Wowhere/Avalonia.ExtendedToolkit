@@ -50,7 +50,6 @@
                           ItemsSource="{TemplateBinding ItemsSource}"
                           ItemsPanel="{TemplateBinding ItemsPanel}"
                           MaxWidth="500" />
-                <!--bad viewItems="{TemplateBinding ItemsSource}"-->
             </Grid>
           </Border>
         </ControlTemplate>

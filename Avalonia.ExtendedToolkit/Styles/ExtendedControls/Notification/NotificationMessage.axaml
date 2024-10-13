@@ -225,7 +225,6 @@
                   VerticalAlignment="Stretch"
                   ItemsSource="{TemplateBinding Buttons}"
                   >
-                  <!--bad viewItems="{TemplateBinding Buttons}"-->
                   <ItemsControl.ItemsPanel>
                   <ItemsPanelTemplate>
                     <StackPanel Orientation="Horizontal" Spacing="1" />

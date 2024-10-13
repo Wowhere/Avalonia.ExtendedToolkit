@@ -48,7 +48,6 @@
                       BorderThickness="1">
                 <ScrollViewer>
                   <ItemsPresenter Name="PART_ItemsPresenter"
-                                  
                                   ItemsPanel="{TemplateBinding ItemsPanel}"
                                   
                                   
