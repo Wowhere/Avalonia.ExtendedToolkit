@@ -1,7 +1,7 @@
-﻿//using Avalonia.Controls;
-//using Avalonia.Controls.Generators;
-//using Avalonia.Data;
-//.orig
+﻿using Avalonia.Controls;
+using Avalonia.Controls.Generators;
+using Avalonia.Data;
+
 //namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Design
 //{
 //    //
