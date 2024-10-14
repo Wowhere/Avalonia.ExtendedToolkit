@@ -12,9 +12,7 @@ namespace Avalonia.ExampleApp.Model
         public FolderItem()
         {
             Uri uri = new Uri("/Assets/openfolderHS.png", UriKind.Relative);
-            //.orig
-            //var assets = AvaloniaLocator.GetService<AssetLoader>();
-            //Image= new Bitmap(assets.Open(uri));
+            Image= new Bitmap(AssetLoader.Open(uri));
         }
     }
 }
