@@ -165,19 +165,18 @@ namespace Avalonia.Controlz.Helper
         /// </summary>
         /// <param name="element"></param>
         /// <param name="value"></param>
-        //.orig
-        //public static void SetClasses(StyledElement element, Classes value)
-        //{
-        //    element.SetValue(ClassesProperty, value);
-        //    OnClassesChanged(element, value);
-        //}
+        public static void SetClasses(StyledElement element, Classes value)
+        {
+            element.SetValue(ClassesProperty, value);
+            OnClassesChanged(element, value);
+        }
 
-        //private static void OnClassesChanged(StyledElement element, Classes value)
-        //{
-        //    if (value != null)
-        //    {
-        //        element.Classes = value;
-        //    }
-        //}
+        private static void OnClassesChanged(StyledElement element, Classes value)
+        {
+            if (value != null)
+            {
+                element.Classes.Add(value.ToString());
+            }
+        }
     }
 }
