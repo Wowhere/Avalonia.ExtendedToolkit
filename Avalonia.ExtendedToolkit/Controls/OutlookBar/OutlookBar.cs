@@ -5,7 +5,7 @@ using System.Collections.Specialized;
 using System.Linq;
 using Avalonia.Collections;
 using Avalonia.Controls;
-using Avalonia.Controls.Generators;
+using Avalonia.Data;
 using Avalonia.Controls.Primitives;
 using Avalonia.Input;
 using Avalonia.Interactivity;
@@ -242,7 +242,7 @@ namespace Avalonia.ExtendedToolkit.Controls
             };
 
             base.OnApplyTemplate(e);
-            //.orig
+            //.obsolete, OdcExpanderClassesProperty is Styled now
             //RaisePropertyChanged(OdcExpanderClassesProperty, null, (Classes)OdcExpanderClasses);
             ApplySections();
 
@@ -300,7 +300,7 @@ namespace Avalonia.ExtendedToolkit.Controls
                 MaxWidth = MinimizedWidth + (CanResize ? 4 : 0);
                 RaiseEvent(new RoutedEventArgs(CollapsedEvent));
             }
-            //.orig, think many
+            //.obsolete, IsOverflowVisibleProperty is styled now
             //RaisePropertyChanged(IsOverflowVisibleProperty, !IsOverflowVisible, IsOverflowVisible);
         }
 
