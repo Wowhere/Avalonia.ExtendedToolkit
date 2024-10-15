@@ -15,21 +15,21 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// Style key for this control
         /// </summary>
         public Type StyleKey => typeof(Image);
-        private IBrush _geometryFillBrush;
+
         /// <summary>
         /// Gets or sets Foreground.
         /// </summary>
         public IBrush GeometryFillBrush
         {
-            get => _geometryFillBrush;
-            set => SetAndRaise(GeometryFillBrushProperty, ref _geometryFillBrush, value);
+            get { return (IBrush)GetValue(GeometryFillBrushProperty); }
+            set { SetValue(GeometryFillBrushProperty, value); }
         }
 
         /// <summary>
         /// Defines the Foreground property.
         /// </summary>
-        public static readonly DirectProperty<ImageExt, IBrush> GeometryFillBrushProperty =
-        AvaloniaProperty.RegisterDirect<ImageExt, IBrush>(nameof(GeometryFillBrush), o => o._geometryFillBrush, (o, v) => o._geometryFillBrush = v);
+        public static readonly StyledProperty<IBrush> GeometryFillBrushProperty =
+        AvaloniaProperty.Register<ImageExt, IBrush>(nameof(GeometryFillBrush));
 
         static ImageExt()
         {
@@ -41,7 +41,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         {
             //.edited, think many
             //.orig, think many
-            o.RaisePropertyChanged<IBrush>(GeometryFillBrushProperty, null, o.GeometryFillBrush);
+            //o.RaisePropertyChanged<IBrush>(GeometryFillBrushProperty, null, o.GeometryFillBrush);
         }
 
         /// <summary>
