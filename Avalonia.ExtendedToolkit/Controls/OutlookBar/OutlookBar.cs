@@ -243,7 +243,7 @@ namespace Avalonia.ExtendedToolkit.Controls
 
             base.OnApplyTemplate(e);
             //.orig
-            RaisePropertyChanged(OdcExpanderClassesProperty, null, (Classes)OdcExpanderClasses);
+            //RaisePropertyChanged(OdcExpanderClassesProperty, null, (Classes)OdcExpanderClasses);
             ApplySections();
 
             //RaisePropertyChanged(IsOverflowVisibleProperty, !IsOverflowVisible, IsOverflowVisible);
