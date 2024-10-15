@@ -39,7 +39,9 @@ namespace Avalonia.ExtendedToolkit.Controls
 
         private static void OnSourceChanged(ImageExt o, object e)
         {
-            o.RaisePropertyChanged(GeometryFillBrushProperty, null, o.GeometryFillBrush);
+            //.edited, think many
+            //.orig, think many
+            o.RaisePropertyChanged<IBrush>(GeometryFillBrushProperty, null, o.GeometryFillBrush);
         }
 
         /// <summary>
