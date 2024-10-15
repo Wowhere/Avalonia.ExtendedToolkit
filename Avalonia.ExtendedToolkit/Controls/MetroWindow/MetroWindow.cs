@@ -579,7 +579,7 @@ namespace Avalonia.ExtendedToolkit.Controls
                             KeyModifiers.None
                         );
                     }
-                    //.orig
+                    //.later, seems like we need to implement it for differents OS`s, brrrr
                     //window.PlatformImpl.BeginMoveDrag(dummyPointerPressedEventArgs);
                 }
                 catch
