@@ -7,6 +7,7 @@ using Avalonia.Data;
 using Avalonia.Input;
 using Avalonia.Interactivity;
 using Avalonia.VisualTree;
+using DynamicData.Kernel;
 
 namespace Avalonia.ExtendedToolkit.Controls
 {
@@ -51,8 +52,7 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// </summary>
         private void OnTagItemPropertyChanged(object sender, AvaloniaPropertyChangedEventArgs e)
         {
-            //.orig, think many
-            //RaisePropertyChanged(IsAnyItemInEditModeProperty, new Data.Optional<bool>(), ItemsSource.Any(x => x.IsInEditMode));//IsAnyItemInEditModeProperty
+            RaisePropertyChanged<bool>(IsAnyItemInEditModeProperty, new bool(), ItemsSource.Any(x => x.IsInEditMode));
         }
 
         /// <summary>
@@ -283,8 +283,7 @@ namespace Avalonia.ExtendedToolkit.Controls
                                           OnAcceptEdit,
                                           TagMargin));
                 }
-                //.orig, think many
-                //RaisePropertyChanged(IsAnyItemInEditModeProperty, new Optional<bool>(), ItemsSource.Any(x => x.IsInEditMode));
+                RaisePropertyChanged<bool>(IsAnyItemInEditModeProperty, new  bool(), ItemsSource.Any(x => x.IsInEditMode));
             }
         }
 
