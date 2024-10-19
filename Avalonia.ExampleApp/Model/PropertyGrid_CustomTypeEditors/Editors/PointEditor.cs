@@ -73,7 +73,7 @@ namespace Avalonia.ExampleApp.Model
             }
 
             _isUpdating = false;
-            //.orig
+            //.obsolete, EditValueProperty is styled now
             //RaisePropertyChanged(EditValueProperty, new Point(), EditValue);
         }
 

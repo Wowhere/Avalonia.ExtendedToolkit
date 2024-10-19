@@ -300,8 +300,8 @@ namespace Avalonia.ExtendedToolkit.Controls
             }
 
             base.OnApplyTemplate(e);
-            //.orig
-            //RaisePropertyChanged(ItemsProperty, new Data.Optional<IEnumerable>(), new Data.Optional<IEnumerable>(Items));
+            //.obsolete, ItemsSourceProperty is styled
+            //RaisePropertyChanged(ItemsSourceProperty, new Data.Optional<IEnumerable>(), new Data.Optional<IEnumerable>(Items));
         }
 
         private void dropDownBtn_MouseDown(object sender, EventArgs e)
